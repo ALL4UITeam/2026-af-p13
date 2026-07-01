@@ -1,0 +1,147 @@
+@use 'base/variables' as *;
+
+// Figma: card (87:991)
+.place-card {
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: $color-bg-white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+  &__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__thumb {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 170px;
+    padding: 15px;
+  }
+
+  &__thumb-top {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__badges {
+    display: flex;
+    gap: 3px;
+  }
+
+  &__mark {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  &__thumb-title {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    color: $color-bg-white;
+  }
+
+  &__name {
+    font-family: $font-heading;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  &__sub {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 21px;
+    color: #555;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  &__rating {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 14px;
+
+    strong { font-weight: 700; color: $color-text; }
+    span:last-child { font-size: 12px; color: #555; }
+  }
+
+  &__info-row {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #555;
+
+    span {
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+.explore {
+  &__bg {
+    display: none;
+  }
+
+  &__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__search {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__count {
+    font-size: 14px;
+    color: #495056;
+
+    strong { color: #1c5acc; }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+}

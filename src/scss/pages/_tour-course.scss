@@ -1,0 +1,246 @@
+@use 'base/variables' as *;
+
+// Figma: card-course-detail (91:2255)
+.card-course-detail {
+  position: relative;
+  height: 254px;
+
+  &__thumb {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 15px 20px 50px;
+  }
+
+  &__toolbar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    background-color: $color-bg-white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+
+  &__title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: $color-bg-white;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 1;
+    color: #ebedee;
+  }
+}
+
+.info-bx--course {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  max-width: $content-width;
+  padding: 15px 20px;
+  border-radius: 15px;
+  background-color: $color-bg-white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.tour-course {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+
+  &__intro {
+    font-size: 14px;
+    line-height: 21px;
+    color: #495056;
+  }
+
+  &__reserve {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-bg-white;
+    background-color: $color-primary-800;
+    cursor: pointer;
+  }
+
+  &__note {
+    font-size: 14px;
+    line-height: 21px;
+    color: #495056;
+    text-align: center;
+  }
+}
+
+.course-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  &__point {
+    position: relative;
+    flex-shrink: 0;
+    width: 26px;
+    background: linear-gradient(180deg, #1c5acc 0%, #1c5acc 100%) center / 2px 100% no-repeat;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #1c5acc;
+      border-radius: 50%;
+      background-color: $color-bg-white;
+      transform: translate(-50%, -50%);
+    }
+
+    &--start::before {
+      background-color: #1c5acc;
+    }
+
+    &--end {
+      background: none;
+
+      &::before {
+        background-color: #1c5acc;
+      }
+    }
+  }
+}
+
+.schedule-card {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  align-items: center;
+  min-height: 98px;
+  padding: 16px;
+  border: 1px solid $color-blue-30;
+  border-radius: 16px;
+  background-color: $color-bg-white;
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 13px;
+    min-width: 0;
+  }
+
+  &__head {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__time {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1c5acc;
+    background-color: #e8ecf4;
+  }
+
+  &__duration {
+    font-size: 12px;
+    font-weight: 500;
+    color: #495056;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    strong {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+      color: $color-text;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1;
+      color: #495056;
+    }
+  }
+}

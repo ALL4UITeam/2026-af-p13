@@ -1,0 +1,243 @@
+@use 'base/variables' as *;
+
+.route-chips {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+
+  .route-chip {
+    display: inline-flex;
+    flex: 1;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    height: 30px;
+    padding-inline: 10px;
+    border: 1px solid $color-text-muted;
+    border-radius: 50px;
+    font-size: 14px;
+    line-height: 1;
+    color: #666;
+    background-color: $color-bg-white;
+    cursor: pointer;
+
+    &--active {
+      color: $color-bg-white;
+      font-weight: 700;
+      background-color: #0d2655;
+      border-color: #0d2655;
+    }
+  }
+}
+
+.map {
+  &__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+
+  &__route {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+}
+
+.map-area {
+  overflow: hidden;
+  height: 210px;
+  border: 1px solid $color-blue-30;
+  border-radius: 10px;
+  background-color: $color-bg-white;
+
+  &__canvas {
+    position: relative;
+    height: 100%;
+    background: linear-gradient(145deg, #e8f5e9 0%, #c8e6c9 30%, #dcedc8 60%, #f1f8e9 100%);
+  }
+
+  &__label {
+    position: absolute;
+    font-size: 7px;
+    font-weight: 700;
+    color: #99a1af;
+    white-space: nowrap;
+
+    &--gwanghwamun {
+      top: 73%;
+      left: 28%;
+    }
+
+    &--jongno {
+      top: 61%;
+      left: 55%;
+    }
+  }
+}
+
+.map-marker {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+
+  &__pin {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid $color-bg-white;
+    border-radius: 50%;
+    background-color: #c9a84c;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+
+    &--primary {
+      width: 34px;
+      height: 34px;
+      background-color: #8b1a1a;
+    }
+  }
+
+  &__label {
+    margin-top: 4px;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #374151;
+    white-space: nowrap;
+    background-color: $color-bg-white;
+    box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.1);
+
+    &--primary {
+      color: $color-bg-white;
+      background-color: #8b1a1a;
+    }
+  }
+
+  &--active .map-marker__pin::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 14px;
+    height: 14px;
+    border: 0.5px solid $color-bg-white;
+    border-radius: 50%;
+    background-color: #c9a84c;
+  }
+}
+
+.map-marker--active {
+  .map-marker__pin {
+    position: relative;
+  }
+}
+
+.map-featured {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: $content-width;
+  height: 64px;
+  padding: 20px;
+  border-radius: 10px;
+  color: $color-bg-white;
+  background-color: $color-primary-900;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+
+  &__main {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    min-width: 0;
+
+    strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    span {
+      display: block;
+      margin-top: 3px;
+      font-size: 14px;
+      line-height: 21px;
+      opacity: 0.95;
+    }
+  }
+}
+
+.map-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+}
+
+.site-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: $content-width;
+  height: 64px;
+  padding: 20px;
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  text-align: left;
+  background-color: $color-bg-white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  &__icon {
+    background-color: #e8ecf4;
+
+    &--active {
+      background-color: $color-primary-800;
+    }
+  }
+
+  div {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    margin-inline: 15px;
+
+    strong {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+      color: $color-text;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 21px;
+      color: #555;
+    }
+  }
+
+  &--active {
+    border: 2px solid $color-primary-800;
+  }
+}

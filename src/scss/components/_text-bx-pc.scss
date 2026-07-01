@@ -1,0 +1,111 @@
+@use 'base/variables' as *;
+
+// Figma: text-bx-pc (69:3809)
+.text-bx-pc {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  width: 100%;
+
+  &--question {
+    justify-content: flex-end;
+  }
+
+  &--dimmed {
+    opacity: 0.8;
+  }
+
+  &__avatar {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+
+    &--user {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  &--question &__body {
+    flex: 0 1 auto;
+    align-items: flex-end;
+  }
+
+  &__meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &--user {
+      justify-content: flex-end;
+    }
+  }
+
+  &__time {
+    font-size: 14px;
+    line-height: 24px;
+    color: #555;
+    white-space: nowrap;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  &__action {
+    display: inline-flex;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__bubble {
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: $color-text;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid $color-border;
+    border-radius: 0 20px 20px 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+    p {
+      margin: 0;
+
+      & + p {
+        margin-top: 0;
+      }
+    }
+
+    &--user {
+      width: auto;
+      max-width: 600px;
+      padding: 20px 30px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $color-bg-white;
+      background-color: $color-primary-900;
+      border: none;
+      border-radius: 20px 0 20px 20px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

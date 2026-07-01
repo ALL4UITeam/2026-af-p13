@@ -1,0 +1,95 @@
+@use 'base/variables' as *;
+
+.layout-full {
+  min-height: 100dvh;
+  background-color: $color-bg-blue;
+}
+
+.layout-app,
+.layout-user-select {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background-color: $color-bg-blue;
+
+  .app-main {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: $top-height;
+    padding-bottom: $gnb-height;
+  }
+}
+
+.main {
+  width: 100%;
+
+  @media (max-width: #{$bp-desktop - 1px}) {
+    max-width: $mobile-width;
+    margin-inline: auto;
+  }
+}
+
+.layout-explore-detail {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background-color: $color-bg-blue;
+
+  .explore-detail-main {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 0;
+    padding-bottom: $gnb-height;
+  }
+}
+
+// PC 공통: left-bar + 본문 전체 너비
+@media (min-width: $bp-desktop) {
+  .layout-app,
+  .layout-user-select,
+  .layout-explore-detail {
+    padding-left: $left-bar-width;
+  }
+
+  .left-menu-mobile {
+    display: none;
+  }
+
+  .layout-app .top {
+    left: $left-bar-width;
+    width: calc(100% - #{$left-bar-width});
+    max-width: none;
+    transform: none;
+  }
+
+  .layout-explore-detail .top {
+    left: $left-bar-width;
+    width: calc(100% - #{$left-bar-width});
+    max-width: none;
+    transform: none;
+  }
+
+  .layout-app .app-main {
+    padding-bottom: 0;
+  }
+
+  .layout-app--guide .top {
+    display: none;
+  }
+
+  .layout-app--guide .app-main--guide {
+    padding-top: $top-height;
+    padding-bottom: 180px;
+  }
+
+  .layout-explore-detail .explore-detail-main {
+    padding-bottom: 0;
+  }
+
+  .layout-explore-detail {
+    .explore-detail-main {
+      padding-top: $top-height;
+      padding-bottom: 0;
+    }
+  }
+}

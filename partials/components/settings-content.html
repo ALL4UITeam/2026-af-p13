@@ -1,0 +1,81 @@
+<section class="settings" data-page="06-settings">
+  <div class="settings__contents">
+    <p class="settings__intro">{{settingsIntro}}</p>
+    <div class="settings__list" id="settingsLangList">
+      <a href="./settings-kor.html" class="language-item{{#ifeq activeLang 'kor'}} language-item--active{{/ifeq}}">
+        <div class="language-item__main">
+          <span class="flag-slot flag-slot--kor" aria-hidden="true"></span>
+          <div>
+            <strong>한국어</strong>
+            <span>조선왕조 문화유산 플랫폼</span>
+          </div>
+        </div>
+        <span class="language-item__arrow icon-slot icon-slot--20{{#ifeq activeLang 'kor'}} icon-slot--primary icon-slot--circle{{else}} icon-slot--circle{{/ifeq}}" aria-hidden="true"></span>
+      </a>
+      <a href="./settings-eng.html" class="language-item{{#ifeq activeLang 'eng'}} language-item--active{{/ifeq}}">
+        <div class="language-item__main">
+          <span class="flag-slot flag-slot--eng" aria-hidden="true"></span>
+          <div>
+            <strong>ENGLISH</strong>
+            <span>Joseon Heritage Platform</span>
+          </div>
+        </div>
+        <span class="language-item__arrow icon-slot icon-slot--20{{#ifeq activeLang 'eng'}} icon-slot--primary icon-slot--circle{{else}} icon-slot--circle{{/ifeq}}" aria-hidden="true"></span>
+      </a>
+      <a href="./settings-jpn.html" class="language-item{{#ifeq activeLang 'jpn'}} language-item--active{{/ifeq}}">
+        <div class="language-item__main">
+          <span class="flag-slot flag-slot--jpn" aria-hidden="true"></span>
+          <div>
+            <strong>日本語</strong>
+            <span>朝鮮王朝文化遺産プラットフォーム</span>
+          </div>
+        </div>
+        <span class="language-item__arrow icon-slot icon-slot--20{{#ifeq activeLang 'jpn'}} icon-slot--primary icon-slot--circle{{else}} icon-slot--circle{{/ifeq}}" aria-hidden="true"></span>
+      </a>
+      <a href="./settings-chn.html" class="language-item{{#ifeq activeLang 'chn'}} language-item--active{{/ifeq}}">
+        <div class="language-item__main">
+          <span class="flag-slot flag-slot--chn" aria-hidden="true"></span>
+          <div>
+            <strong>中文</strong>
+            <span>朝鲜王朝文化遗产平台</span>
+          </div>
+        </div>
+        <span class="language-item__arrow icon-slot icon-slot--20{{#ifeq activeLang 'chn'}} icon-slot--primary icon-slot--circle{{else}} icon-slot--circle{{/ifeq}}" aria-hidden="true"></span>
+      </a>
+    </div>
+    <aside class="settings-ai-banner">
+      <div class="settings-ai-banner__head">
+        <span class="icon-slot icon-slot--20 icon-slot--white" aria-hidden="true"></span>
+        <strong>{{aiGuideTitle}}</strong>
+      </div>
+      <p>{{aiGuideDesc}}</p>
+      <div class="settings-ai-banner__chips">
+        <a href="./settings-kor.html" class="settings-ai-banner__chip">한국어</a>
+        <a href="./settings-eng.html" class="settings-ai-banner__chip">English</a>
+        <a href="./settings-jpn.html" class="settings-ai-banner__chip">日本語</a>
+        <a href="./settings-chn.html" class="settings-ai-banner__chip">中文</a>
+      </div>
+    </aside>
+    <div class="settings-voice">
+      <div class="settings-voice__head">
+        <span class="icon-slot icon-slot--24" aria-hidden="true"></span>
+        <strong>{{voiceTitle}}</strong>
+      </div>
+      <div class="settings-voice__row">
+        <p>{{voiceDesc}}</p>
+        <button type="button" class="toggle toggle--on" aria-label="{{voiceTitle}}" aria-pressed="true"></button>
+      </div>
+    </div>
+    <aside class="notification notification--lang-tip">
+      <div class="notification__head">
+        <span class="icon-slot icon-slot--30" aria-hidden="true"></span>
+        <strong>{{tipTitle}}</strong>
+      </div>
+      <p>{{tipDesc}}</p>
+    </aside>
+    <div class="settings-status">
+      <span class="flag-slot flag-slot--{{statusFlag}}" aria-hidden="true"></span>
+      <p><strong>{{statusLang}}</strong> <span>{{statusSuffix}}</span></p>
+    </div>
+  </div>
+</section>

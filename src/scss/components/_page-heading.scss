@@ -1,0 +1,27 @@
+@use 'base/variables' as *;
+
+.page-heading {
+  display: none;
+
+  @media (min-width: $bp-desktop) {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    height: 60px;
+  }
+
+  &__home,
+  &__chevron {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    color: $color-text;
+  }
+}

@@ -1,0 +1,56 @@
+@use 'base/variables' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-family: $font-body;
+  font-weight: 600;
+  cursor: pointer;
+
+  &--primary {
+    height: 48px;
+    padding-inline: 24px;
+    font-size: 16px;
+    line-height: 1;
+    color: $color-bg-white;
+    background-color: $color-primary;
+  }
+
+  &--full {
+    width: 100%;
+  }
+}
+
+.lang-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 150px;
+  height: 32px;
+  border: 1px solid $color-border-light;
+  border-radius: 30px;
+  background-color: $color-bg-white;
+
+  &__flag {
+    flex-shrink: 0;
+    width: 30px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-text-caption;
+    white-space: nowrap;
+
+    strong {
+      font-weight: 700;
+      color: $color-text;
+    }
+  }
+}

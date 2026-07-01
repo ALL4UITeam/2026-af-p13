@@ -1,0 +1,58 @@
+@use 'base/variables' as *;
+
+// Figma: search-bar (86:1046)
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 46px;
+  padding-inline: 20px;
+  border: 1px solid $color-border-light;
+  border-radius: 30px;
+  background-color: $color-bg-white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+
+  &__input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $color-text;
+    background: transparent;
+    outline: none;
+
+    &::placeholder { color: #555; }
+  }
+}
+
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 3px;
+
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    height: 30px;
+    padding-inline: 8px;
+    border: 1px solid $color-text-muted;
+    border-radius: 50px;
+    font-size: 14px;
+    line-height: 1;
+    color: #666;
+    background-color: $color-bg-white;
+    cursor: pointer;
+
+    &--active {
+      color: $color-bg-white;
+      font-weight: 700;
+      background-color: #0d2655;
+      border-color: #0d2655;
+    }
+  }
+}

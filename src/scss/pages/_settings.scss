@@ -1,0 +1,256 @@
+@use 'base/variables' as *;
+
+.layout-app:has(.settings) {
+  background-color: #f5f7fa;
+}
+
+.flag-slot {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 36px;
+  height: 24px;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+
+  &--kor {
+    background:
+      linear-gradient(to bottom, transparent 33%, #0047a0 33%, #0047a0 66%, transparent 66%),
+      linear-gradient(to right, transparent 40%, #cd2e3a 40%, #cd2e3a 60%, transparent 60%),
+      #fff;
+  }
+
+  &--eng {
+    background:
+      repeating-linear-gradient(180deg, #b22234 0 2px, #fff 2px 4px);
+  }
+
+  &--jpn {
+    background: radial-gradient(circle at 50% 50%, #bc002d 28%, transparent 29%), #fff;
+  }
+
+  &--chn {
+    background: linear-gradient(135deg, #de2910 0%, #de2910 100%);
+  }
+}
+
+.settings {
+  &__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+
+  &__intro {
+    width: 100%;
+    max-width: 290px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    color: #495056;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: $content-width;
+  }
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 20px;
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  color: inherit;
+  text-decoration: none;
+  background-color: $color-bg-white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+
+  &--active {
+    border: 2px solid $color-primary-800;
+  }
+
+  &__main {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    min-width: 0;
+
+    strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+      color: $color-text;
+    }
+
+    span {
+      display: block;
+      margin-top: 3px;
+      font-size: 14px;
+      line-height: 21px;
+      color: #555;
+    }
+  }
+}
+
+.settings-ai-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: $content-width;
+  padding: 20px;
+  border-radius: 10px;
+  color: $color-bg-white;
+  background-color: $color-primary-900;
+
+  &__head {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  &__chips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  &__chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-text;
+    text-decoration: none;
+    background-color: $color-bg-white;
+  }
+}
+
+.settings-voice {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: $content-width;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: $color-bg-white;
+
+  &__head {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-text;
+  }
+
+  &__row {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    p {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #555;
+    }
+  }
+}
+
+.toggle {
+  position: relative;
+  flex-shrink: 0;
+  width: 60px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  background-color: $color-border;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $color-bg-white;
+    transition: transform 0.2s ease;
+  }
+
+  &--on {
+    background-color: $color-gradient-end;
+
+    &::after {
+      transform: translateX(36px);
+    }
+  }
+}
+
+.notification--lang-tip {
+  width: 100%;
+  max-width: $content-width;
+  border: 1px dashed $color-gradient-end;
+  background-color: $color-bg-white;
+
+  .notification__head {
+    color: $color-gradient-end;
+  }
+}
+
+.settings-status {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding-inline: 12px;
+  border: 1px solid $color-border-light;
+  border-radius: 30px;
+  background-color: $color-bg-white;
+
+  p {
+    display: flex;
+    gap: 3px;
+    font-size: 14px;
+    line-height: 24px;
+    white-space: nowrap;
+
+    strong {
+      font-weight: 700;
+      color: $color-text;
+    }
+
+    span {
+      color: $color-text-caption;
+    }
+  }
+}

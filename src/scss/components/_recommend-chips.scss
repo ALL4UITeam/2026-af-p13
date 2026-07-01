@@ -1,0 +1,76 @@
+@use 'base/variables' as *;
+
+// Figma: m-Button small (추천질문 칩)
+.m-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: 30px;
+  padding-inline: 10px;
+  border: 1px solid $color-blue-30;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  color: #495056;
+  background-color: $color-bg-white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  &__emoji {
+    font-weight: 400;
+  }
+
+  &--active {
+    color: $color-bg-white;
+    font-weight: 700;
+    background-color: $color-primary-border;
+    border-color: $color-primary-border;
+  }
+}
+
+.recommend-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+
+  &__head {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #2b2f32;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    @media (min-width: $bp-desktop) {
+      gap: 7px;
+    }
+  }
+
+  @media (min-width: $bp-desktop) {
+    gap: 12px;
+
+    .m-chip {
+      height: 36px;
+      padding-inline: 30px;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,188 @@
+@use 'base/variables' as *;
+
+.voice-panel {
+  width: 100%;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+
+  &__inner {
+    width: 100%;
+    border: 1px solid $color-bg-white;
+    background: radial-gradient(ellipse at center, #454999 0%, #343276 25%, #231b52 50%);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: height 0.3s ease, border-radius 0.3s ease;
+  }
+
+  // 기본: 접힌 상태 (음성으로 선택)
+  &:not(.is-expanded) &__inner {
+    height: 70px;
+    border-radius: 80px;
+  }
+
+  // 확장: 음성 안내 중
+  &.is-expanded &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 200px;
+    padding: 10px 15px;
+    border-radius: 20px;
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  &.is-expanded &__trigger {
+    display: none;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $color-bg-white;
+  }
+
+  &__desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  // 확장 영역
+  &__expanded {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.is-expanded &__expanded {
+    display: flex;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px;
+  }
+
+  &__status {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: $color-bg-white;
+    white-space: nowrap;
+  }
+
+  &__cancel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    width: 50px;
+    height: 20px;
+    border: 1px solid $color-bg-white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: $color-bg-white;
+    cursor: pointer;
+
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__visual {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
+  &__waveform {
+    width: 208px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  &__playing {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: $color-bg-white;
+    white-space: nowrap;
+  }
+
+  &__controls {
+    display: flex;
+    gap: 5px;
+    width: 212px;
+    margin-inline: auto;
+  }
+
+  &__control-btn {
+    display: inline-flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 28px;
+    padding-inline: 32px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: $color-bg-white;
+    white-space: nowrap;
+    cursor: pointer;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &--restart {
+      background-color: #153e8d;
+    }
+
+    &--play {
+      background-color: #3a7bf2;
+    }
+  }
+}

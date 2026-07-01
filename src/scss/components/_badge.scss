@@ -1,0 +1,33 @@
+@use 'base/variables' as *;
+
+// Figma: Badge (87:1043)
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding-inline: 8px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: $color-bg-white;
+  letter-spacing: -0.28px;
+
+  &--palace { background-color: #005b61; }
+  &--unesco { background-color: #712cc5; }
+  &--shrine { background-color: #1c5acc; }
+  &--tomb { background-color: #b47019; }
+}
+
+.hash-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding-inline: 7px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #555;
+  background-color: #edf4ff;
+}

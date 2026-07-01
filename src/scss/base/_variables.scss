@@ -1,0 +1,39 @@
+// Breakpoints (mobile-first)
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1280px;
+
+// Design tokens (Figma 공통UI)
+$color-bg-blue: #f2f4f9;
+$color-bg-white: #fff;
+$color-primary: #123371;
+$color-primary-border: #143a7f;
+$color-primary-800: #214a97;
+$color-primary-900: #153e8d;
+$color-blue-30: #b7c4dc;
+$color-gradient-start: #d9488b;
+$color-gradient-end: #2c63c7;
+$color-border: #dce3f0;
+$color-border-light: #d6d9dd;
+$color-text: #1a1a1a;
+$color-text-sub: #373c41;
+$color-text-muted: #8e8e93;
+$color-text-caption: #5c656c;
+$color-subtitle: #7b8aa6;
+
+// Layout
+$mobile-width: 360px;
+$content-width: 320px;
+$content-max: 960px;
+$left-bar-width: 70px;
+$side-padding: 20px;
+$top-height: 60px;
+$gnb-height: 70px;
+
+// Typography
+$font-body: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-heading: 'HangeulNuri-Bold', 'Pretendard', sans-serif;
+
+// Z-index
+$z-top: 100;
+$z-gnb: 100;

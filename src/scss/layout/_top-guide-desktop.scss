@@ -1,0 +1,54 @@
+@use 'base/variables' as *;
+
+.top-guide-desktop {
+  display: none;
+
+  @media (min-width: $bp-desktop) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: $left-bar-width;
+    z-index: $z-top;
+    display: block;
+    height: $top-height;
+    background-color: $color-bg-white;
+    border-bottom: 1px solid $color-border-light;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    padding-inline: 40px;
+  }
+
+  &__right {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  &__voice {
+    display: inline-flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    min-width: 85px;
+    height: 30px;
+    padding: 2px 8px 2px 4px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $color-bg-white;
+    background-color: #0d2655;
+    cursor: pointer;
+
+    img {
+      display: block;
+      flex-shrink: 0;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@use 'base/variables' as *;
+
+.top {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: $z-top;
+  width: 100%;
+  max-width: $mobile-width;
+  height: $top-height;
+  background-color: $color-bg-white;
+  transform: translateX(-50%);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding-inline: $side-padding;
+  }
+
+  &__left {
+    display: flex;
+    flex: 1;
+    gap: 7px;
+    align-items: center;
+    min-width: 0;
+    height: 30px;
+  }
+
+  &__icon {
+    display: block;
+    flex-shrink: 0;
+
+    &--home,
+    &--chevron {
+      object-fit: contain;
+    }
+
+    &--voice {
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  &__home {
+    display: flex;
+    flex-shrink: 0;
+    line-height: 0;
+  }
+
+  &__title {
+    flex: 1;
+    min-width: 0;
+    font-family: $font-heading;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.66px;
+    color: $color-text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__right {
+    display: flex;
+    flex-shrink: 0;
+    gap: 5px;
+    align-items: center;
+    margin-left: 8px;
+  }
+
+  &__voice {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid $color-primary-800;
+    border-radius: 20px;
+    line-height: 0;
+    background-color: $color-bg-white;
+    cursor: pointer;
+  }
+}

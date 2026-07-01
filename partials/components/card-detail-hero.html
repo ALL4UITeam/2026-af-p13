@@ -1,0 +1,49 @@
+<header class="card-detail">
+  <div class="card-detail__thumb">
+    <div class="thumb-slot thumb-slot--hero" aria-hidden="true"></div>
+    <div class="card-detail__overlay">
+      <div class="card-detail__toolbar">
+        <a href="./explore.html" class="btn-prev" aria-label="뒤로가기">
+          <span class="icon-slot icon-slot--24 icon-slot--circle icon-slot--white" aria-hidden="true"></span>
+        </a>
+        <div class="card-detail__actions">
+          <button type="button" class="card-detail__action" aria-label="음성 안내">
+            <span class="icon-slot icon-slot--20" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="card-detail__action" aria-label="북마크">
+            <span class="icon-slot icon-slot--24 icon-slot--circle" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <div class="card-detail__title-wrap">
+        <div class="card-detail__badges">
+          {{#if badge1}}
+            {{#ifeq badge1 'palace'}}<span class="badge badge--palace">궁궐</span>{{/ifeq}}
+            {{#ifeq badge1 'shrine'}}<span class="badge badge--shrine">사당</span>{{/ifeq}}
+            {{#ifeq badge1 'tomb'}}<span class="badge badge--tomb">왕릉</span>{{/ifeq}}
+          {{else}}
+            <span class="badge badge--palace">궁궐</span>
+          {{/if}}
+          {{#if badge2}}
+            {{#ifeq badge2 'unesco'}}<span class="badge badge--unesco">유네스코</span>{{/ifeq}}
+          {{else}}
+            <span class="badge badge--unesco">유네스코</span>
+          {{/if}}
+        </div>
+        <h1 class="card-detail__title">{{#if detailTitle}}{{detailTitle}}{{else}}경복궁{{/if}}</h1>
+        <p class="card-detail__subtitle">{{#if detailSubtitle}}{{detailSubtitle}}{{else}}조선의 대표 법궁{{/if}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="info-bx">
+    <div class="info-bx__rating">
+      <span class="icon-slot icon-slot--16" aria-hidden="true"></span>
+      <strong>4.9</strong>
+      <span>(24,562)</span>
+    </div>
+    <div class="info-bx__row">
+      <span><span class="icon-slot icon-slot--16" aria-hidden="true"></span> 2~3 시간</span>
+      <span><span class="icon-slot icon-slot--16" aria-hidden="true"></span> 서울 종로구 사직로</span>
+    </div>
+  </div>
+</header>

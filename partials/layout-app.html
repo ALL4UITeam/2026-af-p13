@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {{> meta}}
+</head>
+<body class="layout-app{{#if guideDesktop}} layout-app--guide{{/if}}{{#if exploreDesktop}} layout-app--explore{{/if}}">
+  {{> left-bar}}
+  {{> top}}
+  {{#if guideDesktop}}{{> top-guide-desktop}}{{/if}}
+  <main class="main app-main{{#if guideDesktop}} app-main--guide{{/if}}" id="main">
+    {{>@partial-block}}
+  </main>
+  {{> gnb}}
+  {{> scripts}}
+</body>
+</html>

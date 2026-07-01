@@ -1,0 +1,52 @@
+<article class="place-card">
+  <a href="{{#if href}}{{href}}{{else}}./explore-intro.html{{/if}}" class="place-card__link">
+    <div class="place-card__thumb">
+      <img class="place-card__thumb-img" src="/src/assets/images/explore/{{#if image}}{{image}}{{else}}card-01.jpg{{/if}}" alt="" />
+      <div class="thumb-slot thumb-slot--card" aria-hidden="true"></div>
+      <div class="place-card__thumb-top">
+        <div class="place-card__badges">
+          {{#if badge1}}
+            {{#ifeq badge1 'palace'}}<span class="badge badge--palace">궁궐</span>{{/ifeq}}
+            {{#ifeq badge1 'tomb'}}<span class="badge badge--tomb">왕릉</span>{{/ifeq}}
+            {{#ifeq badge1 'shrine'}}<span class="badge badge--shrine">사당</span>{{/ifeq}}
+          {{else}}
+            <span class="badge badge--palace">궁궐</span>
+          {{/if}}
+          {{#if badge2}}
+            {{#ifeq badge2 'unesco'}}<span class="badge badge--unesco">유네스코</span>{{/ifeq}}
+          {{else}}
+            <span class="badge badge--unesco">유네스코</span>
+          {{/if}}
+        </div>
+        <button type="button" class="place-card__mark{{#if bookmarkActive}} is-active{{/if}}" aria-label="북마크">
+          <img class="place-card__mark-img" src="/src/assets/images/explore/icon-bookmark.png" alt="" width="24" height="24" />
+          <span class="icon-slot icon-slot--24 icon-slot--circle{{#if bookmarkActive}} icon-slot--primary{{/if}}" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="place-card__thumb-title">
+        <h2 class="place-card__name">{{#if name}}{{name}}{{else}}경복궁{{/if}}</h2>
+        <p class="place-card__sub">{{#if subtitle}}{{subtitle}}{{else}}조선의 대표 법궁{{/if}}</p>
+      </div>
+    </div>
+    <div class="place-card__body">
+      <p class="place-card__desc">{{#if desc}}{{desc}}{{else}}경복궁은 1395년 조선왕조의 첫 번째 법궁으로 건립된 대한민국을 대표하는 궁궐입니다.{{/if}}</p>
+      <div class="place-card__meta">
+        <div class="place-card__rating">
+          <img src="/src/assets/images/explore/icon-star.png" alt="" width="16" height="16" />
+          <span class="icon-slot icon-slot--16" aria-hidden="true"></span>
+          <strong>{{#if rating}}{{rating}}{{else}}4.9{{/if}}</strong>
+          <span>({{#if reviewCount}}{{reviewCount}}{{else}}24,562{{/if}})</span>
+        </div>
+        <div class="place-card__info-row">
+          <span><img src="/src/assets/images/explore/icon-clock.png" alt="" width="16" height="16" /><span class="icon-slot icon-slot--16" aria-hidden="true"></span> {{#if duration}}{{duration}}{{else}}2~3 시간{{/if}}</span>
+          <span><img src="/src/assets/images/explore/icon-location.png" alt="" width="16" height="16" /><span class="icon-slot icon-slot--16" aria-hidden="true"></span> {{#if location}}{{location}}{{else}}서울 종로구 사직로{{/if}}</span>
+        </div>
+      </div>
+      <div class="place-card__tags">
+        <span class="hash-tag"># 조선왕조</span>
+        <span class="hash-tag"># UNESCO</span>
+        <span class="hash-tag"># 한복체험</span>
+      </div>
+    </div>
+  </a>
+</article>

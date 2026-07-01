@@ -1,0 +1,31 @@
+<aside class="left-bar" id="leftBar" aria-label="주 메뉴">
+  <div class="left-bar__symbol">
+    <span class="icon-slot icon-slot--40" aria-hidden="true"></span>
+  </div>
+  <nav class="left-bar__nav" aria-label="사이드 내비게이션">
+    <a href="./" class="left-bar__item{{#ifeq navActive 'home'}} left-bar__item--active{{/ifeq}}">
+      <span class="icon-slot icon-slot--20" aria-hidden="true"></span>
+      <span class="left-bar__label">홈</span>
+    </a>
+    <a href="./guide.html" class="left-bar__item{{#ifeq navActive 'guide'}} left-bar__item--active{{/ifeq}}">
+      <span class="icon-slot icon-slot--20" aria-hidden="true"></span>
+      <span class="left-bar__label">AI가이드</span>
+    </a>
+    <a href="./explore.html" class="left-bar__item{{#ifeq navActive 'explore'}} left-bar__item--active{{/ifeq}}">
+      <span class="icon-slot icon-slot--20" aria-hidden="true"></span>
+      <span class="left-bar__label">탐방</span>
+    </a>
+    <a href="./tour.html" class="left-bar__item{{#ifeq navActive 'tour'}} left-bar__item--active{{/ifeq}}">
+      <span class="icon-slot icon-slot--20" aria-hidden="true"></span>
+      <span class="left-bar__label">투어</span>
+    </a>
+    <a href="./map.html" class="left-bar__item{{#ifeq navActive 'map'}} left-bar__item--active{{/ifeq}}">
+      <span class="icon-slot icon-slot--20" aria-hidden="true"></span>
+      <span class="left-bar__label">지도</span>
+    </a>
+    <a href="./settings-kor.html" class="left-bar__item{{#ifeq navActive 'lang'}} left-bar__item--active{{/ifeq}}">
+      <span class="icon-slot icon-slot--20" aria-hidden="true"></span>
+      <span class="left-bar__label">언어</span>
+    </a>
+  </nav>
+</aside>

@@ -1,0 +1,38 @@
+@use 'base/variables' as *;
+
+// Figma: Desktop_01 speech bubble (4:279–4:284)
+.welcome-bubble {
+  display: none;
+  width: 100%;
+  max-width: 540px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
+
+  @media (min-width: $bp-desktop) {
+    display: block;
+  }
+
+  &__inner {
+    padding: 20px 24px;
+    border-radius: 16px;
+    background: linear-gradient(90deg, $color-gradient-start 0%, $color-gradient-end 100%);
+    color: $color-bg-white;
+    text-align: center;
+  }
+
+  &__line {
+    font-family: $font-heading;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.8px;
+
+    &--sub {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      justify-content: center;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use 'base/variables' as *;
+@use 'base/mixins' as *;
+
+.footer {
+  margin-top: auto;
+  border-top: 1px solid $color-border;
+  background-color: #f9fafb;
+
+  &__inner {
+    @include container;
+    padding-block: 24px;
+    text-align: center;
+  }
+
+  &__copy {
+    font-size: 0.875rem;
+    color: $color-text-muted;
+  }
+}

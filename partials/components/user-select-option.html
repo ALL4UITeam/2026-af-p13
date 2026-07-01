@@ -1,0 +1,12 @@
+<label class="user-select-item{{#if active}} is-active{{/if}}">
+  <input type="radio" name="userType" value="{{value}}"{{#if active}} checked{{/if}} />
+  <span class="user-select-item__inner">
+    <span class="user-select-item__left">
+      <img class="user-select-item__icon user-select-item__icon--mobile" src="/src/assets/images/user-select/{{icon}}" alt="" width="40" height="40" />
+      <img class="user-select-item__icon user-select-item__icon--desktop" src="/src/assets/images/user-select/{{iconDesktop}}" alt="" width="60" height="60" />
+      <span class="user-select-item__label">{{label}}</span>
+    </span>
+    <img class="user-select-item__check user-select-item__check--on" src="/src/assets/images/user-select/icon-checked.png" alt="" width="28" height="28" />
+    <img class="user-select-item__check user-select-item__check--off" src="/src/assets/images/user-select/icon-unchecked.png" alt="" width="28" height="28" />
+  </span>
+</label>

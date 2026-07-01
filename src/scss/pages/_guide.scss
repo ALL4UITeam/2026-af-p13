@@ -1,0 +1,167 @@
+@use 'base/variables' as *;
+
+.guide {
+  position: relative;
+  min-height: 100%;
+
+  &__bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-color: $color-bg-blue;
+
+    @media (min-width: $bp-desktop) {
+      left: $left-bar-width;
+      background-color: $color-bg-blue;
+      background-image: url('/src/assets/images/guide/bg-pattern.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    &::after {
+      @media (min-width: $bp-desktop) {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba($color-bg-blue, 0.5);
+      }
+    }
+  }
+
+  &__hero {
+    display: none;
+
+    @media (min-width: $bp-desktop) {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: $content-max;
+      margin-inline: auto;
+      padding: 32px 0 8px;
+    }
+  }
+
+  &.is-answered &__hero {
+    @media (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__contents {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: $content-width;
+    margin-inline: auto;
+    padding: 20px;
+    padding-bottom: 160px;
+
+    @media (min-width: $bp-desktop) {
+      gap: 30px;
+      width: 100%;
+      max-width: $content-max;
+      margin-inline: auto;
+      padding: 0 0 24px;
+    }
+  }
+
+  &__stack {
+    display: contents;
+
+    &--mobile {
+      @media (min-width: $bp-desktop) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: $bp-desktop) {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__chat {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    @media (min-width: $bp-desktop) {
+      gap: 10px;
+      max-height: none;
+      overflow: visible;
+    }
+  }
+
+  &.is-answered &__chat--desktop {
+    @media (min-width: $bp-desktop) {
+      max-height: calc(100dvh - 240px);
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+  }
+
+  &__chat-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__chat-desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btn-vps {
+    @media (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  &.is-answered .recommend-chips {
+    display: none;
+  }
+
+  .prompt-mobile {
+    @media (min-width: $bp-desktop) {
+      display: none !important;
+    }
+  }
+
+  .prompt-mobile__scroll {
+    display: none;
+
+    .guide.is-answered & {
+      display: block;
+    }
+  }
+
+  .prompt-mobile__send--active {
+    display: none;
+  }
+
+  &.is-answered .prompt-mobile__send--default {
+    display: none;
+  }
+
+  &.is-answered .prompt-mobile__send--active {
+    display: block;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+}

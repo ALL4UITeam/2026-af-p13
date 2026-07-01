@@ -1,0 +1,98 @@
+{{#> layout-user-select}}
+<section class="user-select" data-page="01-user-select">
+  <div class="user-select__bg" aria-hidden="true"></div>
+
+  <div class="user-select__contents">
+    <header class="user-select__intro">
+      <div class="logo">
+        <div class="logo__text">
+          <p class="logo__title">AI 국가유산 가이드</p>
+          <p class="logo__subtitle">조선왕조 국가유산 전문 AI</p>
+        </div>
+        <div class="logo__character">
+          <img src="/src/assets/images/user-select/character.png" alt="" width="50" height="49" />
+        </div>
+      </div>
+
+      <div class="welcome-bubble user-select__welcome" aria-live="polite">
+        <div class="welcome-bubble__inner">
+          <p class="welcome-bubble__line">안녕하세요, AI 문화유산 가이드 서비스입니다.</p>
+          <p class="welcome-bubble__line welcome-bubble__line--sub">
+            <span>원하는 사용자유형을 선택해 주세요.</span>
+            <span>쉽고 빠르게 소통할 수 있습니다!</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="voice-panel" id="voicePanel">
+        <div class="voice-panel__inner">
+          <button type="button" class="voice-panel__trigger" id="voiceTrigger" aria-label="음성으로 선택" aria-expanded="false">
+            <span class="voice-panel__icon">
+              <img src="/src/assets/images/user-select/icon-voice.png" alt="" width="40" height="40" />
+            </span>
+            <span class="voice-panel__text">
+              <span class="voice-panel__title">음성으로 선택</span>
+              <span class="voice-panel__desc">버튼을 눌러 음성으로 선택하세요</span>
+            </span>
+          </button>
+
+          <div class="voice-panel__expanded" id="voiceExpanded" hidden>
+            <div class="voice-panel__header">
+              <span class="voice-panel__status">안내 중...</span>
+              <button type="button" class="voice-panel__cancel" id="voiceCancel" aria-label="음성 안내 취소">
+                <img src="/src/assets/images/user-select/icon-cancel.png" alt="" width="12" height="12" />
+                취소
+              </button>
+            </div>
+            <div class="voice-panel__visual">
+              <img class="voice-panel__waveform" src="/src/assets/images/user-select/voice-waveform.png" alt="" width="208" height="60" />
+              <p class="voice-panel__playing">안내 음성을 재생하고 있습니다...</p>
+            </div>
+            <div class="voice-panel__controls">
+              <button type="button" class="voice-panel__control-btn voice-panel__control-btn--restart">
+                <img src="/src/assets/images/user-select/icon-restart.png" alt="" width="20" height="20" />
+                다시 시작
+              </button>
+              <button type="button" class="voice-panel__control-btn voice-panel__control-btn--play">
+                <img src="/src/assets/images/user-select/icon-play.png" alt="" width="20" height="20" />
+                안내 재생
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="user-select__body">
+      <p class="user-select__guide">원하는 사용자유형을 선택해 주세요.</p>
+
+      <div class="user-select__list" role="radiogroup" aria-label="사용자 유형">
+        {{> components/user-select-option value="general" label="일반 사용자" icon="icon-general.png" iconDesktop="icon-general.png" active=true}}
+        {{> components/user-select-option value="blind" label="시각 장애인" icon="icon-blind.png" iconDesktop="icon-blind.png"}}
+        {{> components/user-select-option value="colorblind" label="색약자" icon="icon-colorblind.png" iconDesktop="icon-colorblind.png"}}
+        {{> components/user-select-option value="hearing" label="청각 장애인" icon="icon-hearing.png" iconDesktop="icon-hearing.png"}}
+        {{> components/user-select-option value="child" label="어린이" icon="icon-child.png" iconDesktop="icon-child.png"}}
+      </div>
+
+      <div class="user-select__actions">
+        <button type="button" class="btn btn--primary btn--full user-select__submit" id="btnComplete">선택 완료</button>
+
+        <div class="user-select__lang">
+          <p class="user-select__lang-text user-select__lang-text--mobile">
+            언제든지 <strong>언어설정</strong>에서 변경 할 수 있습니다.
+          </p>
+          <p class="user-select__lang-text user-select__lang-text--desktop">
+            언제든지 언어설정 메뉴에서 변경 할 수 있습니다.
+          </p>
+          <div class="lang-badge user-select__lang-badge">
+            <img class="lang-badge__flag" src="/src/assets/images/user-select/flag-kr.png" alt="" width="30" height="20" />
+            <span class="lang-badge__text">
+              <strong>한국어</strong> 로 설정됨
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{/layout-user-select}}

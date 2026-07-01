@@ -1,0 +1,11 @@
+<article class="text-bx-pc text-bx-pc--question"{{#if id}} id="{{id}}"{{/if}}{{#if hidden}} hidden{{/if}}>
+  <div class="text-bx-pc__body">
+    <div class="text-bx-pc__meta text-bx-pc__meta--user">
+      <time class="text-bx-pc__time" datetime="{{#if timeValue}}{{timeValue}}{{else}}14:41{{/if}}">{{#if time}}{{time}}{{else}}오후 02:41{{/if}}</time>
+    </div>
+    <div class="text-bx-pc__bubble text-bx-pc__bubble--user">
+      <p{{#if textId}} id="{{textId}}"{{/if}}>{{#if text}}{{text}}{{/if}}</p>
+    </div>
+  </div>
+  <img class="text-bx-pc__avatar text-bx-pc__avatar--user" src="/src/assets/images/guide/user-avatar.png" alt="" width="50" height="50" />
+</article>

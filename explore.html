@@ -1,0 +1,24 @@
+{{#> layout-app exploreDesktop=true}}
+<section class="explore" data-page="03-explore">
+  <div class="explore__bg" aria-hidden="true"></div>
+  <div class="explore__inner">
+    {{> components/page-heading title="탐방"}}
+    <div class="explore__contents">
+      <div class="explore__search">
+        {{> components/search-bar}}
+        {{> components/filter-chips}}
+      </div>
+      <p class="explore__count">총 <strong>5</strong>건 검색</p>
+      <div class="explore__list">
+        {{> components/place-card bookmarkActive=true}}
+        {{> components/place-card image="card-02.jpg" badge1="tomb" rating="4.2" reviewCount="1,562" duration="1시간 30분"}}
+        {{> components/place-card image="card-03.jpg" badge1="shrine" badge2="unesco" name="종묘" subtitle="조선 왕실의 사당" rating="4.7" reviewCount="8,420" duration="1~2 시간" location="서울 종로구 종로"}}
+        {{> components/place-card image="card-04.jpg" badge1="palace" name="창덕궁" subtitle="자연과 조화로운 궁궐" rating="4.8" reviewCount="12,305" duration="2~3 시간" location="서울 종로구 율곡로"}}
+        {{> components/place-card image="card-05.jpg" badge1="palace" name="창경궁" subtitle="왕비와 대비의 궁궐" rating="4.6" reviewCount="6,118" duration="1~2 시간" location="서울 종로구 창경궁로"}}
+        {{> components/place-card image="card-06.jpg" badge1="palace" name="덕수궁" subtitle="근대와 전통이 공존하는 궁" rating="4.5" reviewCount="5,902" duration="1~2 시간" location="서울 중구 세종대로"}}
+      </div>
+      {{> components/pagination}}
+    </div>
+  </div>
+</section>
+{{/layout-app}}
