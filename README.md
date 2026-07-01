@@ -68,6 +68,8 @@ npm run preview
 
 `main` 브랜치에 push하면 GitHub Actions가 자동으로 빌드·배포합니다.
 
-1. GitHub 저장소 **Settings → Pages → Build and deployment → Source** 를 **GitHub Actions** 로 설정
-2. `main` 브랜치에 push
-3. 배포 URL: https://all4land.github.io/2026-af-p13/
+1. [Settings → Pages](https://github.com/ALL4UITeam/2026-af-p13/settings/pages) 에서 **Build and deployment → Source** 를 **GitHub Actions** 로 설정 (최초 1회)
+2. `main` 브랜치에 push (또는 Actions 탭에서 **Deploy to GitHub Pages** 수동 실행)
+3. 배포 URL: https://ALL4UITeam.github.io/2026-af-p13/
+
+> 첫 배포가 실패했다면 Pages Source가 GitHub Actions로 설정됐는지 확인한 뒤 워크플로를 다시 실행하세요.
