@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>목업 뷰어 | AI 국가유산 해설사</title>
+  <script type="module" crossorigin src="/2026-af-p13/assets/viewer-DcjLT9lc.js"></script>
+  <link rel="modulepreload" crossorigin href="/2026-af-p13/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="/2026-af-p13/assets/viewer-O-VMi-bH.css">
+</head>
+<body class="viewer-app">
+  <header class="viewer-toolbar">
+    <div class="viewer-toolbar__brand">
+      <strong>AI 국가유산 해설사</strong>
+      <span>목업 뷰어</span>
+    </div>
+    <div class="viewer-toolbar__devices" role="tablist" aria-label="디바이스 크기">
+      <button type="button" class="viewer-device viewer-device--active" data-device="mobile" role="tab" aria-selected="true">모바일</button>
+      <button type="button" class="viewer-device" data-device="tablet" role="tab" aria-selected="false">태블릿</button>
+      <button type="button" class="viewer-device" data-device="desktop" role="tab" aria-selected="false">PC</button>
+    </div>
+    <div class="viewer-toolbar__actions">
+      <span class="viewer-toolbar__size" id="viewerSizeLabel">360 × —</span>
+      <button type="button" class="viewer-btn" id="viewerOpenTab">새 탭에서 열기</button>
+    </div>
+  </header>
+  <div class="viewer-layout">
+    <aside class="viewer-sidebar" aria-label="페이지 목록">
+      <div class="viewer-sidebar__head">
+        <h1>페이지 목록</h1>
+        <p id="viewerPageCount">0개 화면</p>
+      </div>
+      <nav class="viewer-nav" id="viewerNav"></nav>
+    </aside>
+    <main class="viewer-stage">
+      <div class="viewer-frame viewer-frame--mobile" id="viewerFrame" data-device="mobile">
+        <iframe id="viewerIframe" title="페이지 미리보기" src="./index.html"></iframe>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

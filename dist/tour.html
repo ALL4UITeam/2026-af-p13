@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI 국가유산 해설사 - 투어" />
+  <title>투어 | 2026 AF P13</title>
+  <script type="module" crossorigin src="/2026-af-p13/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+  <script type="module" crossorigin src="/2026-af-p13/assets/main-Cdd9SGQW.js"></script>
+  <link rel="stylesheet" crossorigin href="/2026-af-p13/assets/main-BXoubziK.css">
+</head>
+<body class="layout-app layout-app--tour">
+  
+  
+  <header class="user-select-header" id="userSelectHeader">
+  <div class="user-select-header__brand">
+    <img class="user-select-header__emblem" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20width='100%25'%20height='100%25'%20overflow='visible'%20style='display:%20block;'%20viewBox='0%200%2029%2028'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Emblem'%20clip-path='url(%23clip0_0_153)'%3e%3cpath%20id='Vector'%20d='M21.7238%2013.3637C19.2795%2011.7102%2016.1489%2012.3846%2014.5071%2014.8705C13.1375%2016.9473%2011.0646%2017.2041%2010.2621%2017.2041C7.6477%2017.2041%205.85558%2015.3756%205.32815%2013.4794C5.32248%2013.4596%205.31964%2013.4455%205.31397%2013.4258C5.3083%2013.406%205.30263%2013.3835%205.29696%2013.3609C5.08712%2012.5708%205.03608%2012.1927%205.03608%2011.3546C5.03608%206.82576%209.70637%201.78333%2016.4296%201.78333C23.1529%201.78333%2027.2589%207.00071%2028.2712%209.89862C28.2542%209.84783%2028.2372%209.79704%2028.2202%209.74342C26.2664%204.0774%2020.8617%200%2014.5014%200C6.4936%200%200%206.45893%200%2014.4275C0%2021.5495%205.16368%2027.6501%2012.3265%2027.6501C18.0374%2027.6501%2021.8769%2024.4616%2023.6378%2020.0709C24.6048%2017.6697%2023.9214%2014.8451%2021.7266%2013.3637H21.7238Z'%20fill='%23003964'/%3e%3cpath%20id='Vector_2'%20d='M28.362%2010.1836C27.5141%207.35624%2023.5471%201.78615%2016.4296%201.78615C9.70637%201.78615%205.03608%206.82858%205.03608%2011.3575C5.03608%2012.1983%205.08712%2012.5764%205.29696%2013.3637C5.20905%2013.0194%205.16368%2012.6724%205.16368%2012.3338C5.16368%207.61866%209.9077%204.34828%2014.785%204.34828C21.3892%204.34828%2026.7428%209.6757%2026.7428%2016.2447C26.7428%2021.3972%2023.7626%2025.8527%2019.4354%2027.9944C25.0159%2025.9881%2029%2020.6692%2029%2014.4247C29%2012.9461%2028.8015%2011.6453%2028.362%2010.178V10.1836Z'%20fill='%23ED1A3B'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_0_153'%3e%3crect%20width='29'%20height='28'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="" width="29" height="28" />
+    <div class="user-select-header__titles">
+      <p class="user-select-header__title">AI 국가유산 해설사</p>
+      <p class="user-select-header__subtitle">조선왕조 국가유산 전문 AI</p>
+    </div>
+  </div>
+  <div class="user-select-header__actions">
+    <span class="user-select-badge user-select-badge--wide">일반사용자</span>
+    <button type="button" class="user-select-header__voice" id="voiceTriggerDesktop" aria-label="음성 안내">
+      <img src="/2026-af-p13/assets/icon-voice-BTnF91Qk.svg" alt="" width="20" height="20" />
+      <span>음성안내</span>
+    </button>
+    <div class="lang-menu lang-menu--header" id="langMenuHeader">
+      <button type="button" class="user-select-header__lang" id="langToggleDesktop" aria-label="언어 설정" aria-expanded="false" aria-haspopup="true">
+        <img class="user-select-header__lang-flag" src="data:image/svg+xml,%3csvg%20width='18'%20height='12'%20viewBox='0%200%2018%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20aria-hidden='true'%3e%3cpath%20id='Vector'%20d='M17.5122%200.48999V11.5105H0.487793V0.48999H17.5122Z'%20fill='white'%20stroke='%23DDDDDD'%20stroke-width='0.5'/%3e%3cg%20id='Vector_2'%3e%3cpath%20d='M11.9627%206.08836C11.9627%207.65266%2010.7053%208.92137%209.15509%208.92137C7.60484%208.92137%206.34752%207.65266%206.34752%206.08836C6.34752%204.52406%207.60484%203.25535%209.15509%203.25535C10.7053%203.25535%2011.9627%204.52406%2011.9627%206.08836Z'%20fill='%23F91C1C'/%3e%3cpath%20d='M6.56628%205.02311C6.42932%205.35709%206.35514%205.72177%206.35514%206.10373C6.35514%207.66419%207.60865%208.92906%209.157%208.92906C10.0111%208.92906%2010.7776%208.54327%2011.2912%207.9329C11.2912%207.9329%2011.7801%207.30526%2011.4947%206.41467C11.4947%206.41467%2011.2722%205.79471%2010.5627%205.66611C10.5627%205.66611%209.91215%205.5068%209.38716%206.05958C9.38716%206.05958%209.00483%206.57398%208.60728%206.69298C8.60728%206.69298%207.45648%207.01928%206.95431%206.3091C6.95431%206.3091%206.55486%205.81966%206.57959%205.13828L6.56818%205.0212L6.56628%205.02311Z'%20fill='%232A58EA'/%3e%3cpath%20d='M13.0078%201.8762L12.643%202.15954L14.2292%204.23863L14.5939%203.95529L13.0078%201.8762Z'%20fill='black'/%3e%3cpath%20d='M13.5666%201.44458L13.2019%201.72799L13.8403%202.56438L14.205%202.28097L13.5666%201.44458Z'%20fill='black'/%3e%3cpath%20d='M14.5153%202.68631L14.1506%202.96972L14.7889%203.80611L15.1536%203.5227L14.5153%202.68631Z'%20fill='black'/%3e%3cpath%20d='M12.4316%202.32413L12.067%202.6076L12.7054%203.44388L13.0701%203.16041L12.4316%202.32413Z'%20fill='black'/%3e%3cpath%20d='M13.3814%203.5679L13.0166%203.8513L13.655%204.68769L14.0197%204.40429L13.3814%203.5679Z'%20fill='black'/%3e%3cpath%20d='M5.10543%201.92037L3.5551%204.0268L3.92466%204.30374L5.47498%202.19731L5.10543%201.92037Z'%20fill='black'/%3e%3cpath%20d='M5.67038%202.34364L5.16631%203.02694L5.04647%203.19009L4.11823%204.45112L4.48724%204.72751L5.41549%203.4684L5.53532%203.30333L6.03939%202.62003L5.67038%202.34364Z'%20fill='black'/%3e%3cpath%20d='M4.52142%201.48184L3.98121%202.21696L3.89751%202.3302L2.96926%203.58932L3.33828%203.86571L4.26653%202.6066L4.35022%202.49335L4.89043%201.75823L4.52142%201.48184Z'%20fill='black'/%3e%3cpath%20d='M5.92146%209.51255L5.00653%208.24384L4.39213%207.38971L4.01931%207.66226L5.55054%209.7851L5.92146%209.51255Z'%20fill='black'/%3e%3cpath%20d='M3.81099%207.81498L3.43882%208.08833L4.05449%208.94184L4.42666%208.66849L3.81099%207.81498Z'%20fill='black'/%3e%3cpath%20d='M4.72566%209.08247L4.35349%209.35581L4.96915%2010.2093L5.34132%209.93597L4.72566%209.08247Z'%20fill='black'/%3e%3cpath%20d='M4.76494%2010.3628L3.23371%208.24L2.86279%208.51255L4.39402%2010.6354L4.76494%2010.3628Z'%20fill='black'/%3e%3cpath%20d='M13.7119%207.3906L13.0962%208.24411L13.4684%208.51746L14.084%207.66395L13.7119%207.3906Z'%20fill='black'/%3e%3cpath%20d='M12.7967%208.65837L12.1812%209.51199L12.5534%209.78527L13.1689%208.93166L12.7967%208.65837Z'%20fill='black'/%3e%3cpath%20d='M14.2914%207.81756L13.6756%208.67096L14.0477%208.94437L14.6635%208.09098L14.2914%207.81756Z'%20fill='black'/%3e%3cpath%20d='M13.3768%209.08614L12.761%209.93954L13.1331%2010.213L13.7489%209.35955L13.3768%209.08614Z'%20fill='black'/%3e%3cpath%20d='M14.8668%208.24002L14.2511%209.09352L14.6233%209.36687L15.239%208.51336L14.8668%208.24002Z'%20fill='black'/%3e%3cpath%20d='M13.9536%209.50947L13.3378%2010.3629L13.7099%2010.6363L14.3257%209.78288L13.9536%209.50947Z'%20fill='black'/%3e%3c/svg%3e" alt="" width="30" height="20" />
+        <span class="user-select-header__lang-label">한국어</span>
+      </button>
+      <div class="lang-menu__dropdown lang-menu__dropdown--header" id="langDropdownDesktop" hidden>
+        <button type="button" class="lang-menu__item is-active" data-lang="kor">
+          <img src="data:image/svg+xml,%3csvg%20width='18'%20height='12'%20viewBox='0%200%2018%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20aria-hidden='true'%3e%3cpath%20id='Vector'%20d='M17.5122%200.48999V11.5105H0.487793V0.48999H17.5122Z'%20fill='white'%20stroke='%23DDDDDD'%20stroke-width='0.5'/%3e%3cg%20id='Vector_2'%3e%3cpath%20d='M11.9627%206.08836C11.9627%207.65266%2010.7053%208.92137%209.15509%208.92137C7.60484%208.92137%206.34752%207.65266%206.34752%206.08836C6.34752%204.52406%207.60484%203.25535%209.15509%203.25535C10.7053%203.25535%2011.9627%204.52406%2011.9627%206.08836Z'%20fill='%23F91C1C'/%3e%3cpath%20d='M6.56628%205.02311C6.42932%205.35709%206.35514%205.72177%206.35514%206.10373C6.35514%207.66419%207.60865%208.92906%209.157%208.92906C10.0111%208.92906%2010.7776%208.54327%2011.2912%207.9329C11.2912%207.9329%2011.7801%207.30526%2011.4947%206.41467C11.4947%206.41467%2011.2722%205.79471%2010.5627%205.66611C10.5627%205.66611%209.91215%205.5068%209.38716%206.05958C9.38716%206.05958%209.00483%206.57398%208.60728%206.69298C8.60728%206.69298%207.45648%207.01928%206.95431%206.3091C6.95431%206.3091%206.55486%205.81966%206.57959%205.13828L6.56818%205.0212L6.56628%205.02311Z'%20fill='%232A58EA'/%3e%3cpath%20d='M13.0078%201.8762L12.643%202.15954L14.2292%204.23863L14.5939%203.95529L13.0078%201.8762Z'%20fill='black'/%3e%3cpath%20d='M13.5666%201.44458L13.2019%201.72799L13.8403%202.56438L14.205%202.28097L13.5666%201.44458Z'%20fill='black'/%3e%3cpath%20d='M14.5153%202.68631L14.1506%202.96972L14.7889%203.80611L15.1536%203.5227L14.5153%202.68631Z'%20fill='black'/%3e%3cpath%20d='M12.4316%202.32413L12.067%202.6076L12.7054%203.44388L13.0701%203.16041L12.4316%202.32413Z'%20fill='black'/%3e%3cpath%20d='M13.3814%203.5679L13.0166%203.8513L13.655%204.68769L14.0197%204.40429L13.3814%203.5679Z'%20fill='black'/%3e%3cpath%20d='M5.10543%201.92037L3.5551%204.0268L3.92466%204.30374L5.47498%202.19731L5.10543%201.92037Z'%20fill='black'/%3e%3cpath%20d='M5.67038%202.34364L5.16631%203.02694L5.04647%203.19009L4.11823%204.45112L4.48724%204.72751L5.41549%203.4684L5.53532%203.30333L6.03939%202.62003L5.67038%202.34364Z'%20fill='black'/%3e%3cpath%20d='M4.52142%201.48184L3.98121%202.21696L3.89751%202.3302L2.96926%203.58932L3.33828%203.86571L4.26653%202.6066L4.35022%202.49335L4.89043%201.75823L4.52142%201.48184Z'%20fill='black'/%3e%3cpath%20d='M5.92146%209.51255L5.00653%208.24384L4.39213%207.38971L4.01931%207.66226L5.55054%209.7851L5.92146%209.51255Z'%20fill='black'/%3e%3cpath%20d='M3.81099%207.81498L3.43882%208.08833L4.05449%208.94184L4.42666%208.66849L3.81099%207.81498Z'%20fill='black'/%3e%3cpath%20d='M4.72566%209.08247L4.35349%209.35581L4.96915%2010.2093L5.34132%209.93597L4.72566%209.08247Z'%20fill='black'/%3e%3cpath%20d='M4.76494%2010.3628L3.23371%208.24L2.86279%208.51255L4.39402%2010.6354L4.76494%2010.3628Z'%20fill='black'/%3e%3cpath%20d='M13.7119%207.3906L13.0962%208.24411L13.4684%208.51746L14.084%207.66395L13.7119%207.3906Z'%20fill='black'/%3e%3cpath%20d='M12.7967%208.65837L12.1812%209.51199L12.5534%209.78527L13.1689%208.93166L12.7967%208.65837Z'%20fill='black'/%3e%3cpath%20d='M14.2914%207.81756L13.6756%208.67096L14.0477%208.94437L14.6635%208.09098L14.2914%207.81756Z'%20fill='black'/%3e%3cpath%20d='M13.3768%209.08614L12.761%209.93954L13.1331%2010.213L13.7489%209.35955L13.3768%209.08614Z'%20fill='black'/%3e%3cpath%20d='M14.8668%208.24002L14.2511%209.09352L14.6233%209.36687L15.239%208.51336L14.8668%208.24002Z'%20fill='black'/%3e%3cpath%20d='M13.9536%209.50947L13.3378%2010.3629L13.7099%2010.6363L14.3257%209.78288L13.9536%209.50947Z'%20fill='black'/%3e%3c/svg%3e" alt="" width="18" height="12" />
+          <span>한국어</span>
+        </button>
+        <button type="button" class="lang-menu__item" data-lang="eng">
+          <img src="/2026-af-p13/assets/flag-us-Bg_A6Pig.svg" alt="" width="18" height="12" />
+          <span>ENGLISH</span>
+        </button>
+        <button type="button" class="lang-menu__item" data-lang="chn">
+          <img src="data:image/svg+xml,%3csvg%20width='18'%20height='12'%20viewBox='0%200%2018%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20aria-hidden='true'%3e%3cpath%20id='Vector'%20d='M17.5122%200.488037V11.5085H0.487793V0.488037H17.5122Z'%20fill='%23F91C1C'%20stroke='%23DDDDDD'%20stroke-width='0.5'/%3e%3cg%20id='Vector_2'%3e%3cpath%20d='M3.44664%201.92131L3.91456%203.19194L5.25558%203.24953L4.20369%204.09022L4.56319%205.39348L3.44664%204.64492L2.32817%205.39348L2.68958%204.09022L1.6377%203.24953L2.97871%203.19194L3.44664%201.92131Z'%20fill='%23FFD506'/%3e%3cpath%20d='M6.2105%201.06909L6.34746%201.43761L6.7374%201.45297L6.43115%201.69865L6.53577%202.07677L6.2105%201.85988L5.88524%202.07677L5.99176%201.69865L5.68551%201.45297L6.07545%201.43761L6.2105%201.06909Z'%20fill='%23FFD506'/%3e%3cpath%20d='M7.38216%202.59118L7.51912%202.9597L7.90716%202.97697L7.60281%203.22073L7.70743%203.59885L7.38216%203.38196L7.0569%203.59885L7.16342%203.22073L6.85717%202.97697L7.24711%202.9597L7.38216%202.59118Z'%20fill='%23FFD506'/%3e%3cpath%20d='M7.28706%204.33205L7.42401%204.70249L7.81395%204.71784L7.5077%204.96353L7.61232%205.34164L7.28706%205.12475L6.96369%205.34164L7.06831%204.96353L6.76206%204.71784L7.152%204.70249L7.28706%204.33205Z'%20fill='%23FFD506'/%3e%3cpath%20d='M6.17057%205.78119L6.30562%206.14971L6.69556%206.16507L6.38931%206.41075L6.49583%206.78887L6.17057%206.57198L5.8453%206.78887L5.94992%206.41075L5.64557%206.16507L6.03361%206.14971L6.17057%205.78119Z'%20fill='%23FFD506'/%3e%3c/svg%3e" alt="" width="18" height="12" />
+          <span>中文</span>
+        </button>
+        <button type="button" class="lang-menu__item" data-lang="jpn">
+          <img src="data:image/svg+xml,%3csvg%20width='18'%20height='12'%20viewBox='0%200%2018%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20aria-hidden='true'%3e%3cpath%20d='M17.5122%200.48999V11.5105H0.48584V0.48999H17.5122Z'%20fill='white'%20stroke='%23DDDDDD'%20stroke-width='0.5'/%3e%3cpath%20d='M11.7602%206.04029C11.7602%207.60459%2010.5028%208.8733%208.95239%208.8733C7.40198%208.8733%206.14453%207.60459%206.14453%206.04029C6.14453%204.47599%207.40198%203.20728%208.95239%203.20728C10.5028%203.20728%2011.7602%204.47599%2011.7602%206.04029Z'%20fill='%23F91C1C'/%3e%3c/svg%3e" alt="" width="18" height="12" />
+          <span>日本語</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+  
+  <header class="top" id="top">
+    <div class="top__inner">
+      <div class="top__left">
+        <a href="./" class="top__home" aria-label="홈">
+          <img class="top__icon top__icon--home" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20width='100%25'%20height='100%25'%20overflow='visible'%20style='display:%20block;'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='ph:house'%3e%3cpath%20id='Vector'%20d='M14.341%206.9362L8.78542%201.38065C8.57706%201.17244%208.29456%201.05547%208%201.05547C7.70544%201.05547%207.42294%201.17244%207.21458%201.38065L1.65903%206.9362C1.55536%207.03911%201.47317%207.1616%201.41726%207.29656C1.36135%207.43151%201.33282%207.57624%201.33334%207.72231V14.389C1.33334%2014.5363%201.39187%2014.6776%201.49606%2014.7818C1.60025%2014.886%201.74155%2014.9445%201.8889%2014.9445H6.33334C6.48068%2014.9445%206.62198%2014.886%206.72617%2014.7818C6.83036%2014.6776%206.88889%2014.5363%206.88889%2014.389V10.5001H9.11111V14.389C9.11111%2014.5363%209.16964%2014.6776%209.27383%2014.7818C9.37801%2014.886%209.51932%2014.9445%209.66667%2014.9445H14.1111C14.2584%2014.9445%2014.3998%2014.886%2014.5039%2014.7818C14.6081%2014.6776%2014.6667%2014.5363%2014.6667%2014.389V7.72231C14.6672%207.57624%2014.6387%207.43151%2014.5827%207.29656C14.5268%207.1616%2014.4446%207.03911%2014.341%206.9362ZM13.5556%2013.8334H10.2222V9.94453C10.2222%209.79719%2010.1637%209.65588%2010.0595%209.5517C9.95532%209.44751%209.81401%209.38898%209.66667%209.38898H6.33334C6.18599%209.38898%206.04469%209.44751%205.9405%209.5517C5.83631%209.65588%205.77778%209.79719%205.77778%209.94453V13.8334H2.44445V7.72231L8%202.16676L13.5556%207.72231V13.8334Z'%20fill='var(--fill-0,%20black)'/%3e%3c/g%3e%3c/svg%3e" alt="" width="16" height="16">
+        </a>
+        <img class="top__icon top__icon--chevron" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20width='100%25'%20height='100%25'%20overflow='visible'%20style='display:%20block;'%20viewBox='0%200%208%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='chevron-right'%3e%3cpath%20id='Vector%20(Stroke)'%20d='M2.14645%200.167369C2.34172%20-0.0557898%202.65823%20-0.0557898%202.85349%200.167369L5.85355%203.59598C6.04882%203.81914%206.04882%204.18086%205.85355%204.40402L2.85349%207.83263C2.65823%208.05579%202.34172%208.05579%202.14645%207.83263C1.95118%207.60947%201.95118%207.24775%202.14645%207.02459L4.79298%204L2.14645%200.975414C1.95118%200.752255%201.95118%200.390529%202.14645%200.167369Z'%20fill='var(--fill-0,%20%238E8E93)'/%3e%3c/g%3e%3c/svg%3e" alt="" width="8" height="8" aria-hidden="true">
+        <h1 class="top__title">투어</h1>
+      </div>
+      <div class="top__right">
+        <span class="user-select-badge">일반사용자</span>
+        <button type="button" class="top__voice" aria-label="음성 안내">
+          <img class="top__icon top__icon--voice" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20width='100%25'%20height='100%25'%20overflow='visible'%20style='display:%20block;'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='icons'%3e%3cpath%20id='Vector%20(Stroke)'%20d='M5%209.5V8.25363C5%207.89859%205.29199%207.61077%205.65217%207.61077C6.01236%207.61077%206.30435%207.89859%206.30435%208.25363V9.5C6.30435%2010.4905%206.6969%2011.4381%207.3913%2012.135C8.0853%2012.8315%209.02376%2013.2207%2010%2013.2207C10.9762%2013.2207%2011.9147%2012.8315%2012.6087%2012.135C13.3031%2011.4381%2013.6957%2010.4905%2013.6957%209.5V8.25363C13.6957%207.89859%2013.9876%207.61077%2014.3478%207.61077C14.708%207.61077%2015%207.89859%2015%208.25363V9.5C15%2010.8241%2014.4757%2012.096%2013.5394%2013.0357C12.7572%2013.8207%2011.7406%2014.3187%2010.6522%2014.4621V15.7143H12.4847C12.8448%2015.7144%2013.1369%2016.0022%2013.1369%2016.3571C13.1369%2016.7121%2012.8448%2016.9999%2012.4847%2017H7.51529C7.15521%2016.9999%206.86311%2016.7121%206.86311%2016.3571C6.86311%2016.0022%207.15521%2015.7144%207.51529%2015.7143H9.34783V14.4621C8.25938%2014.3187%207.24278%2013.8207%206.4606%2013.0357C5.52426%2012.096%205%2010.8241%205%209.5ZM12.5153%209.5C12.5153%2010.1627%2012.2536%2010.8008%2011.7833%2011.2729C11.3125%2011.7454%2010.671%2012.0128%2010%2012.0128C9.32901%2012.0128%208.68752%2011.7454%208.21671%2011.2729C7.7464%2010.8008%207.48471%2010.1627%207.48471%209.5V4.51283C7.48475%203.85015%207.74639%203.21204%208.21671%202.73996C8.68752%202.26743%209.32901%202%2010%202C10.671%202%2011.3125%202.26743%2011.7833%202.73996C12.2536%203.21204%2012.5152%203.85015%2012.5153%204.51283V9.5Z'%20fill='var(--fill-0,%20%23214A97)'/%3e%3c/g%3e%3c/svg%3e" alt="" width="20" height="20">
+        </button>
+        <div class="lang-menu" id="langMenu">
+          <button type="button" class="top__lang" id="langToggle" aria-label="언어 설정" aria-expanded="false" aria-haspopup="true">
+            <img class="top__icon top__icon--lang" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20width='100%25'%20height='100%25'%20overflow='visible'%20style='display:%20block;'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Frame'%3e%3cpath%20id='Vector'%20d='M3%207.5H17M3%2012.5H17M9.58333%202.5C8.17945%204.74968%207.43517%207.34822%207.43517%2010C7.43517%2012.6518%208.17945%2015.2503%209.58333%2017.5M10.4167%202.5C11.8206%204.74968%2012.5648%207.34822%2012.5648%2010C12.5648%2012.6518%2011.8206%2015.2503%2010.4167%2017.5M2.5%2010C2.5%2010.9849%202.69399%2011.9602%203.0709%2012.8701C3.44781%2013.7801%204.00026%2014.6069%204.6967%2015.3033C5.39314%2015.9997%206.21993%2016.5522%207.12987%2016.9291C8.03982%2017.306%209.01509%2017.5%2010%2017.5C10.9849%2017.5%2011.9602%2017.306%2012.8701%2016.9291C13.7801%2016.5522%2014.6069%2015.9997%2015.3033%2015.3033C15.9997%2014.6069%2016.5522%2013.7801%2016.9291%2012.8701C17.306%2011.9602%2017.5%2010.9849%2017.5%2010C17.5%208.01088%2016.7098%206.10322%2015.3033%204.6967C13.8968%203.29018%2011.9891%202.5%2010%202.5C8.01088%202.5%206.10322%203.29018%204.6967%204.6967C3.29018%206.10322%202.5%208.01088%202.5%2010Z'%20stroke='var(--stroke-0,%20%232C63C7)'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3c/svg%3e" alt="" width="20" height="20">
+          </button>
+          <div class="lang-menu__dropdown" id="langDropdown" hidden>
+            <button type="button" class="lang-menu__item is-active" data-lang="kor">
+              <img src="data:image/svg+xml,%3csvg%20width='18'%20height='12'%20viewBox='0%200%2018%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20aria-hidden='true'%3e%3cpath%20id='Vector'%20d='M17.5122%200.48999V11.5105H0.487793V0.48999H17.5122Z'%20fill='white'%20stroke='%23DDDDDD'%20stroke-width='0.5'/%3e%3cg%20id='Vector_2'%3e%3cpath%20d='M11.9627%206.08836C11.9627%207.65266%2010.7053%208.92137%209.15509%208.92137C7.60484%208.92137%206.34752%207.65266%206.34752%206.08836C6.34752%204.52406%207.60484%203.25535%209.15509%203.25535C10.7053%203.25535%2011.9627%204.52406%2011.9627%206.08836Z'%20fill='%23F91C1C'/%3e%3cpath%20d='M6.56628%205.02311C6.42932%205.35709%206.35514%205.72177%206.35514%206.10373C6.35514%207.66419%207.60865%208.92906%209.157%208.92906C10.0111%208.92906%2010.7776%208.54327%2011.2912%207.9329C11.2912%207.9329%2011.7801%207.30526%2011.4947%206.41467C11.4947%206.41467%2011.2722%205.79471%2010.5627%205.66611C10.5627%205.66611%209.91215%205.5068%209.38716%206.05958C9.38716%206.05958%209.00483%206.57398%208.60728%206.69298C8.60728%206.69298%207.45648%207.01928%206.95431%206.3091C6.95431%206.3091%206.55486%205.81966%206.57959%205.13828L6.56818%205.0212L6.56628%205.02311Z'%20fill='%232A58EA'/%3e%3cpath%20d='M13.0078%201.8762L12.643%202.15954L14.2292%204.23863L14.5939%203.95529L13.0078%201.8762Z'%20fill='black'/%3e%3cpath%20d='M13.5666%201.44458L13.2019%201.72799L13.8403%202.56438L14.205%202.28097L13.5666%201.44458Z'%20fill='black'/%3e%3cpath%20d='M14.5153%202.68631L14.1506%202.96972L14.7889%203.80611L15.1536%203.5227L14.5153%202.68631Z'%20fill='black'/%3e%3cpath%20d='M12.4316%202.32413L12.067%202.6076L12.7054%203.44388L13.0701%203.16041L12.4316%202.32413Z'%20fill='black'/%3e%3cpath%20d='M13.3814%203.5679L13.0166%203.8513L13.655%204.68769L14.0197%204.40429L13.3814%203.5679Z'%20fill='black'/%3e%3cpath%20d='M5.10543%201.92037L3.5551%204.0268L3.92466%204.30374L5.47498%202.19731L5.10543%201.92037Z'%20fill='black'/%3e%3cpath%20d='M5.67038%202.34364L5.16631%203.02694L5.04647%203.19009L4.11823%204.45112L4.48724%204.72751L5.41549%203.4684L5.53532%203.30333L6.03939%202.62003L5.67038%202.34364Z'%20fill='black'/%3e%3cpath%20d='M4.52142%201.48184L3.98121%202.21696L3.89751%202.3302L2.96926%203.58932L3.33828%203.86571L4.26653%202.6066L4.35022%202.49335L4.89043%201.75823L4.52142%201.48184Z'%20fill='black'/%3e%3cpath%20d='M5.92146%209.51255L5.00653%208.24384L4.39213%207.38971L4.01931%207.66226L5.55054%209.7851L5.92146%209.51255Z'%20fill='black'/%3e%3cpath%20d='M3.81099%207.81498L3.43882%208.08833L4.05449%208.94184L4.42666%208.66849L3.81099%207.81498Z'%20fill='black'/%3e%3cpath%20d='M4.72566%209.08247L4.35349%209.35581L4.96915%2010.2093L5.34132%209.93597L4.72566%209.08247Z'%20fill='black'/%3e%3cpath%20d='M4.76494%2010.3628L3.23371%208.24L2.86279%208.51255L4.39402%2010.6354L4.76494%2010.3628Z'%20fill='black'/%3e%3cpath%20d='M13.7119%207.3906L13.0962%208.24411L13.4684%208.51746L14.084%207.66395L13.7119%207.3906Z'%20fill='black'/%3e%3cpath%20d='M12.7967%208.65837L12.1812%209.51199L12.5534%209.78527L13.1689%208.93166L12.7967%208.65837Z'%20fill='black'/%3e%3cpath%20d='M14.2914%207.81756L13.6756%208.67096L14.0477%208.94437L14.6635%208.09098L14.2914%207.81756Z'%20fill='black'/%3e%3cpath%20d='M13.3768%209.08614L12.761%209.93954L13.1331%2010.213L13.7489%209.35955L13.3768%209.08614Z'%20fill='black'/%3e%3cpath%20d='M14.8668%208.24002L14.2511%209.09352L14.6233%209.36687L15.239%208.51336L14.8668%208.24002Z'%20fill='black'/%3e%3cpath%20d='M13.9536%209.50947L13.3378%2010.3629L13.7099%2010.6363L14.3257%209.78288L13.9536%209.50947Z'%20fill='black'/%3e%3c/svg%3e" alt="" width="18" height="12" />
+              <span>한국어</span>
+            </button>
+            <button type="button" class="lang-menu__item" data-lang="eng">
+              <img src="/2026-af-p13/assets/flag-us-Bg_A6Pig.svg" alt="" width="18" height="12" />
+              <span>ENGLISH</span>
+            </button>
+            <button type="button" class="lang-menu__item" data-lang="chn">
+              <img src="data:image/svg+xml,%3csvg%20width='18'%20height='12'%20viewBox='0%200%2018%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20aria-hidden='true'%3e%3cpath%20id='Vector'%20d='M17.5122%200.488037V11.5085H0.487793V0.488037H17.5122Z'%20fill='%23F91C1C'%20stroke='%23DDDDDD'%20stroke-width='0.5'/%3e%3cg%20id='Vector_2'%3e%3cpath%20d='M3.44664%201.92131L3.91456%203.19194L5.25558%203.24953L4.20369%204.09022L4.56319%205.39348L3.44664%204.64492L2.32817%205.39348L2.68958%204.09022L1.6377%203.24953L2.97871%203.19194L3.44664%201.92131Z'%20fill='%23FFD506'/%3e%3cpath%20d='M6.2105%201.06909L6.34746%201.43761L6.7374%201.45297L6.43115%201.69865L6.53577%202.07677L6.2105%201.85988L5.88524%202.07677L5.99176%201.69865L5.68551%201.45297L6.07545%201.43761L6.2105%201.06909Z'%20fill='%23FFD506'/%3e%3cpath%20d='M7.38216%202.59118L7.51912%202.9597L7.90716%202.97697L7.60281%203.22073L7.70743%203.59885L7.38216%203.38196L7.0569%203.59885L7.16342%203.22073L6.85717%202.97697L7.24711%202.9597L7.38216%202.59118Z'%20fill='%23FFD506'/%3e%3cpath%20d='M7.28706%204.33205L7.42401%204.70249L7.81395%204.71784L7.5077%204.96353L7.61232%205.34164L7.28706%205.12475L6.96369%205.34164L7.06831%204.96353L6.76206%204.71784L7.152%204.70249L7.28706%204.33205Z'%20fill='%23FFD506'/%3e%3cpath%20d='M6.17057%205.78119L6.30562%206.14971L6.69556%206.16507L6.38931%206.41075L6.49583%206.78887L6.17057%206.57198L5.8453%206.78887L5.94992%206.41075L5.64557%206.16507L6.03361%206.14971L6.17057%205.78119Z'%20fill='%23FFD506'/%3e%3c/svg%3e" alt="" width="18" height="12" />
+              <span>中文</span>
+            </button>
+            <button type="button" class="lang-menu__item" data-lang="jpn">
+              <img src="data:image/svg+xml,%3csvg%20width='18'%20height='12'%20viewBox='0%200%2018%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20aria-hidden='true'%3e%3cpath%20d='M17.5122%200.48999V11.5105H0.48584V0.48999H17.5122Z'%20fill='white'%20stroke='%23DDDDDD'%20stroke-width='0.5'/%3e%3cpath%20d='M11.7602%206.04029C11.7602%207.60459%2010.5028%208.8733%208.95239%208.8733C7.40198%208.8733%206.14453%207.60459%206.14453%206.04029C6.14453%204.47599%207.40198%203.20728%208.95239%203.20728C10.5028%203.20728%2011.7602%204.47599%2011.7602%206.04029Z'%20fill='%23F91C1C'/%3e%3c/svg%3e" alt="" width="18" height="12" />
+              <span>日本語</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main app-main" id="main">
+    <section class="tour" data-page="04-tour">
+      <div class="tour__bg" aria-hidden="true"></div>
+      <div class="tour__contents">
+        <nav class="page-breadcrumb" aria-label="현재 위치">
+          <a href="./" class="page-breadcrumb__home" aria-label="홈">
+            <img src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20width='100%25'%20height='100%25'%20overflow='visible'%20style='display:%20block;'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='ph:house'%3e%3cpath%20id='Vector'%20d='M14.341%206.9362L8.78542%201.38065C8.57706%201.17244%208.29456%201.05547%208%201.05547C7.70544%201.05547%207.42294%201.17244%207.21458%201.38065L1.65903%206.9362C1.55536%207.03911%201.47317%207.1616%201.41726%207.29656C1.36135%207.43151%201.33282%207.57624%201.33334%207.72231V14.389C1.33334%2014.5363%201.39187%2014.6776%201.49606%2014.7818C1.60025%2014.886%201.74155%2014.9445%201.8889%2014.9445H6.33334C6.48068%2014.9445%206.62198%2014.886%206.72617%2014.7818C6.83036%2014.6776%206.88889%2014.5363%206.88889%2014.389V10.5001H9.11111V14.389C9.11111%2014.5363%209.16964%2014.6776%209.27383%2014.7818C9.37801%2014.886%209.51932%2014.9445%209.66667%2014.9445H14.1111C14.2584%2014.9445%2014.3998%2014.886%2014.5039%2014.7818C14.6081%2014.6776%2014.6667%2014.5363%2014.6667%2014.389V7.72231C14.6672%207.57624%2014.6387%207.43151%2014.5827%207.29656C14.5268%207.1616%2014.4446%207.03911%2014.341%206.9362ZM13.5556%2013.8334H10.2222V9.94453C10.2222%209.79719%2010.1637%209.65588%2010.0595%209.5517C9.95532%209.44751%209.81401%209.38898%209.66667%209.38898H6.33334C6.18599%209.38898%206.04469%209.44751%205.9405%209.5517C5.83631%209.65588%205.77778%209.79719%205.77778%209.94453V13.8334H2.44445V7.72231L8%202.16676L13.5556%207.72231V13.8334Z'%20fill='var(--fill-0,%20black)'/%3e%3c/g%3e%3c/svg%3e" alt="" width="24" height="24" />
+          </a>
+          <img class="page-breadcrumb__chevron" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20width='100%25'%20height='100%25'%20overflow='visible'%20style='display:%20block;'%20viewBox='0%200%208%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='chevron-right'%3e%3cpath%20id='Vector%20(Stroke)'%20d='M2.14645%200.167369C2.34172%20-0.0557898%202.65823%20-0.0557898%202.85349%200.167369L5.85355%203.59598C6.04882%203.81914%206.04882%204.18086%205.85355%204.40402L2.85349%207.83263C2.65823%208.05579%202.34172%208.05579%202.14645%207.83263C1.95118%207.60947%201.95118%207.24775%202.14645%207.02459L4.79298%204L2.14645%200.975414C1.95118%200.752255%201.95118%200.390529%202.14645%200.167369Z'%20fill='var(--fill-0,%20%238E8E93)'/%3e%3c/g%3e%3c/svg%3e" alt="" width="12" height="12" aria-hidden="true" />
+          <h1 class="page-breadcrumb__title">투어</h1>
+        </nav>
+    
+        <div class="tour__search tour__search--desktop">
+          <div class="search-bar">
+            <input type="search" class="search-bar__input" placeholder="유적지를 검색하세요" aria-label="유적지 검색" />
+            <img class="search-bar__icon" src="/2026-af-p13/assets/icon-search-zJFUYQqN.png" alt="" width="24" height="24" />
+            <span class="icon-slot icon-slot--24" aria-hidden="true"></span>
+          </div>
+        </div>
+    
+        <p class="tour__count">총 <strong>6</strong>건 검색</p>
+    
+        <div class="tour__list">
+          <article class="tour-card">
+            <a href="./tour-course.html" class="tour-card__link">
+            <div class="tour-card__thumb">
+              <img class="tour-card__thumb-img" src="/2026-af-p13/assets/card-01-C1pMC68p.jpg" alt="" />
+              <div class="tour-card__thumb-title">
+                <h2 class="tour-card__name">조선의 심장 - 경복궁</h2>
+                <p class="tour-card__sub">주요 전각을 따라 걷는 관람 여정</p>
+              </div>
+            </div>
+            <div class="tour-card__body">
+              <p class="tour-card__desc">경복궁은 1395년 조선왕조의 첫 번째 법궁으로 건립된 대한민국을 대표하는 궁궐입니다.</p>
+              <div class="tour-card__courses">
+                <p class="tour-card__courses-title">추천 코스</p>
+                <div class="tour-card__courses-track">
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">산책 코스</span>
+                    <span class="tour-card__courses-text">대표 공간을<br />빠르게 관람</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">관람 코스</span>
+                    <span class="tour-card__courses-text">주요 전각과<br />생활공간 관람</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">탐방 코스</span>
+                    <span class="tour-card__courses-text">주요 시설을<br />구석구석 관람</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </article>
+          <article class="tour-card">
+            <a href="./tour-course.html" class="tour-card__link">
+            <div class="tour-card__thumb">
+              <img class="tour-card__thumb-img" src="/2026-af-p13/assets/card-04-C_rMM0zu.jpg" alt="" />
+              <div class="tour-card__thumb-title">
+                <h2 class="tour-card__name">자연이 품은 궁궐 - 창덕궁</h2>
+                <p class="tour-card__sub">자연과 궁궐을 함께 둘러보는 여정</p>
+              </div>
+            </div>
+            <div class="tour-card__body">
+              <p class="tour-card__desc">창덕궁은 경복궁의 이궁으로 지어진 궁궐로, 자연 지형과 건축이 조화롭게 어우러진 조선의 대표 궁궐입니다.</p>
+              <div class="tour-card__courses">
+                <p class="tour-card__courses-title">추천 코스</p>
+                <div class="tour-card__courses-track">
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">전각 관람</span>
+                    <span class="tour-card__courses-text">인정전과 왕실 공간을<br />중심으로 관람</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">후원 관람</span>
+                    <span class="tour-card__courses-text">숲과 연못, 정자가<br />어우러진 후원 감상</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </article>
+          <article class="tour-card">
+            <a href="./tour-course.html" class="tour-card__link">
+            <div class="tour-card__thumb">
+              <img class="tour-card__thumb-img" src="/2026-af-p13/assets/card-06-iBbKx2N-.jpg" alt="" />
+              <div class="tour-card__thumb-title">
+                <h2 class="tour-card__name">대한민국의 기억 - 덕수궁</h2>
+                <p class="tour-card__sub">덕수궁 맞춤 코스</p>
+              </div>
+            </div>
+            <div class="tour-card__body">
+              <p class="tour-card__desc">덕수궁은 대한제국의 황궁으로 사용된 궁궐로, 전통 궁궐 건축과 근대 건축이 함께 남아 있는 역사 공간입니다.</p>
+              <div class="tour-card__courses">
+                <p class="tour-card__courses-title">관람 포인트</p>
+                <div class="tour-card__courses-track">
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">역사</span>
+                    <span class="tour-card__courses-text">대한제국의 흔적 따라 관람</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">석조전</span>
+                    <span class="tour-card__courses-text">근대 건축과<br />황실 문화 감상</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">정관헌</span>
+                    <span class="tour-card__courses-text">고종의 휴식<br />공간 둘러보기</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </article>
+          <article class="tour-card">
+            <a href="./tour-course.html" class="tour-card__link">
+            <div class="tour-card__thumb">
+              <img class="tour-card__thumb-img" src="/2026-af-p13/assets/card-05-DPxoWodx.jpg" alt="" />
+              <div class="tour-card__thumb-title">
+                <h2 class="tour-card__name">왕실의 품격 - 창경궁</h2>
+                <p class="tour-card__sub">궁궐 일상과 정원을 담은 여정</p>
+              </div>
+            </div>
+            <div class="tour-card__body">
+              <p class="tour-card__desc">창경궁은 왕실 어른들을 위해 조성된 궁궐로, 조선 왕실의 일상과 품격을 느낄 수 있는 역사 공간입니다.</p>
+              <div class="tour-card__courses">
+                <p class="tour-card__courses-title">관람 포인트</p>
+                <div class="tour-card__courses-track">
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">생활공간</span>
+                    <span class="tour-card__courses-text">대비·왕비의<br />생활 공간 관람</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">춘당지</span>
+                    <span class="tour-card__courses-text">연못과 정자가<br />어우러진 후원</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">대전</span>
+                    <span class="tour-card__courses-text">궁궐 중심<br />전각 둘러보기</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </article>
+          <article class="tour-card">
+            <a href="./tour-course.html" class="tour-card__link">
+            <div class="tour-card__thumb">
+              <img class="tour-card__thumb-img" src="/2026-af-p13/assets/card-03-DI_-J0Y2.jpg" alt="" />
+              <div class="tour-card__thumb-title">
+                <h2 class="tour-card__name">왕실의 정신 - 종묘</h2>
+                <p class="tour-card__sub">조선 왕실의 제례 공간</p>
+              </div>
+            </div>
+            <div class="tour-card__body">
+              <p class="tour-card__desc">종묘는 조선 왕조 역대 왕과 왕비의 신주를 모신 사당으로, 유네스코 세계문화유산으로 지정된 국가유산입니다.</p>
+              <div class="tour-card__courses">
+                <p class="tour-card__courses-title">관람 포인트</p>
+                <div class="tour-card__courses-track">
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">정전</span>
+                    <span class="tour-card__courses-text">왕실 제례의<br />중심 공간</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">영녕전</span>
+                    <span class="tour-card__courses-text">왕비 신주를<br />모신 전각</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">새길</span>
+                    <span class="tour-card__courses-text">종묘 둘레<br />산책 코스</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </article>
+          <article class="tour-card">
+            <a href="./tour-course.html" class="tour-card__link">
+            <div class="tour-card__thumb">
+              <img class="tour-card__thumb-img" src="/2026-af-p13/assets/card-02-ByMJbs4N.jpg" alt="" />
+              <div class="tour-card__thumb-title">
+                <h2 class="tour-card__name">조선 왕릉 - 자연과 역사</h2>
+                <p class="tour-card__sub">왕릉을 따라 걷는 역사 코스</p>
+              </div>
+            </div>
+            <div class="tour-card__body">
+              <p class="tour-card__desc">조선 왕릉은 자연 지형과 조화를 이룬 왕릴로, 조선 왕실의 역사와 문화를 느낄 수 있는 공간입니다.</p>
+              <div class="tour-card__courses">
+                <p class="tour-card__courses-title">추천 코스</p>
+                <div class="tour-card__courses-track">
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">동구릉</span>
+                    <span class="tour-card__courses-text">태종·세종<br />왕릉 둘러보기</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">선정릉</span>
+                    <span class="tour-card__courses-text">중종·인종<br />왕릉 관람</span>
+                  </div>
+                  <div class="tour-card__courses-item">
+                    <span class="tour-card__courses-label">영릉</span>
+                    <span class="tour-card__courses-text">숙종·효종<br />왕릉 산책</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
