@@ -1,79 +1,16 @@
 {{#> layout-app}}
 <section class="map" data-page="05-map">
-  <div class="map__contents">
-    <div class="map__route">
-      {{> components/route-chips}}
-      <div class="map-area" aria-label="지도">
-        <div class="map-area__canvas">
-          <span class="map-area__label map-area__label--gwanghwamun">Gwanghwamun</span>
-          <span class="map-area__label map-area__label--jongno">Jongno</span>
-          <div class="map-marker map-marker--active" style="--x:44%; --y:17%">
-            <span class="map-marker__pin map-marker__pin--primary"></span>
-            <span class="map-marker__label map-marker__label--primary">수정전</span>
-          </div>
-          <div class="map-marker" style="--x:34%; --y:27%">
-            <span class="map-marker__pin"></span>
-            <span class="map-marker__label">경회루</span>
-          </div>
-          <div class="map-marker" style="--x:55%; --y:12%">
-            <span class="map-marker__pin"></span>
-            <span class="map-marker__label">향원정</span>
-          </div>
-          <div class="map-marker" style="--x:44%; --y:32%">
-            <span class="map-marker__pin"></span>
-            <span class="map-marker__label">교태전</span>
-          </div>
-          <div class="map-marker" style="--x:38%; --y:22%">
-            <span class="map-marker__pin"></span>
-            <span class="map-marker__label">사정전</span>
-          </div>
-          <div class="map-marker" style="--x:52%; --y:25%">
-            <span class="map-marker__pin"></span>
-            <span class="map-marker__label">강녕전</span>
-          </div>
-        </div>
-      </div>
+  <div class="map__stage">
+    <div class="map__canvas" aria-label="지도">
+      <img
+        class="map__photo"
+        src="/src/assets/images/map/map-screenshot.png"
+        alt="경복궁 주변 지도"
+        width="598"
+        height="780"
+      />
     </div>
-    <article class="map-featured" id="mapFeatured">
-      <div class="map-featured__main">
-        <span class="icon-slot icon-slot--30 icon-slot--white icon-slot--circle" aria-hidden="true"></span>
-        <div>
-          <strong id="mapFeaturedTitle">수정전</strong>
-          <span id="mapFeaturedDesc">근정전 동편 경회루 바로 앞</span>
-        </div>
-      </div>
-      <span class="icon-slot icon-slot--20 icon-slot--white icon-slot--circle" aria-hidden="true"></span>
-    </article>
-    <section class="map-list">
-      <h2 class="section-title">전체 유적지 목록</h2>
-      <div class="map-list__items" id="mapSiteList">
-        <button type="button" class="site-list-item site-list-item--active" data-name="수정전" data-desc="근정전 동편 경회루 바로 앞">
-          <span class="icon-slot icon-slot--30 icon-slot--circle site-list-item__icon site-list-item__icon--active" aria-hidden="true"></span>
-          <div><strong>수정전</strong><span>근정전 동편 경회루 바로 앞</span></div>
-          <span class="icon-slot icon-slot--20 icon-slot--circle icon-slot--primary" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="site-list-item" data-name="경복궁" data-desc="근정전 동편 경회루 바로 앞">
-          <span class="icon-slot icon-slot--30 icon-slot--circle site-list-item__icon" aria-hidden="true"></span>
-          <div><strong>경복궁</strong><span>근정전 동편 경회루 바로 앞</span></div>
-          <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="site-list-item" data-name="종묘" data-desc="근정전 동편 경회루 바로 앞">
-          <span class="icon-slot icon-slot--30 icon-slot--circle site-list-item__icon" aria-hidden="true"></span>
-          <div><strong>종묘</strong><span>근정전 동편 경회루 바로 앞</span></div>
-          <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="site-list-item" data-name="덕수궁" data-desc="근정전 동편 경회루 바로 앞">
-          <span class="icon-slot icon-slot--30 icon-slot--circle site-list-item__icon" aria-hidden="true"></span>
-          <div><strong>덕수궁</strong><span>근정전 동편 경회루 바로 앞</span></div>
-          <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="site-list-item" data-name="수정전" data-desc="근정전 동편 경회루 바로 앞">
-          <span class="icon-slot icon-slot--30 icon-slot--circle site-list-item__icon" aria-hidden="true"></span>
-          <div><strong>수정전</strong><span>근정전 동편 경회루 바로 앞</span></div>
-          <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
-        </button>
-      </div>
-    </section>
+    {{> components/map-search-bar}}
   </div>
 </section>
 {{/layout-app}}

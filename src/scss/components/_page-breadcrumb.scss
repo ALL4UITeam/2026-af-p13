@@ -1,0 +1,33 @@
+@use 'base/variables' as *;
+
+.page-breadcrumb {
+  display: none;
+
+  @media (min-width: $bp-app-shell) {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    height: 60px;
+  }
+
+  &__home {
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  &__chevron {
+    flex-shrink: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    color: $color-text;
+  }
+}

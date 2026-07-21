@@ -1,26 +1,12 @@
-{{#> layout-app guideDesktop=true}}
-<section class="guide" data-page="02-ai-guide">
+{{#> layout-app}}
+<section class="guide" data-page="02-ai-guide" id="guidePage">
   <div class="guide__bg" aria-hidden="true"></div>
-
-  <div class="guide__hero" id="guideHero">
-    <div class="logo logo--medium">
-      <div class="logo__text">
-        <p class="logo__title">AI 국가유산 가이드</p>
-        <p class="logo__subtitle">조선왕조 국가유산 전문 AI</p>
-      </div>
-      <div class="logo__character">
-        <img src="/src/assets/images/guide/character-medium.png" alt="" width="114" height="112" />
-      </div>
-    </div>
-  </div>
-
-  <div class="guide__contents" id="guideContents">
-  <div class="guide__stack guide__stack--mobile">
+  <div class="guide__contents">
     {{> components/btn-vps}}
 
-    <div class="guide__chat guide__chat--mobile" id="chatArea">
+    <div class="guide__chat" id="chatArea">
       {{#> components/text-bx-mobile-ai}}
-        <p>안녕하세요! 저는 조선왕조 국가유산 전문 AI 가이드입니다.</p>
+        <p>안녕하세요! 저는 조선왕조 국가유산 전문 AI 해설사입니다.</p>
         <p>경복궁, 창덕궁, 창경궁, 덕수궁, 종묘 등 서울의 주요 유적지에 대한 역사, 문화, 관람 정보를 안내 해 드립니다.</p>
         <p>아래 추천 질문을 선택하거나 직접 질문을 입력해 보세요!</p>
       {{/components/text-bx-mobile-ai}}
@@ -33,49 +19,77 @@
         <p>👉 위치: 경복궁</p>
         <p>👉 창건: 1395년(태조 4년)</p>
         <p>👉 창건자: 이성계</p>
-        <p>👉 의미: "큰 복을 누리며 번영하라"는 뜻</p>
-        <p>👉 특징: 조선의 정치·행정·문화 중심지</p>
-        <p>💡 경복궁의 역사</p>
-        <p>1. 조선 건국과 함께 탄생</p>
-        <p>1392년 조선 건국 후, 1395년에 새 왕조의 중심 궁궐로 지어졌다. 궁 이름은 정도전이 지었으며, "새 왕조가 큰 복을 누리길 바란다"는 의미를 담고 있다.</p>
-        <p>2. 훈민정음의 시대</p>
-        <p>경복궁은 세종대왕 시기에 가장 번성했다. 훈민정음이 창제되고 반포된 역사적 공간이기도 하다.</p>
+        {{> components/authorship}}
       {{/components/text-bx-mobile-ai}}
+
+      <article class="text-bx-mobile text-bx-mobile--ai guide__image-answer" id="chatImageAnswer" hidden>
+        <div class="text-bx-mobile__head">
+        <picture>
+          <source media="(min-width: 768px)" srcset="/src/assets/images/guide/ai-avatar.png" />
+          <img class="text-bx-mobile__avatar" src="/src/assets/images/guide/ai-avatar-mobile.png" alt="" width="36" height="36" />
+        </picture>
+          <div class="text-bx-mobile__meta">
+            <time class="text-bx-mobile__time">오후 02:41</time>
+            <div class="text-bx-mobile__actions">
+              <button type="button" class="text-bx-mobile__action" aria-label="음성 재생"><img src="/src/assets/images/guide/icon-speaker.svg" alt="" width="20" height="20" /></button>
+              <button type="button" class="text-bx-mobile__action" aria-label="새로고침"><img src="/src/assets/images/guide/icon-refresh.svg" alt="" width="20" height="20" /></button>
+            </div>
+          </div>
+        </div>
+        <div class="text-bx-mobile__bubble text-bx-mobile__bubble--media">
+          <div class="guide-gallery">
+            <div class="guide-gallery__track">
+              <img src="/src/assets/images/explore/hero-gyeongbokgung.jpg" alt="" width="230" height="159" />
+              <img src="/src/assets/images/explore/card-01.jpg" alt="" width="230" height="159" />
+              <img src="/src/assets/images/explore/card-02.jpg" alt="" width="230" height="159" />
+            </div>
+            <span class="guide-gallery__count">10</span>
+          </div>
+          <p>경복궁은 조선 왕조의 법궁(정궁)으로, 1395년 태조 이성계 때 창건되었습니다. 조선의 정치·행정·문화의 중심지였으며, 오늘날에도 대한민국을 대표하는 궁궐이자 가장 많은 방문객이 찾는 문화유산 중 하나입니다.</p>
+          {{> components/authorship open=true}}
+        </div>
+      </article>
+
+      <article class="text-bx-mobile text-bx-mobile--ai guide__map-answer" id="chatMapAnswer" hidden>
+        <div class="text-bx-mobile__head">
+        <picture>
+          <source media="(min-width: 768px)" srcset="/src/assets/images/guide/ai-avatar.png" />
+          <img class="text-bx-mobile__avatar" src="/src/assets/images/guide/ai-avatar-mobile.png" alt="" width="36" height="36" />
+        </picture>
+          <div class="text-bx-mobile__meta">
+            <time class="text-bx-mobile__time">오후 02:41</time>
+            <div class="text-bx-mobile__actions">
+              <button type="button" class="text-bx-mobile__action" aria-label="음성 재생"><img src="/src/assets/images/guide/icon-speaker.svg" alt="" width="20" height="20" /></button>
+              <button type="button" class="text-bx-mobile__action" aria-label="새로고침"><img src="/src/assets/images/guide/icon-refresh.svg" alt="" width="20" height="20" /></button>
+            </div>
+          </div>
+        </div>
+        <div class="guide-map-card">
+          <div class="guide-map-card__map">
+            <img src="/src/assets/images/explore/hero-gyeongbokgung.jpg" alt="경복궁 근정전 지도" />
+            <button type="button" class="guide-map-card__expand" aria-label="지도 확대"></button>
+          </div>
+          <div class="text-bx-mobile__bubble">
+            <p>경복궁 근정전 위치에 대해서 설명 드리겠습니다.</p>
+            <p><strong>✅ 경복궁 근정전</strong></p>
+            <div class="guide-map-card__place">
+              <img src="/src/assets/images/explore/spot-01.jpg" alt="" width="80" height="80" />
+              <div>
+                <p>4.8 ★</p>
+                <p>📍 역사적 명소</p>
+                <p><strong class="guide-map-card__open">영업</strong> 중· 오후 05:00에 영업 종료</p>
+              </div>
+            </div>
+            <p>경복궁 근정전과 경복궁 경회루의 위치입니다. 두 공간은 경복궁 중심부에 나란히 위치해 있어 쉽게 오가실 수 있습니다.</p>
+            {{> components/authorship open=true}}
+          </div>
+        </div>
+      </article>
     </div>
 
-  </div>
-
-  <div class="guide__stack guide__stack--desktop">
-    <div class="guide__chat guide__chat--desktop" id="chatAreaDesktop">
-      {{#> components/text-bx-pc-ai}}
-        <p>안녕하세요! 저는 조선왕조 국가유산 전문 AI 가이드입니다.</p>
-        <p>경복궁, 창덕궁, 창경궁, 덕수궁, 종묘 등 서울의 주요 유적지에 대한 역사, 문화, 관람 정보를 안내 해 드립니다.</p>
-        <p>아래 추천 질문을 선택하거나 직접 질문을 입력해 보세요!</p>
-      {{/components/text-bx-pc-ai}}
-
-      {{> components/text-bx-pc-user id="chatUserDesktop" hidden=true textId="chatUserTextDesktop"}}
-
-      {{#> components/text-bx-pc-ai id="chatAnswerDesktop" hidden=true dimmed=true}}
-        <p>✅ 경복궁 (景福宮)</p>
-        <p>경복궁은 조선왕조의 첫 번째이자 가장 대표적인 궁궐(법궁)로, 현재 대한민국을 대표하는 문화유산 중 하나야.</p>
-        <p>👉 위치: 경복궁</p>
-        <p>👉 창건: 1395년(태조 4년)</p>
-        <p>👉 창건자: 이성계</p>
-        <p>👉 의미: "큰 복을 누리며 번영하라"는 뜻</p>
-        <p>👉 특징: 조선의 정치·행정·문화 중심지</p>
-        <p>💡 경복궁의 역사</p>
-        <p>1. 조선 건국과 함께 탄생</p>
-        <p>1392년 조선 건국 후, 1395년에 새 왕조의 중심 궁궐로 지어졌다. 궁 이름은 정도전이 지었으며, "새 왕조가 큰 복을 누리길 바란다"는 의미를 담고 있다.</p>
-        <p>2. 훈민정음의 시대</p>
-        <p>경복궁은 세종대왕 시기에 가장 번성했다. 훈민정음이 창제되고 반포된 역사적 공간이기도 하다.</p>
-      {{/components/text-bx-pc-ai}}
-    </div>
-  </div>
-
-  {{> components/recommend-chips}}
+    {{> components/recommend-chips}}
   </div>
 
   {{> components/prompt-mobile}}
-  {{> components/prompt-pc}}
 </section>
 {{/layout-app}}

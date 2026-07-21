@@ -1,7 +1,8 @@
 // Breakpoints (mobile-first)
 $bp-tablet: 768px;
 $bp-desktop: 1024px;
-$bp-wide: 1280px;
+// guide / explore / tour / detail — tablet부터 PC 셸 (index 사용자선택은 $bp-desktop 유지)
+$bp-app-shell: $bp-tablet;
 
 // Design tokens (Figma 공통UI)
 $color-bg-blue: #f2f4f9;
@@ -21,14 +22,15 @@ $color-text-muted: #8e8e93;
 $color-text-caption: #5c656c;
 $color-subtitle: #7b8aa6;
 
-// Layout
+// Layout (mobile-first)
 $mobile-width: 360px;
 $content-width: 320px;
-$content-max: 960px;
-$left-bar-width: 70px;
+$content-max: 1200px;
+$guide-content-max: 960px;
 $side-padding: 20px;
-$top-height: 60px;
-$gnb-height: 70px;
+$app-shell-padding-inline: 40px;
+$top-height: 50px;
+$user-select-header-height: 60px;
 
 // Typography
 $font-body: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -36,4 +38,4 @@ $font-heading: 'HangeulNuri-Bold', 'Pretendard', sans-serif;
 
 // Z-index
 $z-top: 100;
-$z-gnb: 100;
+$z-dropdown: 110;

@@ -28,6 +28,39 @@
   }
 }
 
+.layout-app--explore .search-bar,
+.layout-app--tour .search-bar {
+  @media (min-width: $bp-app-shell) {
+    width: 100%;
+    max-width: 500px;
+    height: 56px;
+    padding: 0;
+    border: 2px solid $color-primary-900;
+    border-radius: 30px;
+    box-shadow: none;
+
+    &__input {
+      flex: 1;
+      padding-left: 24px;
+      font-size: 16px;
+    }
+
+    &__icon,
+    .icon-slot {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      flex-shrink: 0;
+      width: 70px;
+      height: 56px;
+      border-radius: 0 30px 30px 0;
+      background: $color-primary-900 url('/src/assets/images/explore/icon-search.png') center / 20px no-repeat;
+    }
+  }
+}
+
 .filter-chips {
   display: flex;
   flex-wrap: wrap;

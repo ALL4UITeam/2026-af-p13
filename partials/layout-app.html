@@ -3,14 +3,15 @@
 <head>
   {{> meta}}
 </head>
-<body class="layout-app{{#if guideDesktop}} layout-app--guide{{/if}}{{#if exploreDesktop}} layout-app--explore{{/if}}">
-  {{> left-bar}}
+<body class="layout-app{{#if mapFull}} layout-app--map{{/if}}{{#if guideDesktop}} layout-app--guide{{/if}}{{#if exploreDesktop}} layout-app--explore{{/if}}{{#if tourDesktop}} layout-app--tour{{/if}}">
+  {{#if guideDesktop}}{{> user-select-header}}{{/if}}
+  {{#if exploreDesktop}}{{> user-select-header}}{{/if}}
+  {{#if tourDesktop}}{{> user-select-header}}{{/if}}
+  {{#if mapDesktop}}{{> user-select-header}}{{/if}}
   {{> top}}
-  {{#if guideDesktop}}{{> top-guide-desktop}}{{/if}}
-  <main class="main app-main{{#if guideDesktop}} app-main--guide{{/if}}" id="main">
+  <main class="main app-main" id="main">
     {{>@partial-block}}
   </main>
-  {{> gnb}}
   {{> scripts}}
 </body>
 </html>

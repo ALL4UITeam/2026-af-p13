@@ -1,50 +1,15 @@
 <article class="tour-card">
+  {{#if href}}<a href="{{href}}" class="tour-card__link">{{/if}}
   <div class="tour-card__thumb">
-    <div class="thumb-slot thumb-slot--card{{#if alt}} thumb-slot--alt{{/if}}" aria-hidden="true"></div>
-    <div class="tour-card__thumb-top">
-      <span class="badge badge--course">{{#if courseLabel}}{{courseLabel}}{{else}}40분 코스{{/if}}</span>
-      <div class="theme-tags">
-        <span class="theme-tag theme-tag--popular">인기</span>
-        <span class="theme-tag theme-tag--family">가족</span>
-        <span class="theme-tag theme-tag--beginner">입문</span>
-      </div>
-    </div>
+    <img class="tour-card__thumb-img" src="/src/assets/images/explore/{{#if image}}{{image}}{{else}}card-01.jpg{{/if}}" alt="" />
     <div class="tour-card__thumb-title">
-      <h2 class="tour-card__name">{{#if title}}{{title}}{{else}}조선의 심장 - 경복궁&amp;인사동{{/if}}</h2>
-      <p class="tour-card__sub">{{#if subtitle}}{{subtitle}}{{else}}40분 핵심 코스{{/if}}</p>
+      <h2 class="tour-card__name">{{#if title}}{{title}}{{else}}조선의 심장 - 경복궁{{/if}}</h2>
+      <p class="tour-card__sub">{{#if subtitle}}{{subtitle}}{{else}}주요 전각을 따라 걷는 관람 여정{{/if}}</p>
     </div>
   </div>
   <div class="tour-card__body">
     <p class="tour-card__desc">{{#if desc}}{{desc}}{{else}}경복궁은 1395년 조선왕조의 첫 번째 법궁으로 건립된 대한민국을 대표하는 궁궐입니다.{{/if}}</p>
-    <div class="tour-card__meta">
-      <div class="tour-card__rating">
-        <span class="icon-slot icon-slot--16" aria-hidden="true"></span>
-        <strong>4.9</strong>
-        <span>(24,562)</span>
-      </div>
-      <span class="tour-card__distance"><span class="icon-slot icon-slot--16" aria-hidden="true"></span> 3.2km</span>
-      <span class="difficulty-badge">난이도 <em>쉬움</em></span>
-    </div>
-    <div class="schedule-preview">
-      <p class="schedule-preview__title">일정 미리보기</p>
-      <div class="schedule-preview__track">
-        <div class="schedule-preview__item">
-          <span class="schedule-preview__time">09:00</span>
-          <span class="schedule-preview__text">경복궁 입장 &amp; 수문장 교대식</span>
-        </div>
-        <div class="schedule-preview__item">
-          <span class="schedule-preview__time">11:30</span>
-          <span class="schedule-preview__text">토속촌 삼계탕<br>점심식사</span>
-        </div>
-        <div class="schedule-preview__item">
-          <span class="schedule-preview__time">13:00</span>
-          <span class="schedule-preview__text">인사동 전통 문화 거리 탐방</span>
-        </div>
-      </div>
-    </div>
-    <a href="./tour-course.html" class="tour-card__btn">
-      투어 상세보기
-      <span class="icon-slot icon-slot--16 icon-slot--white" aria-hidden="true"></span>
-    </a>
+    {{> components/tour-card-courses}}
   </div>
+  {{#if href}}</a>{{/if}}
 </article>

@@ -1,0 +1,19 @@
+<div class="tour-card__courses">
+  <p class="tour-card__courses-title">{{#if previewTitle}}{{previewTitle}}{{else}}추천 코스{{/if}}</p>
+  <div class="tour-card__courses-track">
+    <div class="tour-card__courses-item">
+      <span class="tour-card__courses-label">{{#if chip1Label}}{{chip1Label}}{{else}}산책 코스{{/if}}</span>
+      <span class="tour-card__courses-text">{{#if chip1Text}}{{{chip1Text}}}{{else}}대표 공간을<br />빠르게 관람{{/if}}</span>
+    </div>
+    <div class="tour-card__courses-item">
+      <span class="tour-card__courses-label">{{#if chip2Label}}{{chip2Label}}{{else}}관람 코스{{/if}}</span>
+      <span class="tour-card__courses-text">{{#if chip2Text}}{{{chip2Text}}}{{else}}주요 전각과<br />생활공간 관람{{/if}}</span>
+    </div>
+    {{#unless hideChip3}}
+    <div class="tour-card__courses-item">
+      <span class="tour-card__courses-label">{{#if chip3Label}}{{chip3Label}}{{else}}탐방 코스{{/if}}</span>
+      <span class="tour-card__courses-text">{{#if chip3Text}}{{{chip3Text}}}{{else}}주요 시설을<br />구석구석 관람{{/if}}</span>
+    </div>
+    {{/unless}}
+  </div>
+</div>

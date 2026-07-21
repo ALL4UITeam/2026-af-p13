@@ -3,7 +3,7 @@
 // Figma: prompt-mobile (69:3694)
 .prompt-mobile {
   position: fixed;
-  bottom: $gnb-height;
+  bottom: 0;
   left: 50%;
   z-index: 90;
   display: flex;
@@ -88,5 +88,28 @@
   .guide.is-answered & &__field {
     border-color: $color-blue-30;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  }
+
+  .layout-app--guide & {
+    @media (min-width: $bp-app-shell) {
+      max-width: $guide-content-max;
+      padding-inline: 0;
+      padding-bottom: 24px;
+
+      &__field {
+        height: 70px;
+        padding: 0 15px 0 25px;
+        border-radius: 80px;
+      }
+
+      &__input {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__notice {
+        font-size: 14px;
+      }
+    }
   }
 }

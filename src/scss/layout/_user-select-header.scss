@@ -1,0 +1,135 @@
+@use 'base/variables' as *;
+
+@mixin user-select-header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-top;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: $user-select-header-height;
+  padding-inline: 40px;
+  background-color: $color-bg-white;
+}
+
+.user-select-header {
+  display: none;
+}
+
+.layout-app .user-select-header,
+.layout-explore-detail .user-select-header {
+  @media (min-width: $bp-app-shell) {
+    @include user-select-header-bar;
+  }
+}
+
+.layout-user-select .user-select-header {
+  @media (min-width: $bp-desktop) {
+    @include user-select-header-bar;
+  }
+}
+
+.user-select-header {
+  &__brand {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    align-items: center;
+    min-width: 0;
+  }
+
+  &__emblem {
+    display: block;
+    flex-shrink: 0;
+    width: 29px;
+    height: 28px;
+  }
+
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  &__title {
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: -0.3px;
+    color: $color-text;
+  }
+
+  &__subtitle {
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: -0.44px;
+    color: #888;
+  }
+
+  &__actions {
+    display: flex;
+    flex-shrink: 0;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__voice {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 30px;
+    padding: 0 5px 0 0;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $color-bg-white;
+    background-color: #0d2655;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__lang {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid $color-border-light;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $color-text;
+    background-color: $color-bg-white;
+    cursor: pointer;
+  }
+
+  &__lang-flag {
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 1px;
+  }
+}
+
+.lang-menu--header {
+  position: relative;
+}
+
+.lang-menu__dropdown--header {
+  top: calc(100% + 6px);
+  right: 0;
+  width: 100px;
+}

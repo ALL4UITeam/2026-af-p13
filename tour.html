@@ -1,22 +1,23 @@
 {{#> layout-app}}
 <section class="tour" data-page="04-tour">
+  <div class="tour__bg" aria-hidden="true"></div>
   <div class="tour__contents">
-    {{> components/tour-filter-chips}}
-    <p class="tour__count">5개 유적지</p>
-    <div class="tour__list">
-      {{> components/tour-card}}
-      {{> components/tour-card alt=true}}
+    {{> components/page-breadcrumb breadcrumbTitle="투어"}}
+
+    <div class="tour__search tour__search--desktop">
+      {{> components/search-bar}}
     </div>
-    <aside class="tour-ai-banner">
-      <div class="tour-ai-banner__head">
-        <strong>나만의 맞춤 투어 만들기</strong>
-        <p>AI가 관심사와 일정에 맞는 최적의 투어를 설계해 드립니다.</p>
-      </div>
-      <button type="button" class="tour-ai-banner__btn">
-        AI 투어 설계 시작
-        <span class="icon-slot icon-slot--16" aria-hidden="true"></span>
-      </button>
-    </aside>
+
+    <p class="tour__count">총 <strong>6</strong>건 검색</p>
+
+    <div class="tour__list">
+      {{> components/tour-card href="./tour-course.html" image="card-01.jpg" title="조선의 심장 - 경복궁" subtitle="주요 전각을 따라 걷는 관람 여정"}}
+      {{> components/tour-card href="./tour-course.html" image="card-04.jpg" title="자연이 품은 궁궐 - 창덕궁" subtitle="자연과 궁궐을 함께 둘러보는 여정" desc="창덕궁은 경복궁의 이궁으로 지어진 궁궐로, 자연 지형과 건축이 조화롭게 어우러진 조선의 대표 궁궐입니다." chip1Label="전각 관람" chip1Text="인정전과 왕실 공간을<br />중심으로 관람" chip2Label="후원 관람" chip2Text="숲과 연못, 정자가<br />어우러진 후원 감상" hideChip3=true}}
+      {{> components/tour-card href="./tour-course.html" image="card-06.jpg" title="대한민국의 기억 - 덕수궁" subtitle="덕수궁 맞춤 코스" desc="덕수궁은 대한제국의 황궁으로 사용된 궁궐로, 전통 궁궐 건축과 근대 건축이 함께 남아 있는 역사 공간입니다." previewTitle="관람 포인트" chip1Label="역사" chip1Text="대한제국의 흔적 따라 관람" chip2Label="석조전" chip2Text="근대 건축과<br />황실 문화 감상" chip3Label="정관헌" chip3Text="고종의 휴식<br />공간 둘러보기"}}
+      {{> components/tour-card href="./tour-course.html" image="card-05.jpg" title="왕실의 품격 - 창경궁" subtitle="궁궐 일상과 정원을 담은 여정" desc="창경궁은 왕실 어른들을 위해 조성된 궁궐로, 조선 왕실의 일상과 품격을 느낄 수 있는 역사 공간입니다." previewTitle="관람 포인트" chip1Label="생활공간" chip1Text="대비·왕비의<br />생활 공간 관람" chip2Label="춘당지" chip2Text="연못과 정자가<br />어우러진 후원" chip3Label="대전" chip3Text="궁궐 중심<br />전각 둘러보기"}}
+      {{> components/tour-card href="./tour-course.html" image="card-03.jpg" title="왕실의 정신 - 종묘" subtitle="조선 왕실의 제례 공간" desc="종묘는 조선 왕조 역대 왕과 왕비의 신주를 모신 사당으로, 유네스코 세계문화유산으로 지정된 국가유산입니다." previewTitle="관람 포인트" chip1Label="정전" chip1Text="왕실 제례의<br />중심 공간" chip2Label="영녕전" chip2Text="왕비 신주를<br />모신 전각" chip3Label="새길" chip3Text="종묘 둘레<br />산책 코스"}}
+      {{> components/tour-card href="./tour-course.html" image="card-02.jpg" title="조선 왕릉 - 자연과 역사" subtitle="왕릉을 따라 걷는 역사 코스" desc="조선 왕릉은 자연 지형과 조화를 이룬 왕릴로, 조선 왕실의 역사와 문화를 느낄 수 있는 공간입니다." previewTitle="추천 코스" chip1Label="동구릉" chip1Text="태종·세종<br />왕릉 둘러보기" chip2Label="선정릉" chip2Text="중종·인종<br />왕릉 관람" chip3Label="영릉" chip3Text="숙종·효종<br />왕릉 산책"}}
+    </div>
   </div>
 </section>
 {{/layout-app}}

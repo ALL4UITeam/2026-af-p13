@@ -1,5 +1,5 @@
 <article class="place-card">
-  <a href="{{#if href}}{{href}}{{else}}./explore-intro.html{{/if}}" class="place-card__link">
+  <a href="{{#if href}}{{href}}{{else}}./explore-detail.html{{/if}}" class="place-card__link">
     <div class="place-card__thumb">
       <img class="place-card__thumb-img" src="/src/assets/images/explore/{{#if image}}{{image}}{{else}}card-01.jpg{{/if}}" alt="" />
       <div class="thumb-slot thumb-slot--card" aria-hidden="true"></div>
@@ -15,7 +15,7 @@
           {{#if badge2}}
             {{#ifeq badge2 'unesco'}}<span class="badge badge--unesco">유네스코</span>{{/ifeq}}
           {{else}}
-            <span class="badge badge--unesco">유네스코</span>
+            {{#unless hideDefaultUnesco}}<span class="badge badge--unesco">유네스코</span>{{/unless}}
           {{/if}}
         </div>
         <button type="button" class="place-card__mark{{#if bookmarkActive}} is-active{{/if}}" aria-label="북마크">

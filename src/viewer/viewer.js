@@ -11,54 +11,35 @@ const PAGE_GROUPS = [
     title: '온보딩',
     items: [
       { id: '01', name: '사용자선택', file: 'index.html', ready: true },
-      { id: '02', name: '음성안내 (확장)', file: null, ready: false, note: 'index 확장 상태' },
     ],
   },
   {
-    title: 'AI 가이드',
+    title: 'AI 해설사',
     items: [
-      { id: '03', name: 'AI 가이드', file: 'guide.html', ready: true },
-      { id: '04', name: 'AI가이드 답변', file: null, ready: false, note: 'guide 확장 상태' },
-    ],
-  },
-  {
-    title: 'VPS',
-    items: [
-      { id: '05', name: 'VPS모드', file: 'vps.html', ready: false },
-      { id: '06', name: 'VPS모드 완료', file: 'vps-complete.html', ready: false },
-      { id: '07', name: 'VPS 현재위치 지도', file: 'vps-map.html', ready: false },
+      { id: '02', name: 'AI 해설사 초기', file: 'guide.html', ready: true },
+      { id: '03', name: '답변', file: 'guide.html#answer', ready: true },
+      { id: '04', name: '이미지 답변', file: 'guide.html#image', ready: true },
+      { id: '05', name: '지도 답변', file: 'guide.html#map', ready: true },
     ],
   },
   {
     title: '탐방',
     items: [
-      { id: '08', name: '탐방 목록', file: 'explore.html', ready: true },
-      { id: '09', name: '탐방 · 소개', file: 'explore-intro.html', ready: true },
-      { id: '10', name: '탐방 · 역사', file: 'explore-history.html', ready: true },
-      { id: '11', name: '탐방 · 주변맛집', file: 'explore-food.html', ready: true },
-      { id: '12', name: '탐방 · AI가이드', file: 'explore-guide.html', ready: true },
+      { id: '06', name: '탐방', file: 'explore.html', ready: true },
+      { id: '07', name: '탐방 상세', file: 'explore-detail.html', ready: true },
     ],
   },
   {
     title: '투어',
     items: [
-      { id: '13', name: '투어 목록', file: 'tour.html', ready: true },
-      { id: '14', name: '투어 · 코스안내', file: 'tour-course.html', ready: true },
+      { id: '08', name: '투어', file: 'tour.html', ready: true },
+      { id: '09', name: '투어 코스안내', file: 'tour-course.html', ready: true },
     ],
   },
   {
     title: '지도',
     items: [
-      { id: '15', name: '지도&루트', file: 'map.html', ready: true },
-    ],
-  },
-  {
-    title: '언어설정',
-    items: [
-      { id: '16', name: '언어설정 KOR', file: 'settings-kor.html', ready: true },
-      { id: '17', name: '언어설정 ENG', file: 'settings-eng.html', ready: true },
-      { id: '18', name: '언어설정 JPN', file: 'settings-jpn.html', ready: true },
-      { id: '19', name: '언어설정 CHN', file: 'settings-chn.html', ready: true },
+      { id: '10', name: '지도', file: 'map.html', ready: true },
     ],
   },
 ]
@@ -119,7 +100,7 @@ function loadPage(file) {
   currentFile = file
   iframe.src = `./${file}`
   renderNav()
-  history.replaceState(null, '', `#${file}`)
+  history.replaceState(null, '', `#${encodeURIComponent(file)}`)
 }
 
 function setDevice(device) {
@@ -145,7 +126,7 @@ function updateSizeLabel(width, label) {
 }
 
 function initFromHash() {
-  const hash = window.location.hash.replace('#', '')
+  const hash = decodeURIComponent(window.location.hash.replace('#', ''))
   if (!hash) return
 
   const exists = getReadyPages().some((page) => page.file === hash)

@@ -177,9 +177,16 @@ body.viewer-app {
     color: inherit;
     background: transparent;
     cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
 
     &:hover {
-      background: #f2f4f9;
+      background: #dce8f8;
+      color: #123371;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #153e8d;
+      outline-offset: 1px;
     }
 
     &--active {
@@ -189,12 +196,21 @@ body.viewer-app {
       .viewer-nav__id {
         color: rgba(255, 255, 255, 0.75);
       }
+
+      &:hover {
+        background: #1a4085;
+        color: #fff;
+      }
     }
   }
 
   &__item--pending {
     opacity: 0.55;
     cursor: default;
+
+    &:hover {
+      background: transparent;
+    }
   }
 
   &__id {

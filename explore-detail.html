@@ -1,0 +1,108 @@
+{{#> layout-explore-detail}}
+<section class="explore-detail" data-page="03-explore-detail">
+  <div class="explore-detail__bg" aria-hidden="true"></div>
+  <div class="explore-detail__shell">
+    {{> components/page-breadcrumb breadcrumbTitle="탐방"}}
+    {{> components/card-detail-desktop}}
+
+    {{> components/card-detail-hero}}
+
+    <div class="explore-detail__body">
+    <div class="info-grid">
+      <div class="info-grid__item">
+        <div>
+          <span class="info-grid__label info-grid__label--desktop">입장료</span>
+          <span class="info-grid__label info-grid__label--mobile">입장료(대인)</span>
+          <strong>3,000원</strong>
+        </div>
+        <img class="info-grid__icon" src="/src/assets/images/explore/icon-fee.png" alt="" width="30" height="30" />
+      </div>
+      <div class="info-grid__item">
+        <div>
+          <span class="info-grid__label">운영시간</span>
+          <strong>09:00 ~ 18:00</strong>
+        </div>
+        <img class="info-grid__icon" src="/src/assets/images/explore/icon-hours.png" alt="" width="30" height="30" />
+      </div>
+      <div class="info-grid__item">
+        <div>
+          <span class="info-grid__label">휴관일</span>
+          <strong>화요일</strong>
+        </div>
+        <img class="info-grid__icon" src="/src/assets/images/explore/icon-closed.png" alt="" width="30" height="30" />
+      </div>
+      <div class="info-grid__item">
+        <div>
+          <span class="info-grid__label">소요시간</span>
+          <strong class="info-grid__value info-grid__value--desktop">약 2-3시간</strong>
+          <strong class="info-grid__value info-grid__value--mobile">약 40분</strong>
+        </div>
+        <img class="info-grid__icon" src="/src/assets/images/explore/icon-duration.png" alt="" width="30" height="30" />
+      </div>
+    </div>
+
+    <section class="explore-detail__section">
+      <h2 class="section-title">소개</h2>
+      <div class="explore-detail__intro">
+        <div class="explore-detail__text" id="introText">
+          <p>경복궁(景福宮)은 1392년 조선 건국 후 1395년(태조 4)에 창건한 조선왕조 제일의 법궁(法宮)이다.</p>
+          <p>경복궁은 백악산(북악산)을 주산으로 넓은 지형에 건물을 배치하였고 정문인 광화문 앞으로 넓은 육조거리가 펼쳐진 한양의 중심이었다. ‘경복’의 이름은 ‘새 왕조가 큰 복을 누려 번영할 것’이라는 의미가 담겨있으며, 이곳에서 세종 대에 훈민정음이 창제되어 반포되기도 하였다.</p>
+          <p>경복궁은 1592년(선조 25) 임진왜란으로 소실되었는데 그 후 복구되지 못하였다가 270여년이 지난 1867년(고종 4)에 다시 지어졌다. 고종 대에 들어 건청궁과 태원전, 집옥재 등이 조성되었으며, 특히 건청궁 옥호루는 1895년 을미사변으로 명성황후가 시해되는 비운의 장소이기도 하다.</p>
+          <p>1910년 경술국치 후 경복궁은 계획적으로 훼손되기 시작하여 1915년 조선물산공진회를 개최한다는 명분으로 대부분의 전각들이 철거되었고, 1926년에는 조선총독부 청사를 지어 경복궁의 경관을 훼손하였다. 이후 1990년대부터 본격적으로 경복궁 복원공사가 진행되었고, 1995년부터 1997년까지 조선총독부 청사를 철거하였으며 흥례문 일원, 침전 권역, 건청궁과 태원전, 그리고 광화문 등이 복원되어 현재에 이르고 있다.</p>
+        </div>
+        <button type="button" class="btn-more" id="introMore">
+          더 보기
+          <img src="/src/assets/images/explore/icon-chevron.svg" alt="" width="16" height="16" />
+        </button>
+      </div>
+    </section>
+
+    <section class="explore-detail__section">
+      <h2 class="section-title">역사</h2>
+      <ol class="timeline__list">
+        <li>
+          <span class="timeline__year">1395년<br />(태조 4)</span>
+          <span class="timeline__text">경복궁 창건</span>
+        </li>
+        <li>
+          <span class="timeline__year">1426년<br />(세종 8)</span>
+          <span class="timeline__text">광화문, 건춘문, 영추문 지음</span>
+        </li>
+        <li>
+          <span class="timeline__year">1446년<br />(세종 28)</span>
+          <span class="timeline__text">훈민정음 반포</span>
+        </li>
+        <li>
+          <span class="timeline__year">1475년<br />(성종 6)</span>
+          <span class="timeline__text">북문의 이름을 신무문이라 함</span>
+        </li>
+        <li>
+          <span class="timeline__year">1592년<br />(선조 25)</span>
+          <span class="timeline__text">임진왜란으로 소실</span>
+        </li>
+        <li>
+          <span class="timeline__year">1865년<br />(고종 2)</span>
+          <span class="timeline__text">중건 시작</span>
+        </li>
+        <li>
+          <span class="timeline__year">1867년<br />(고종 4)</span>
+          <span class="timeline__text">중건 완료</span>
+        </li>
+        <li>
+          <span class="timeline__year">1873년<br />(고종 10)</span>
+          <span class="timeline__text">건청궁 지음</span>
+        </li>
+        <li>
+          <span class="timeline__year">1895년<br />(고종 32)</span>
+          <span class="timeline__text">건청궁 옥호루에서 을미사변 발생</span>
+        </li>
+        <li>
+          <span class="timeline__year">1896년<br />(고종 33)</span>
+          <span class="timeline__text">고종이 거처를 러시아공사관으로 옮김</span>
+        </li>
+      </ol>
+    </section>
+    </div>
+  </div>
+</section>
+{{/layout-explore-detail}}

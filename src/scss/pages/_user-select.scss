@@ -5,6 +5,14 @@
   min-height: 100dvh;
   padding: 40px $side-padding;
 
+  @media (min-width: $bp-app-shell) {
+    padding-inline: $app-shell-padding-inline;
+  }
+
+  @media (min-width: $bp-desktop) {
+    padding: calc(#{$user-select-header-height} + 48px) $app-shell-padding-inline 60px;
+  }
+
   &__bg {
     position: fixed;
     inset: 0;
@@ -12,10 +20,12 @@
     pointer-events: none;
     background-color: $color-bg-blue;
 
-    // 배경 패턴 이미지는 추후 적용
-    // background-image: url('...');
-    // background-size: cover;
-    // opacity: 0.5;
+    @media (min-width: $bp-desktop) {
+      background-image: url('/src/assets/images/explore/bg-pattern.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5;
+    }
   }
 
   &__contents {
@@ -29,12 +39,24 @@
     margin-inline: auto;
 
     @media (min-width: $bp-tablet) {
-      max-width: min(100%, $content-max);
+      max-width: min(100%, 720px);
     }
 
     @media (min-width: $bp-desktop) {
       gap: 50px;
-      padding-block: 32px 60px;
+      max-width: $content-max;
+    }
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+
+    @media (min-width: $bp-desktop) {
+      gap: 32px;
     }
   }
 
@@ -45,13 +67,11 @@
     align-items: center;
     width: 100%;
 
-    @media (min-width: $bp-desktop) {
-      gap: 24px;
+    &--mobile {
+      @media (min-width: $bp-desktop) {
+        display: none;
+      }
     }
-  }
-
-  &__welcome {
-    width: 100%;
   }
 
   &__body {
@@ -85,9 +105,14 @@
     gap: 7px;
     width: 100%;
 
+    @media (min-width: $bp-tablet) {
+      flex-flow: row wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
     @media (min-width: $bp-desktop) {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      flex-wrap: nowrap;
       gap: 15px;
     }
   }
@@ -100,7 +125,7 @@
     width: 100%;
 
     @media (min-width: $bp-desktop) {
-      gap: 30px;
+      gap: 0;
     }
   }
 
@@ -110,39 +135,7 @@
       max-width: 100%;
       height: 50px;
       font-size: 18px;
-    }
-  }
-
-  &__lang {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-  }
-
-  &__lang-text {
-    font-size: 14px;
-    line-height: 24px;
-    color: $color-text;
-    text-align: center;
-    white-space: nowrap;
-
-    strong {
       font-weight: 700;
-    }
-
-    &--desktop {
-      display: none;
-
-      @media (min-width: $bp-desktop) {
-        display: block;
-      }
-    }
-
-    &--mobile {
-      @media (min-width: $bp-desktop) {
-        display: none;
-      }
     }
   }
 
@@ -154,9 +147,32 @@
 
   .voice-panel {
     width: 100%;
+  }
+}
 
-    @media (min-width: $bp-desktop) {
-      display: none;
+.logo--hero {
+  @media (min-width: $bp-desktop) {
+    gap: 20px;
+    align-items: center;
+
+    .logo__text {
+      gap: 10px;
+    }
+
+    .logo__title {
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -1.2px;
+    }
+
+    .logo__subtitle {
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .logo__character {
+      width: 170px;
+      height: 167px;
     }
   }
 }

@@ -1,6 +1,6 @@
 @use 'base/variables' as *;
 
-// Figma: m-Button small (추천질문 칩)
+// Figma: m-Button small (???? ?)
 .m-chip {
   display: inline-flex;
   align-items: center;
@@ -59,12 +59,12 @@
     flex-wrap: wrap;
     gap: 5px;
 
-    @media (min-width: $bp-desktop) {
+    @media (min-width: $bp-app-shell) {
       gap: 7px;
     }
   }
 
-  @media (min-width: $bp-desktop) {
+  @media (min-width: $bp-app-shell) {
     gap: 12px;
 
     .m-chip {

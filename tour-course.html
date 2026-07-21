@@ -1,98 +1,109 @@
 {{#> layout-explore-detail}}
 <section class="tour-course" data-page="04-tour-course">
-  {{> components/card-course-detail-hero}}
-  <div class="tour-course__body">
-    <p class="tour-course__intro">서울 최고의 궁궐 경복궁과 전통 문화의 거리 인사동을 하루에 경험하는 완벽한 1일 코스입니다.</p>
-    <section class="course-schedule">
-      <h2 class="section-title">1일차 일정</h2>
-      <ol class="course-schedule__list">
-        <li class="course-schedule__item">
-          <span class="course-schedule__point course-schedule__point--start" aria-hidden="true"></span>
-          <article class="schedule-card">
-            <div class="schedule-card__content">
-              <div class="schedule-card__head">
-                <span class="schedule-card__time">09:00</span>
-                <span class="schedule-card__duration">2시간</span>
+  <div class="tour-course__bg" aria-hidden="true"></div>
+  <div class="tour-course__shell">
+    {{> components/page-breadcrumb breadcrumbTitle="투어"}}
+    {{> components/card-course-detail-desktop}}
+    {{> components/card-course-detail-hero}}
+
+    <div class="tour-course__desktop">
+      {{> components/tour-course-tabs}}
+      {{> components/tour-course-desktop}}
+    </div>
+
+    <div class="tour-course__body tour-course__mobile">
+      <p class="tour-course__intro">서울 최고의 궁궐 경복궁과 전통 문화의 거리 인사동을 하루에 경험하는 완벽한 1일 코스입니다.</p>
+      <section class="course-schedule">
+        <h2 class="section-title">1일차 일정</h2>
+        <ol class="course-schedule__list">
+          <li class="course-schedule__item">
+            <span class="course-schedule__point course-schedule__point--start" aria-hidden="true"></span>
+            <article class="schedule-card">
+              <div class="schedule-card__content">
+                <div class="schedule-card__head">
+                  <span class="schedule-card__time">09:00</span>
+                  <span class="schedule-card__duration">2시간</span>
+                </div>
+                <div class="schedule-card__body">
+                  <strong>경복궁 입장 &amp; 수문장 교대식</strong>
+                  <p>아침 일찍 경복궁을 방문하여 웅장한 광화문...</p>
+                </div>
               </div>
-              <div class="schedule-card__body">
-                <strong>경복궁 입장 &amp; 수문장 교대식</strong>
-                <p>아침 일찍 경복궁을 방문하여 웅장한 광화문...</p>
+              <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
+            </article>
+          </li>
+          <li class="course-schedule__item">
+            <span class="course-schedule__point" aria-hidden="true"></span>
+            <article class="schedule-card">
+              <div class="schedule-card__content">
+                <div class="schedule-card__head">
+                  <span class="schedule-card__time">11:30</span>
+                  <span class="schedule-card__duration">1시간</span>
+                </div>
+                <div class="schedule-card__body">
+                  <strong>토속촌 삼계탕 점심</strong>
+                  <p>경복궁 인근 유명 삼계탕 맛집에서 인삼 삼...</p>
+                </div>
               </div>
-            </div>
-            <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
-          </article>
-        </li>
-        <li class="course-schedule__item">
-          <span class="course-schedule__point" aria-hidden="true"></span>
-          <article class="schedule-card">
-            <div class="schedule-card__content">
-              <div class="schedule-card__head">
-                <span class="schedule-card__time">11:30</span>
-                <span class="schedule-card__duration">1시간</span>
+              <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
+            </article>
+          </li>
+          <li class="course-schedule__item">
+            <span class="course-schedule__point" aria-hidden="true"></span>
+            <article class="schedule-card">
+              <div class="schedule-card__content">
+                <div class="schedule-card__head">
+                  <span class="schedule-card__time">13:00</span>
+                  <span class="schedule-card__duration">2시간</span>
+                </div>
+                <div class="schedule-card__body">
+                  <strong>인사동 전통 문화 거리 탐방</strong>
+                  <p>아침 일찍 경복궁을 방문하여 웅장한 광화문...</p>
+                </div>
               </div>
-              <div class="schedule-card__body">
-                <strong>토속촌 삼계탕 점심</strong>
-                <p>경복궁 인근 유명 삼계탕 맛집에서 인삼 삼...</p>
+              <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
+            </article>
+          </li>
+          <li class="course-schedule__item">
+            <span class="course-schedule__point" aria-hidden="true"></span>
+            <article class="schedule-card">
+              <div class="schedule-card__content">
+                <div class="schedule-card__head">
+                  <span class="schedule-card__time">15:30</span>
+                  <span class="schedule-card__duration">1.5시간</span>
+                </div>
+                <div class="schedule-card__body">
+                  <strong>종묘 방문 및 산책</strong>
+                  <p>유네스코 세계문화유산 종묘를 방문하여...</p>
+                </div>
               </div>
-            </div>
-            <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
-          </article>
-        </li>
-        <li class="course-schedule__item">
-          <span class="course-schedule__point" aria-hidden="true"></span>
-          <article class="schedule-card">
-            <div class="schedule-card__content">
-              <div class="schedule-card__head">
-                <span class="schedule-card__time">13:00</span>
-                <span class="schedule-card__duration">2시간</span>
+              <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
+            </article>
+          </li>
+          <li class="course-schedule__item">
+            <span class="course-schedule__point course-schedule__point--end" aria-hidden="true"></span>
+            <article class="schedule-card">
+              <div class="schedule-card__content">
+                <div class="schedule-card__head">
+                  <span class="schedule-card__time">19:00</span>
+                  <span class="schedule-card__duration">1.5시간</span>
+                </div>
+                <div class="schedule-card__body">
+                  <strong>광장시장 야시장 저녁</strong>
+                  <p>광장시장에서 육회비빔밥, 마약김밥, 빈대떡...</p>
+                </div>
               </div>
-              <div class="schedule-card__body">
-                <strong>인사동 전통 문화 거리 탐방</strong>
-                <p>아침 일찍 경복궁을 방문하여 웅장한 광화문...</p>
-              </div>
-            </div>
-            <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
-          </article>
-        </li>
-        <li class="course-schedule__item">
-          <span class="course-schedule__point" aria-hidden="true"></span>
-          <article class="schedule-card">
-            <div class="schedule-card__content">
-              <div class="schedule-card__head">
-                <span class="schedule-card__time">15:30</span>
-                <span class="schedule-card__duration">1.5시간</span>
-              </div>
-              <div class="schedule-card__body">
-                <strong>종묘 방문 및 산책</strong>
-                <p>유네스코 세계문화유산 종묘를 방문하여...</p>
-              </div>
-            </div>
-            <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
-          </article>
-        </li>
-        <li class="course-schedule__item">
-          <span class="course-schedule__point course-schedule__point--end" aria-hidden="true"></span>
-          <article class="schedule-card">
-            <div class="schedule-card__content">
-              <div class="schedule-card__head">
-                <span class="schedule-card__time">19:00</span>
-                <span class="schedule-card__duration">1.5시간</span>
-              </div>
-              <div class="schedule-card__body">
-                <strong>광장시장 야시장 저녁</strong>
-                <p>광장시장에서 육회비빔밥, 마약김밥, 빈대떡...</p>
-              </div>
-            </div>
-            <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
-          </article>
-        </li>
-      </ol>
-    </section>
-    <button type="button" class="tour-course__reserve">
-      이 투어 예약하기
-      <span class="icon-slot icon-slot--16 icon-slot--white" aria-hidden="true"></span>
-    </button>
-    <p class="tour-course__note">무료 취소 가능 · 즉시 예약 확정</p>
+              <span class="icon-slot icon-slot--20 icon-slot--circle" aria-hidden="true"></span>
+            </article>
+          </li>
+        </ol>
+      </section>
+      <button type="button" class="tour-course__reserve">
+        이 투어 예약하기
+        <span class="icon-slot icon-slot--16 icon-slot--white" aria-hidden="true"></span>
+      </button>
+      <p class="tour-course__note">무료 취소 가능 · 즉시 예약 확정</p>
+    </div>
   </div>
 </section>
 {{/layout-explore-detail}}
