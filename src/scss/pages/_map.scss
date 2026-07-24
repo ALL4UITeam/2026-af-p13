@@ -8,10 +8,10 @@
 .map {
   position: relative;
   width: 100%;
-  height: calc(100dvh - #{$top-height});
+  height: calc(100dvh - var(--top-height));
 
   @media (min-width: $bp-app-shell) {
-    height: calc(100dvh - #{$user-select-header-height});
+    height: calc(100dvh - var(--user-select-header-height));
   }
 
   &__stage {
@@ -55,24 +55,24 @@
 
 .map-search {
   position: fixed;
-  top: calc(#{$top-height} + 10px);
+  top: calc(var(--top-height) + 10px);
   left: 50%;
-  z-index: $z-dropdown;
+  z-index: var(--z-dropdown);
   display: flex;
   align-items: center;
   gap: 10px;
-  width: min(#{$content-width}, calc(100vw - #{$side-padding * 2}));
-  max-width: $content-width;
+  width: min(var(--content-width), calc(100vw - (var(--side-padding) * 2)));
+  max-width: var(--content-width);
   height: 46px;
-  padding-left: 20px;
-  border: 2px solid $color-primary-900;
+  padding-left: var(--side-padding);
+  border: 2px solid var(--color-primary-900);
   border-radius: 30px;
-  background-color: $color-bg-white;
+  background-color: var(--color-bg-white);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   transform: translateX(-50%);
 
   @media (min-width: $bp-app-shell) {
-    top: calc(#{$user-select-header-height} + 10px);
+    top: calc(var(--user-select-header-height) + 10px);
     width: min(480px, calc(100vw - 80px));
     max-width: 480px;
   }
@@ -135,7 +135,7 @@
     border: none;
     border-radius: 0 30px 30px 0;
     line-height: 0;
-    background-color: $color-primary-900;
+    background-color: var(--color-primary-900);
     cursor: pointer;
 
     img {

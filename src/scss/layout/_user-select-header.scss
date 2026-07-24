@@ -4,14 +4,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: $z-top;
+  z-index: var(--z-top);
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: $user-select-header-height;
+  height: var(--user-select-header-height);
   padding-inline: 40px;
-  background-color: $color-bg-white;
+  background-color: var(--color-bg-white);
 }
 
 .user-select-header {
@@ -57,7 +57,7 @@
     font-size: 15px;
     line-height: 1;
     letter-spacing: -0.3px;
-    color: $color-text;
+    color: var(--color-text);
   }
 
   &__subtitle {
@@ -81,21 +81,19 @@
     justify-content: center;
     width: 85px;
     height: 30px;
-    padding: 0 5px 0 0;
+    padding: 0 5px 0 25px;
     border: none;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
-    color: $color-bg-white;
+    color: var(--color-bg-white);
     background-color: #0d2655;
+    background-image: url('/src/assets/images/user-select/icon-voice.svg');
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 20px 20px;
     cursor: pointer;
-
-    img {
-      display: block;
-      width: 20px;
-      height: 20px;
-    }
   }
 
   &__lang {
@@ -106,21 +104,39 @@
     width: 100px;
     height: 30px;
     padding: 0;
-    border: 1px solid $color-border-light;
+    border: 1px solid var(--color-border-light);
     border-radius: 30px;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
-    color: $color-text;
-    background-color: $color-bg-white;
+    color: var(--color-text);
+    background-color: var(--color-bg-white);
     cursor: pointer;
   }
 
   &__lang-flag {
+    display: block;
+    flex-shrink: 0;
     width: 30px;
     height: 20px;
-    object-fit: cover;
     border-radius: 1px;
+    background: center / cover no-repeat;
+  }
+
+  &__lang[data-lang='kor'] .user-select-header__lang-flag {
+    background-image: url('/src/assets/images/common/flag-kr.svg');
+  }
+
+  &__lang[data-lang='eng'] .user-select-header__lang-flag {
+    background-image: url('/src/assets/images/common/flag-en.svg');
+  }
+
+  &__lang[data-lang='chn'] .user-select-header__lang-flag {
+    background-image: url('/src/assets/images/common/flag-zh.svg');
+  }
+
+  &__lang[data-lang='jpn'] .user-select-header__lang-flag {
+    background-image: url('/src/assets/images/common/flag-ja.svg');
   }
 }
 
@@ -132,4 +148,16 @@
   top: calc(100% + 6px);
   right: 0;
   width: 100px;
+}
+
+
+@media (min-width: $bp-desktop) {
+  .user-select-header__voice{
+    background-image: url('/src/assets/images/user-select/icon-voice-desktop.svg');
+    background-size: auto;
+    background-position: 14px 50%;
+    gap:0;
+    padding-left: 28px;
+    justify-content: flex-start;
+  }
 }

@@ -17,9 +17,9 @@ const PAGE_GROUPS = [
     title: 'AI 해설사',
     items: [
       { id: '02', name: 'AI 해설사 초기', file: 'guide.html', ready: true },
-      { id: '03', name: '답변', file: 'guide.html#answer', ready: true },
-      { id: '04', name: '이미지 답변', file: 'guide.html#image', ready: true },
-      { id: '05', name: '지도 답변', file: 'guide.html#map', ready: true },
+      { id: '03', name: '답변', file: 'guide-answer.html', ready: true },
+      { id: '04', name: '이미지 답변', file: 'guide-image.html', ready: true },
+      { id: '05', name: '지도 답변', file: 'guide-map.html', ready: true },
     ],
   },
   {

@@ -1,62 +1,63 @@
 @use 'base/variables' as *;
 
-// Figma: search-bar (86:1046)
+// Figma: m-search-bar (505:4321)
 .search-bar {
   display: flex;
   align-items: center;
-  gap: 10px;
   width: 100%;
   height: 46px;
-  padding-inline: 20px;
-  border: 1px solid $color-border-light;
+  padding-left: 20px;
+  overflow: hidden;
+  border: 2px solid var(--color-primary-900);
   border-radius: 30px;
-  background-color: $color-bg-white;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-bg-white);
 
   &__input {
     flex: 1;
     min-width: 0;
+    height: 100%;
     border: none;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
-    color: $color-text;
+    color: var(--color-text);
     background: transparent;
     outline: none;
 
-    &::placeholder { color: #555; }
+    &::placeholder {
+      color: #555;
+    }
+  }
+
+  &__submit {
+    flex-shrink: 0;
+    width: 56px;
+    height: 46px;
+    padding: 0;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    background-color: var(--color-primary-900);
+    background-image: url('/src/assets/images/explore/icon-search.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
   }
 }
 
 .layout-app--explore .search-bar,
 .layout-app--tour .search-bar {
   @media (min-width: $bp-app-shell) {
-    width: 100%;
     max-width: 500px;
     height: 56px;
-    padding: 0;
-    border: 2px solid $color-primary-900;
-    border-radius: 30px;
-    box-shadow: none;
 
     &__input {
-      flex: 1;
-      padding-left: 24px;
+      padding-left: 4px;
       font-size: 16px;
     }
 
-    &__icon,
-    .icon-slot {
-      display: none;
-    }
-
-    &::after {
-      content: '';
-      flex-shrink: 0;
+    &__submit {
       width: 70px;
       height: 56px;
-      border-radius: 0 30px 30px 0;
-      background: $color-primary-900 url('/src/assets/images/explore/icon-search.png') center / 20px no-repeat;
     }
   }
 }
@@ -73,16 +74,16 @@
     min-width: 60px;
     height: 30px;
     padding-inline: 8px;
-    border: 1px solid $color-text-muted;
+    border: 1px solid var(--color-text-muted);
     border-radius: 50px;
     font-size: 14px;
     line-height: 1;
     color: #666;
-    background-color: $color-bg-white;
+    background-color: var(--color-bg-white);
     cursor: pointer;
 
     &--active {
-      color: $color-bg-white;
+      color: var(--color-bg-white);
       font-weight: 700;
       background-color: #0d2655;
       border-color: #0d2655;

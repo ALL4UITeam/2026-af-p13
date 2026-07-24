@@ -6,23 +6,20 @@
 
     <div class="explore__search">
       {{> components/search-bar}}
-      {{> components/filter-chips}}
     </div>
 
-    <p class="explore__count">
-      총 <strong class="explore__count-value explore__count-value--mobile">5</strong><strong class="explore__count-value explore__count-value--desktop">55</strong>건 검색
-    </p>
+    <div class="explore__result">
+      <p class="explore__count">총 <strong>6</strong>건 검색</p>
 
-    <div class="explore__list">
-      {{> components/place-card bookmarkActive=true hideDefaultUnesco=true href="./explore-detail.html" location="서울특별시 종로구 사직로 161 경복궁"}}
-      {{> components/place-card image="card-04.jpg" name="창덕궁" subtitle="자연과 조화를 이룬 궁궐" desc="창덕궁은 경복궁의 이궁으로 지어진 궁궐로, 자연 지형과 건축이 조화롭게 어우러진 조선의 대표 궁궐입니다." location="서울특별시 종로구 율곡로 99 창덕궁" badge1="palace" hideDefaultUnesco=true rating="4.8" reviewCount="12,305" duration="2~3 시간" href="./explore-detail.html"}}
-      {{> components/place-card image="card-05.jpg" name="창경궁" subtitle="왕실의 생활 공간이 담긴 궁궐" desc="창경궁은 왕실 어른들을 위해 조성된 궁궐로, 조선 왕실의 일상과 품격을 느낄 수 있는 역사 공간입니다." location="서울특별시 종로구 창경궁로 185 창경궁" badge1="palace" hideDefaultUnesco=true rating="4.6" reviewCount="6,118" duration="1~2 시간" href="./explore-detail.html"}}
-      {{> components/place-card image="card-06.jpg" name="덕수궁" subtitle="대한제국의 황궁" desc="덕수궁은 대한제국의 황궁으로 사용된 궁궐로, 전통 궁궐 건축과 근대 건축이 함께 남아 있는 역사 공간입니다." location="서울특별시 중구 세종대로 99 덕수궁" badge1="palace" hideDefaultUnesco=true rating="4.5" reviewCount="5,902" duration="1~2 시간" href="./explore-detail.html"}}
-      {{> components/place-card image="card-02.jpg" name="숭례문" subtitle="한양도성의 남쪽 정문" desc="숭례문은 조선시대 한양도성의 남쪽 정문으로, 남대문이라는 이름으로 알려진 대한민국의 대표 국가유산입니다." location="서울특별시 중구 세종대로 40 숭례문" badge1="tomb" hideDefaultUnesco=true rating="4.2" reviewCount="1,562" duration="1시간 30분" href="./explore-detail.html"}}
-      {{> components/place-card image="card-03.jpg" name="경희궁" subtitle="조선 후기의 서쪽 궁궐" desc="경희궁은 조선 후기 왕들이 머물던 궁궐로, 100여 동의 전각을 갖추었던 서궐의 역사성을 간직한 공간입니다." location="서울특별시 종로구 새문안로 45 경희궁" badge1="shrine" hideDefaultUnesco=true rating="4.7" reviewCount="8,420" duration="1~2 시간" href="./explore-detail.html"}}
+      <div class="explore__list">
+        {{> components/place-card href="./explore-detail.html" location="서울특별시 종로구 사직로 161 경복궁"}}
+        {{> components/place-card image="card-04.jpg" name="창덕궁" subtitle="자연과 조화를 이룬 궁궐" desc="창덕궁은 경복궁의 이궁으로 지어진 궁궐로, 자연 지형과 건축이 조화롭게 어우러진 조선의 대표 궁궐입니다." location="서울특별시 종로구 율곡로 99 창덕궁" href="./explore-detail.html"}}
+        {{> components/place-card image="card-05.jpg" name="창경궁" subtitle="왕실의 생활 공간이 담긴 궁궐" desc="창경궁은 왕실 어른들을 위해 조성된 궁궐로, 조선 왕실의 일상과 품격을 느낄 수 있는 역사 공간입니다." location="서울특별시 종로구 창경궁로 185 창경궁" href="./explore-detail.html"}}
+        {{> components/place-card image="card-06.jpg" name="덕수궁" subtitle="대한제국의 황궁" desc="덕수궁은 대한제국의 황궁으로 사용된 궁궐로, 전통 궁궐 건축과 근대 건축이 함께 남아 있는 역사 공간입니다." location="서울특별시 중구 세종대로 99 덕수궁" href="./explore-detail.html"}}
+        {{> components/place-card image="card-02.jpg" name="숭례문" subtitle="한양도성의 남쪽 정문" desc="숭례문은 조선시대 한양도성의 남쪽 정문으로, 남대문이라는 이름으로 알려진 대한민국의 대표 국가유산입니다." location="서울특별시 중구 세종대로 40 숭례문" href="./explore-detail.html"}}
+        {{> components/place-card image="card-03.jpg" name="경희궁" subtitle="조선 후기의 서쪽 궁궐" desc="경희궁은 조선 후기 왕들이 머물던 궁궐로, 100여 동의 전각을 갖추었던 서궐의 역사성을 간직한 공간입니다." location="서울특별시 종로구 새문안로 45 경희궁" href="./explore-detail.html"}}
+      </div>
     </div>
-
-    {{> components/pagination}}
   </div>
 </section>
 {{/layout-app}}

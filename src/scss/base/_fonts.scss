@@ -1,1 +1,39 @@
-// Fonts are imported via JS (main.js) from npm packages
+@font-face {
+  font-family: 'HangeulNuri-Bold';
+  src: url('../assets/fonts/hangeulnuri-bold-normal.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Freesentation';
+  src: url('../assets/fonts/freesentation/Freesentation-4Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Freesentation';
+  src: url('../assets/fonts/freesentation/Freesentation-5Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Freesentation';
+  src: url('../assets/fonts/freesentation/Freesentation-6SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Freesentation';
+  src: url('../assets/fonts/freesentation/Freesentation-7Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,5 +1,3 @@
-import 'pretendard/dist/web/static/pretendard.css'
-import '@noonnu/hangeul-nuri-bold/index.css'
 import '../scss/main.scss'
 
 function initVoicePanel() {
@@ -61,16 +59,15 @@ function initLangMenu() {
       item.classList.add('is-active')
 
       const label = item.querySelector('span')?.textContent?.trim()
-      const flagSrc = item.querySelector('img')?.getAttribute('src')
+      const lang = item.getAttribute('data-lang')
 
       document.querySelectorAll('.lang-menu').forEach((otherMenu) => {
         const otherToggle = otherMenu.querySelector('button[aria-haspopup="true"]')
         if (!otherToggle) return
         if (otherToggle.classList.contains('user-select-header__lang')) {
           const textEl = otherToggle.querySelector('.user-select-header__lang-label')
-          const flagEl = otherToggle.querySelector('.user-select-header__lang-flag')
           if (textEl && label) textEl.textContent = label
-          if (flagEl && flagSrc) flagEl.setAttribute('src', flagSrc)
+          if (lang) otherToggle.setAttribute('data-lang', lang)
         }
       })
 
@@ -118,75 +115,31 @@ function initDesktopVoiceBridge() {
 function initGuide() {
   const guide = document.querySelector('.guide')
   const chips = document.getElementById('guideChips')
-  const chatUser = document.getElementById('chatUser')
-  const chatAnswer = document.getElementById('chatAnswer')
-  const chatImageAnswer = document.getElementById('chatImageAnswer')
-  const chatMapAnswer = document.getElementById('chatMapAnswer')
-  const chatUserText = document.getElementById('chatUserText')
   const chatArea = document.getElementById('chatArea')
   const scrollBtns = document.querySelectorAll('.prompt-mobile__scroll')
 
-  if (!guide || !chips) return
-
-  const hideAnswers = () => {
-    chatAnswer?.setAttribute('hidden', '')
-    chatImageAnswer?.setAttribute('hidden', '')
-    chatMapAnswer?.setAttribute('hidden', '')
-    guide.classList.remove('is-answered', 'is-image-answer', 'is-map-answer')
-  }
+  if (!guide) return
 
   const scrollChatToEnd = () => {
     chatArea?.lastElementChild?.scrollIntoView({ behavior: 'smooth', block: 'end' })
   }
 
-  const showAnswer = (question, mode = 'text') => {
-    if (chatUserText) chatUserText.textContent = question
-    chatUser?.removeAttribute('hidden')
-    hideAnswers()
-
-    if (mode === 'image') {
-      chatImageAnswer?.removeAttribute('hidden')
-      guide.classList.add('is-image-answer')
-    } else if (mode === 'map') {
-      chatMapAnswer?.removeAttribute('hidden')
-      guide.classList.add('is-map-answer')
-    } else {
-      chatAnswer?.removeAttribute('hidden')
-      guide.classList.add('is-answered')
-    }
-
-    chips.querySelectorAll('.m-chip').forEach((chip) => {
-      chip.classList.toggle('m-chip--active', chip.dataset.question === question)
-    })
-    requestAnimationFrame(scrollChatToEnd)
-  }
-
-  const applyHashState = () => {
-    const hash = window.location.hash.replace('#', '')
-    if (hash === 'answer') {
-      showAnswer('경복궁에 대한 정보를 자세하게 알려줘', 'text')
-    } else if (hash === 'image') {
-      showAnswer('경복궁을 설명해줘. 이미지도 같이 첨부해줘.', 'image')
-    } else if (hash === 'map') {
-      showAnswer('경복궁 근정전 지도를 보여줘', 'map')
-    }
-  }
-
-  chips.querySelectorAll('.m-chip').forEach((chip) => {
+  chips?.querySelectorAll('.m-chip').forEach((chip) => {
     chip.addEventListener('click', () => {
-      chips.querySelectorAll('.m-chip').forEach((c) => c.classList.remove('m-chip--active'))
-      chip.classList.add('m-chip--active')
       const mode = chip.dataset.mode || 'text'
-      showAnswer(chip.dataset.question || chip.textContent.trim(), mode)
+      if (mode === 'image') {
+        window.location.href = './guide-image.html'
+      } else if (mode === 'map') {
+        window.location.href = './guide-map.html'
+      } else {
+        window.location.href = './guide-answer.html'
+      }
     })
   })
 
   scrollBtns.forEach((btn) => {
     btn.addEventListener('click', scrollChatToEnd)
   })
-
-  applyHashState()
-  window.addEventListener('hashchange', applyHashState)
 }
 
 function initFilterChips(rootId) {
@@ -224,19 +177,18 @@ function initTour() {
 }
 
 function initTourCourseTabs() {
-  const tabs = document.getElementById('tourCourseTabs')
-  if (!tabs) return
+  document.querySelectorAll('.tour-course-tabs').forEach((tabs) => {
+    tabs.addEventListener('click', (event) => {
+      const tab = event.target.closest('.tour-course-tabs__tab')
+      if (!tab) return
 
-  tabs.addEventListener('click', (event) => {
-    const tab = event.target.closest('.tour-course-tabs__tab')
-    if (!tab) return
-
-    tabs.querySelectorAll('.tour-course-tabs__tab').forEach((el) => {
-      el.classList.remove('is-active')
-      el.setAttribute('aria-selected', 'false')
+      tabs.querySelectorAll('.tour-course-tabs__tab').forEach((el) => {
+        el.classList.remove('is-active')
+        el.setAttribute('aria-selected', 'false')
+      })
+      tab.classList.add('is-active')
+      tab.setAttribute('aria-selected', 'true')
     })
-    tab.classList.add('is-active')
-    tab.setAttribute('aria-selected', 'true')
   })
 }
 

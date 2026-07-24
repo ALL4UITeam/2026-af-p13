@@ -24,10 +24,10 @@
 
   &__title {
     margin: 0;
-    font-size: 32px;
+    font-size: fluid-px(26, 32, $fluid-vw-min, $fluid-vw-max);
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.64px;
-    color: $color-text;
+    color: var(--color-text);
   }
 }

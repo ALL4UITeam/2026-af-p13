@@ -7,15 +7,9 @@
   width: 24px;
   height: 24px;
   border-radius: 60px;
-  background-color: $color-bg-white;
+  background-color: var(--color-bg-white);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
   text-decoration: none;
-
-  img {
-    display: block;
-    width: 24px;
-    height: 24px;
-  }
 }
 
 .card-detail {
@@ -73,7 +67,7 @@
     padding: 0;
     border: none;
     border-radius: 20px;
-    background-color: $color-bg-white;
+    background-color: var(--color-bg-white);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
     cursor: pointer;
   }
@@ -82,7 +76,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    color: $color-bg-white;
+    color: var(--color-bg-white);
   }
 
   &__title {
@@ -106,10 +100,10 @@
   flex-direction: column;
   gap: 10px;
   width: calc(100% - 40px);
-  max-width: $content-width;
+  max-width: var(--content-width);
   padding: 15px 20px;
   border-radius: 15px;
-  background-color: $color-bg-white;
+  background-color: var(--color-bg-white);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 
   &__row {
@@ -140,7 +134,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
-  color: $color-text;
+  color: var(--color-text);
 }
 
 .explore-detail {
@@ -155,7 +149,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background-color: $color-bg-blue;
+      background-color: var(--color-bg-blue);
       background-image: url('/src/assets/images/explore/bg-pattern.png');
       background-size: cover;
       background-position: center;
@@ -171,7 +165,7 @@
       flex-direction: column;
       gap: 40px;
       width: 100%;
-      max-width: $guide-content-max;
+      max-width: var(--guide-content-max);
       margin-inline: auto;
       padding: 40px 0 60px;
     }
@@ -180,8 +174,8 @@
   &__body {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 20px;
+    gap: var(--space-gap-lg);
+    padding: var(--side-padding);
     padding-bottom: 40px;
 
     @media (min-width: $bp-app-shell) {
@@ -255,7 +249,7 @@
     width: 100%;
     height: 320px;
     border-radius: 10px;
-    background-color: $color-bg-white;
+    background-color: var(--color-bg-white);
   }
 
   &__media {
@@ -275,7 +269,7 @@
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: var(--space-gap-lg);
     flex-shrink: 0;
     width: 340px;
     padding: 30px 40px;
@@ -289,11 +283,11 @@
 
   &__title {
     margin: 0;
-    font-size: 24px;
+    font-size: fluid-px(20, 24, $fluid-vw-min, $fluid-vw-max);
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.48px;
-    color: $color-text;
+    color: var(--color-text);
   }
 
   &__subtitle {
@@ -346,7 +340,7 @@
     height: 60px;
     padding-inline: 12px;
     border-radius: 8px;
-    background-color: $color-bg-white;
+    background-color: var(--color-bg-white);
 
     @media (min-width: $bp-app-shell) {
       height: 90px;
@@ -439,14 +433,22 @@
   border-radius: 4px;
   font-size: 12px;
   font-weight: 700;
-  background-color: $color-bg-white;
+  background-color: var(--color-bg-white);
   cursor: pointer;
 
-  img {
+  .icon-chevron {
+    display: block;
+    flex-shrink: 0;
     width: 16px;
     height: 16px;
-    object-fit: contain;
+    background: center / contain no-repeat url('/src/assets/images/explore/icon-chevron.svg');
+    //transform: rotate(90deg);
+    transition: transform 0.2s ease;
   }
+}
+
+.explore-detail__text.is-expanded + .btn-more .icon-chevron {
+  transform: rotate(-180deg);
 }
 
 .timeline {
@@ -454,57 +456,73 @@
     margin: 0;
     padding: 0;
     list-style: none;
-  }
 
-  li {
-    position: relative;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    min-height: 54px;
-    padding-block: 5px;
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 54px;
+      padding-block: 6px;
 
-    &:nth-child(even) {
-      background-color: $color-bg-white;
-    }
+      &:nth-child(even) {
+        background-color: var(--color-bg-white);
+      }
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 71px;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background-color: $color-primary-border;
-      transform: translateY(-50%);
+      // 세로 라인
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 86px;
+        width: 1px;
+        background-color: var(--color-border-light);
 
-      @media (min-width: $bp-app-shell) {
-        left: 146px;
+        @media (min-width: $bp-app-shell) {
+          left: 151px;
+        }
+      }
+
+      // 파란 점
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 86px;
+        z-index: 1;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        transform: translate(-50%, -50%);
+
+        @media (min-width: $bp-app-shell) {
+          left: 151px;
+        }
       }
     }
   }
 
   &__year {
     flex-shrink: 0;
-    width: 75px;
-    padding-right: 10px;
-    border-right: 1px solid $color-border-light;
+    width: 76px;
+    padding-right: 16px;
     font-size: 14px;
     font-weight: 700;
     line-height: 1.3;
-    color: $color-primary-border;
-    text-align: center;
+    color: var(--color-primary);
+    text-align: right;
 
     @media (min-width: $bp-app-shell) {
-      width: 150px;
-      padding-right: 0;
+      width: 140px;
     }
   }
 
   &__text {
     flex: 1;
-    padding-right: 10px;
+    min-width: 0;
+    padding-left: 16px;
+    padding-right: 12px;
     font-size: 14px;
     line-height: 21px;
     color: #495056;

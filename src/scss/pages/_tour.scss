@@ -13,11 +13,11 @@
 
 .tour {
   position: relative;
-  min-height: calc(100dvh - #{$top-height});
+  min-height: calc(100dvh - var(--top-height));
 
   @media (min-width: $bp-app-shell) {
     min-height: 100dvh;
-    padding-top: calc(#{$user-select-header-height} + 40px);
+    padding-top: calc(var(--user-select-header-height) + 40px);
   }
 
   &__bg {
@@ -29,7 +29,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background-color: $color-bg-blue;
+      background-color: var(--color-bg-blue);
       background-image: url('/src/assets/images/explore/bg-pattern.png');
       background-size: cover;
       background-position: center;
@@ -42,13 +42,13 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    gap: var(--space-gap);
+    padding: var(--side-padding);
     padding-bottom: 40px;
 
     @media (min-width: $bp-app-shell) {
       width: 100%;
-      max-width: $guide-content-max;
+      max-width: var(--guide-content-max);
       margin-inline: auto;
       padding: 0 0 60px;
     }
@@ -79,13 +79,13 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-gap);
     width: 100%;
 
     @media (min-width: $bp-app-shell) {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+      gap: var(--space-gap);
     }
 
     @media (min-width: $bp-desktop) {
@@ -98,7 +98,7 @@
 .tour-card {
   overflow: hidden;
   border-radius: 10px;
-  background-color: $color-bg-white;
+  background-color: var(--color-bg-white);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 
   &__link {
@@ -138,12 +138,12 @@
   &__thumb-title {
     position: relative;
     z-index: 1;
-    color: $color-bg-white;
+    color: var(--color-bg-white);
   }
 
   &__name {
     margin: 0;
-    font-family: $font-heading;
+    font-family: var(--font-heading);
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
@@ -161,7 +161,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 20px;
+    padding: var(--side-padding);
   }
 
   &__desc {
@@ -183,7 +183,7 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 21px;
-    color: $color-text;
+    color: var(--color-text);
   }
 
   &__courses-track {
@@ -217,8 +217,8 @@
     font-size: 12px;
     font-weight: 700;
     line-height: 1;
-    color: $color-text;
-    background-color: $color-bg-white;
+    color: var(--color-text);
+    background-color: var(--color-bg-white);
     white-space: nowrap;
   }
 
@@ -226,6 +226,6 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 1.3;
-    color: $color-text;
+    color: var(--color-text);
   }
 }

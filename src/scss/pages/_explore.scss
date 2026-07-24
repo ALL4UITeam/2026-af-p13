@@ -1,10 +1,10 @@
 @use 'base/variables' as *;
 
-// Figma: card (87:991)
+// Figma: 03_01_탐방 card (505:4331)
 .place-card {
   overflow: hidden;
   border-radius: 10px;
-  background-color: $color-bg-white;
+  background-color: var(--color-bg-white);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 
   &__link {
@@ -17,71 +17,51 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 170px;
     padding: 15px;
+    overflow: hidden;
 
     &::after {
       content: '';
       position: absolute;
       inset: 0;
-      z-index: 0;
+      z-index: 1;
       pointer-events: none;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.635%, rgba(0, 0, 0, 0.8) 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
     }
   }
 
   &__thumb-img {
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: 0;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .thumb-slot--card {
-    display: none;
-  }
-
-  &__thumb-top {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  &__badges {
-    display: flex;
-    gap: 3px;
-  }
-
-  &__mark {
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-
   &__thumb-title {
     position: relative;
-    z-index: 1;
-    margin-top: auto;
-    color: $color-bg-white;
+    z-index: 2;
+    color: #fff;
   }
 
   &__name {
-    font-family: $font-heading;
+    margin: 0;
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
+    color: #fff;
   }
 
   &__sub {
+    margin: 0;
     font-size: 14px;
+    font-weight: 400;
     line-height: 21px;
+    color: #fff;
   }
 
   &__body {
@@ -92,55 +72,38 @@
   }
 
   &__desc {
+    margin: 0;
     font-size: 14px;
     line-height: 21px;
     color: #555;
   }
 
-  &__meta {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-  }
-
-  &__rating {
+  &__location {
     display: flex;
     gap: 5px;
     align-items: center;
-    font-size: 14px;
-
-    strong { font-weight: 700; color: $color-text; }
-    span:last-child { font-size: 12px; color: #555; }
-  }
-
-  &__info-row {
-    display: flex;
-    gap: 20px;
+    margin: 0;
     font-size: 14px;
     line-height: 21px;
     color: #555;
 
-    span {
-      display: inline-flex;
-      gap: 5px;
-      align-items: center;
+    &::before {
+      content: '';
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      background: center / 11px 15px no-repeat url('/src/assets/images/explore/icon-location.svg');
     }
-  }
-
-  &__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
   }
 }
 
 .explore {
   position: relative;
-  min-height: calc(100dvh - #{$top-height});
+  min-height: calc(100dvh - var(--top-height));
 
   @media (min-width: $bp-app-shell) {
     min-height: 100dvh;
-    padding-top: calc(#{$user-select-header-height} + 40px);
+    padding-top: calc(var(--user-select-header-height) + 40px);
   }
 
   &__bg {
@@ -152,7 +115,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background-color: $color-bg-blue;
+      background-color: var(--color-bg-blue);
       background-image: url('/src/assets/images/explore/bg-pattern.png');
       background-size: cover;
       background-position: center;
@@ -165,43 +128,42 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    padding-bottom: 20px;
+    gap: var(--space-gap);
+    padding: var(--side-padding);
+    padding-bottom: 40px;
 
     @media (min-width: $bp-app-shell) {
-      gap: 20px;
       width: 100%;
-      max-width: $guide-content-max;
+      max-width: var(--guide-content-max);
       margin-inline: auto;
       padding: 0 0 60px;
     }
   }
 
   &__search {
+    width: 100%;
+
+    @media (min-width: $bp-app-shell) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__result {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
-
-    @media (min-width: $bp-app-shell) {
-      gap: 30px;
-      align-items: center;
-    }
-
-    .filter-chips {
-      @media (min-width: $bp-app-shell) {
-        display: none;
-      }
-    }
   }
 
   &__count {
+    margin: 0;
     font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
     color: #495056;
 
-    strong,
-    .explore__count-value {
+    strong {
       color: #1c5acc;
       font-weight: 700;
     }
@@ -211,32 +173,16 @@
     }
   }
 
-  &__count-value {
-    &--desktop {
-      display: none;
-
-      @media (min-width: $bp-app-shell) {
-        display: inline;
-      }
-    }
-
-    &--mobile {
-      @media (min-width: $bp-app-shell) {
-        display: none;
-      }
-    }
-  }
-
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-gap);
     width: 100%;
 
     @media (min-width: $bp-app-shell) {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+      gap: var(--space-gap);
     }
 
     @media (min-width: $bp-desktop) {
@@ -245,12 +191,6 @@
   }
 
   @media (min-width: $bp-app-shell) {
-    .place-card__thumb-top,
-    .place-card__rating,
-    .place-card__tags {
-      display: none;
-    }
-
     .place-card__body {
       gap: 16px;
       padding: 16px 20px;
@@ -260,11 +200,9 @@
       color: #495056;
     }
 
-    .place-card__info-row span:first-child {
-      display: none;
-    }
-
     .place-card__sub {
+      font-weight: 500;
+      line-height: 1;
       color: #ebedee;
     }
   }

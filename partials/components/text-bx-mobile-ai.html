@@ -1,18 +1,11 @@
 <article class="text-bx-mobile text-bx-mobile--ai"{{#if id}} id="{{id}}"{{/if}}{{#if hidden}} hidden{{/if}}>
   <div class="text-bx-mobile__head">
-    <picture>
-      <source media="(min-width: 768px)" srcset="/src/assets/images/guide/ai-avatar.png" />
-      <img class="text-bx-mobile__avatar" src="/src/assets/images/guide/ai-avatar-mobile.png" alt="" width="36" height="36" />
-    </picture>
+    <div class="text-bx-mobile__avatar text-bx-mobile__avatar--ai" aria-hidden="true"></div>
     <div class="text-bx-mobile__meta">
       <time class="text-bx-mobile__time" datetime="{{#if timeValue}}{{timeValue}}{{else}}14:41{{/if}}">{{#if time}}{{time}}{{else}}오후 02:41{{/if}}</time>
       <div class="text-bx-mobile__actions">
-        <button type="button" class="text-bx-mobile__action" aria-label="음성 재생">
-          <img src="/src/assets/images/guide/icon-speaker.svg" alt="" width="20" height="20" />
-        </button>
-        <button type="button" class="text-bx-mobile__action" aria-label="새로고침">
-          <img src="/src/assets/images/guide/icon-refresh.svg" alt="" width="20" height="20" />
-        </button>
+        <button type="button" class="text-bx-mobile__action text-bx-mobile__action--speaker" aria-label="음성 재생"></button>
+        <button type="button" class="text-bx-mobile__action text-bx-mobile__action--refresh" aria-label="새로고침"></button>
       </div>
     </div>
   </div>

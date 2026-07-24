@@ -17,6 +17,24 @@ const pageData = {
     topTitle: 'AI 해설사',
     guideDesktop: true,
   },
+  '/guide-answer.html': {
+    title: 'AI 해설사 - 답변',
+    description: 'AI 국가유산 해설사 - 텍스트 답변',
+    topTitle: 'AI 해설사',
+    guideDesktop: true,
+  },
+  '/guide-image.html': {
+    title: 'AI 해설사 - 이미지 답변',
+    description: 'AI 국가유산 해설사 - 이미지 답변',
+    topTitle: 'AI 해설사',
+    guideDesktop: true,
+  },
+  '/guide-map.html': {
+    title: 'AI 해설사 - 지도 답변',
+    description: 'AI 국가유산 해설사 - 지도 답변',
+    topTitle: 'AI 해설사',
+    guideDesktop: true,
+  },
   '/explore.html': {
     title: '탐방',
     description: 'AI 국가유산 해설사 - 탐방 목록',
@@ -85,6 +103,9 @@ export default defineConfig(({ mode }) => ({
       input: {
         main: path.resolve(__dirname, 'index.html'),
         guide: path.resolve(__dirname, 'guide.html'),
+        guideAnswer: path.resolve(__dirname, 'guide-answer.html'),
+        guideImage: path.resolve(__dirname, 'guide-image.html'),
+        guideMap: path.resolve(__dirname, 'guide-map.html'),
         explore: path.resolve(__dirname, 'explore.html'),
         exploreDetail: path.resolve(__dirname, 'explore-detail.html'),
         tour: path.resolve(__dirname, 'tour.html'),

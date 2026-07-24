@@ -7,8 +7,8 @@ Vite + HTML/SCSS/JS 기반 모바일 우선 반응형 웹 프로젝트입니다.
 - [Vite](https://vitejs.dev/) — 빌드 도구
 - SCSS — 스타일 (모바일 우선)
 - [vite-plugin-handlebars](https://www.npmjs.com/package/vite-plugin-handlebars) — Handlebars partials (`{{> meta}}`)
-- [Pretendard](https://www.npmjs.com/package/pretendard) — 본문 폰트
-- [@noonnu/hangeul-nuri-bold](https://www.npmjs.com/package/@noonnu/hangeul-nuri-bold) — 제목 폰트
+- [Freesentation](https://noonnu.cc/font_page/1369) — 본문 폰트 (`src/assets/fonts/freesentation/`)
+- [HangeulNuri-Bold](https://noonnu.cc/font_page/845) — 제목 폰트 (`src/scss/base/_fonts.scss`)
 
 ## 시작하기
 

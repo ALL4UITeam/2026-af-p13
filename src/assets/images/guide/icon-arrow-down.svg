@@ -1,19 +1,5 @@
-<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="arrow-down" filter="url(#filter0_d_0_126)">
-<rect x="6" y="6" width="46" height="46" rx="23" fill="var(--fill-0, white)"/>
-<rect x="6.5" y="6.5" width="45" height="45" rx="22.5" stroke="var(--stroke-0, #D6D9DD)"/>
-<path id="Vector (Stroke)" d="M28.0769 17.9231C28.0769 17.4133 28.4902 17 29 17C29.5098 17 29.9231 17.4133 29.9231 17.9231V37.8486L39.4243 28.3474C39.7848 27.9869 40.3692 27.9869 40.7296 28.3474C41.0901 28.7079 41.0901 29.2922 40.7296 29.6527L29.6526 40.7296C29.2922 41.0901 28.7078 41.0901 28.3474 40.7296L17.2704 29.6527C16.9099 29.2922 16.9099 28.7079 17.2704 28.3474C17.6309 27.9869 18.2152 27.9869 18.5757 28.3474L28.0769 37.8486V17.9231Z" fill="var(--fill-0, #1A1A1A)"/>
-</g>
-<defs>
-<filter id="filter0_d_0_126" x="0" y="0" width="58" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="3"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_126"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_126" result="shape"/>
-</filter>
-</defs>
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="29" height="29" rx="14.5" fill="white"/>
+<rect x="0.5" y="0.5" width="29" height="29" rx="14.5" stroke="#D9D9D9"/>
+<path d="M14.398 7.7759C14.398 7.44342 14.6675 7.17389 15 7.17389C15.3325 7.17389 15.602 7.44342 15.602 7.7759V20.7708L21.7985 14.5744C22.0336 14.3393 22.4146 14.3393 22.6497 14.5744C22.8848 14.8095 22.8848 15.1905 22.6497 15.4256L15.4256 22.6497C15.1905 22.8848 14.8094 22.8848 14.5743 22.6497L7.35021 15.4256C7.11511 15.1905 7.11511 14.8095 7.35021 14.5744C7.58531 14.3393 7.96639 14.3393 8.20149 14.5744L14.398 20.7708V7.7759Z" fill="#1A1A1A"/>
 </svg>

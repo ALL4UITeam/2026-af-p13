@@ -11,7 +11,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1;
-  color: $color-bg-white;
+  color: var(--color-bg-white);
   letter-spacing: -0.28px;
 
   &--palace { background-color: #005b61; }

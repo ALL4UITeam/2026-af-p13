@@ -26,14 +26,14 @@
     justify-content: center;
     padding: 24px 32px 28px;
     text-align: center;
-    color: $color-bg-white;
+    color: var(--color-bg-white);
     pointer-events: none;
   }
 
   &__lead {
     margin: 0;
-    font-family: $font-heading;
-    font-size: 16px;
+    font-family: var(--font-heading);
+    font-size: fluid-px(14, 16, $fluid-vw-desktop-min, $fluid-vw-max);
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.8px;
@@ -45,8 +45,8 @@
     gap: 4px 8px;
     justify-content: center;
     margin: 0;
-    font-family: $font-heading;
-    font-size: 16px;
+    font-family: var(--font-heading);
+    font-size: fluid-px(14, 16, $fluid-vw-desktop-min, $fluid-vw-max);
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.8px;

@@ -3,14 +3,14 @@
 .user-select {
   position: relative;
   min-height: 100dvh;
-  padding: 40px $side-padding;
+  padding: 40px var(--side-padding);
 
   @media (min-width: $bp-app-shell) {
-    padding-inline: $app-shell-padding-inline;
+    padding-inline: var(--app-shell-padding-inline);
   }
 
   @media (min-width: $bp-desktop) {
-    padding: calc(#{$user-select-header-height} + 48px) $app-shell-padding-inline 60px;
+    padding: calc(var(--user-select-header-height) + 48px) var(--app-shell-padding-inline) 60px;
   }
 
   &__bg {
@@ -18,7 +18,7 @@
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background-color: $color-bg-blue;
+    background-color: var(--color-bg-blue);
 
     @media (min-width: $bp-desktop) {
       background-image: url('/src/assets/images/explore/bg-pattern.png');
@@ -35,8 +35,9 @@
     flex-direction: column;
     gap: 40px;
     width: 100%;
-    max-width: $content-width;
-    margin-inline: auto;
+    margin: 0 auto;
+    //max-width: var(--content-width);
+    //margin-inline: auto;
 
     @media (min-width: $bp-tablet) {
       max-width: min(100%, 720px);
@@ -44,14 +45,14 @@
 
     @media (min-width: $bp-desktop) {
       gap: 50px;
-      max-width: $content-max;
+      max-width: var(--content-max);
     }
   }
 
   &__hero {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-gap);
     align-items: center;
     width: 100%;
 
@@ -63,7 +64,7 @@
   &__intro {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-gap);
     align-items: center;
     width: 100%;
 
@@ -77,7 +78,7 @@
   &__body {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-gap);
     align-items: center;
     width: 100%;
 
@@ -91,7 +92,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 1;
-    color: $color-text-sub;
+    color: var(--color-text-sub);
     text-align: center;
 
     @media (min-width: $bp-desktop) {
@@ -152,7 +153,7 @@
 
 .logo--hero {
   @media (min-width: $bp-desktop) {
-    gap: 20px;
+    gap: var(--space-gap);
     align-items: center;
 
     .logo__text {
@@ -160,13 +161,13 @@
     }
 
     .logo__title {
-      font-size: 40px;
-      line-height: 40px;
+      font-size: fluid-px(23, 40, $fluid-vw-desktop-min, $fluid-vw-max);
+      line-height: 1;
       letter-spacing: -1.2px;
     }
 
     .logo__subtitle {
-      font-size: 30px;
+      font-size: fluid-px(17, 30, $fluid-vw-desktop-min, $fluid-vw-max);
       font-weight: 500;
     }
 
@@ -174,5 +175,169 @@
       width: 170px;
       height: 167px;
     }
+  }
+}
+
+// user-select-badge
+.user-select-badge {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  height: 30px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-bg-white);
+  white-space: nowrap;
+  background-color: #06c;
+
+  &--wide {
+    min-width: 85px;
+    width: auto;
+    padding-inline: 10px;
+  }
+}
+
+// user-select-item
+.user-select-item {
+  display: block;
+  cursor: pointer;
+
+  @media (min-width: $bp-tablet) {
+    flex: 1 1 calc(50% - 8px);
+    max-width: 228px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 228px;
+  }
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding-inline: 30px;
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+    @media (min-width: $bp-desktop) {
+      position: relative;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 200px;
+      padding: 31px 16px 24px;
+      border-radius: 20px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-gap);
+    min-width: 0;
+
+    @media (min-width: $bp-desktop) {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+
+    @media (min-width: $bp-desktop) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__label {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    color: var(--color-text-muted);
+
+    @media (min-width: $bp-desktop) {
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #666;
+      text-align: center;
+    }
+  }
+
+  &__check {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+
+    @media (min-width: $bp-desktop) {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--on {
+      display: none;
+    }
+
+    &--off {
+      display: block;
+    }
+  }
+
+  &.is-active &__inner,
+  &:has(input:checked) &__inner {
+    border: 3px solid var(--color-primary-border);
+
+    @media (min-width: $bp-desktop) {
+      border-color: var(--color-primary-800);
+    }
+  }
+
+  &.is-active &__label,
+  &:has(input:checked) &__label {
+    color: var(--color-text);
+
+    @media (min-width: $bp-desktop) {
+      font-weight: 700;
+    }
+  }
+
+  &.is-active &__check--on,
+  &:has(input:checked) &__check--on {
+    display: block;
+  }
+
+  &.is-active &__check--off,
+  &:has(input:checked) &__check--off {
+    display: none;
   }
 }

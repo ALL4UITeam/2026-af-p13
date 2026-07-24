@@ -6,7 +6,7 @@
   justify-content: center;
   border: none;
   border-radius: 8px;
-  font-family: $font-body;
+  font-family: var(--font-body);
   font-weight: 600;
   cursor: pointer;
 
@@ -15,8 +15,8 @@
     padding-inline: 24px;
     font-size: 16px;
     line-height: 1;
-    color: $color-bg-white;
-    background-color: $color-primary;
+    color: var(--color-bg-white);
+    background-color: var(--color-primary);
   }
 
   &--full {
@@ -31,9 +31,9 @@
   gap: 5px;
   width: 150px;
   height: 32px;
-  border: 1px solid $color-border-light;
+  border: 1px solid var(--color-border-light);
   border-radius: 30px;
-  background-color: $color-bg-white;
+  background-color: var(--color-bg-white);
 
   &__flag {
     flex-shrink: 0;
@@ -46,12 +46,12 @@
   &__text {
     font-size: 14px;
     line-height: 24px;
-    color: $color-text-caption;
+    color: var(--color-text-caption);
     white-space: nowrap;
 
     strong {
       font-weight: 700;
-      color: $color-text;
+      color: var(--color-text);
     }
   }
 }

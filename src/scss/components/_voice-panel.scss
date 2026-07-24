@@ -6,7 +6,7 @@
 
   &__inner {
     width: 100%;
-    border: 1px solid $color-bg-white;
+    border: 1px solid var(--color-bg-white);
     background: radial-gradient(ellipse at center, #454999 0%, #343276 25%, #231b52 50%);
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -68,7 +68,7 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 18px;
-    color: $color-bg-white;
+    color: var(--color-bg-white);
   }
 
   &__desc {
@@ -103,7 +103,7 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
-    color: $color-bg-white;
+    color: var(--color-bg-white);
     white-space: nowrap;
   }
 
@@ -114,12 +114,12 @@
     gap: 3px;
     width: 50px;
     height: 20px;
-    border: 1px solid $color-bg-white;
+    border: 1px solid var(--color-bg-white);
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
-    color: $color-bg-white;
+    color: var(--color-bg-white);
     cursor: pointer;
 
     img {
@@ -145,7 +145,7 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 18px;
-    color: $color-bg-white;
+    color: var(--color-bg-white);
     white-space: nowrap;
   }
 
@@ -168,7 +168,7 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
-    color: $color-bg-white;
+    color: var(--color-bg-white);
     white-space: nowrap;
     cursor: pointer;
 
