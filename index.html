@@ -7,15 +7,11 @@
   <div class="user-select__contents">
     <div class="user-select__hero">
       <div class="logo logo--hero">
-        <div class="logo__text">
-          <p class="logo__title">AI 국가유산 해설사</p>
-          <p class="logo__subtitle">조선왕조 국가유산 전문 AI</p>
-        </div>
-        <div class="logo__character">
-          <img src="/src/assets/images/user-select/character.svg" alt="" />
-        </div>
+        <picture>
+          <source srcset="/src/assets/images/user-select/hero-content.svg" media="(min-width: 768px)">
+          <img src="/src/assets/images/user-select/hero-content-mobile.svg" alt="" width="247" height="49" />
+        </picture>
       </div>
-      {{> components/welcome-bubble}}
     </div>
 
     <div class="user-select__intro user-select__intro--mobile">

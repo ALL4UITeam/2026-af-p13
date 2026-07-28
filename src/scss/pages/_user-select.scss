@@ -33,7 +33,7 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     width: 100%;
     margin: 0 auto;
     //max-width: var(--content-width);
@@ -81,7 +81,7 @@
     gap: var(--space-gap);
     align-items: center;
     width: 100%;
-
+    padding-top: 20px;
     @media (min-width: $bp-desktop) {
       gap: 50px;
     }
@@ -148,33 +148,6 @@
 
   .voice-panel {
     width: 100%;
-  }
-}
-
-.logo--hero {
-  @media (min-width: $bp-desktop) {
-    gap: var(--space-gap);
-    align-items: center;
-
-    .logo__text {
-      gap: 10px;
-    }
-
-    .logo__title {
-      font-size: fluid-px(23, 40, $fluid-vw-desktop-min, $fluid-vw-max);
-      line-height: 1;
-      letter-spacing: -1.2px;
-    }
-
-    .logo__subtitle {
-      font-size: fluid-px(17, 30, $fluid-vw-desktop-min, $fluid-vw-max);
-      font-weight: 500;
-    }
-
-    .logo__character {
-      width: 170px;
-      height: 167px;
-    }
   }
 }
 

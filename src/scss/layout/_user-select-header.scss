@@ -34,37 +34,34 @@
 .user-select-header {
   &__brand {
     display: flex;
-    flex: 1;
-    gap: 10px;
+    flex-shrink: 0;
     align-items: center;
     min-width: 0;
-  }
 
-  &__emblem {
-    display: block;
-    flex-shrink: 0;
-    width: 29px;
-    height: 28px;
-  }
+    a {
+      display: flex;
+      align-items: center;
+      line-height: 0;
+    }
 
-  &__titles {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
+    picture {
+      display: block;
+      line-height: 0;
+    }
 
-  &__title {
-    font-size: 15px;
-    line-height: 1;
-    letter-spacing: -0.3px;
-    color: var(--color-text);
-  }
+    img {
+      display: block;
+      width: 29px;
+      height: 28px;
+      object-fit: contain;
+    }
 
-  &__subtitle {
-    font-size: 11px;
-    line-height: 1;
-    letter-spacing: -0.44px;
-    color: #888;
+    @media (min-width: $bp-tablet) {
+      img {
+        width: 155px;
+        height: 29px;
+      }
+    }
   }
 
   &__actions {
