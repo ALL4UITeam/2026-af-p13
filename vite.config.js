@@ -70,8 +70,20 @@ const pageData = {
   },
 }
 
-export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/2026-af-p13/' : '/',
+function assetFileNames(assetInfo) {
+  const original = (assetInfo.originalFileNames?.[0] || '').replace(/\\/g, '/')
+  const fromSrcAssets = original.match(/(?:^|\/)src\/assets\/(.+)$/)
+  if (fromSrcAssets) {
+    return `assets/${fromSrcAssets[1]}`
+  }
+
+  const name = assetInfo.names?.[0] || assetInfo.name || 'asset'
+  return `assets/${name}`
+}
+
+export default defineConfig({
+  // 상대경로: dist를 Eclipse/로컬에서 바로 열어봐도 에셋 연결됨
+  base: './',
   plugins: [
     handlebars({
       partialDirectory: path.resolve(__dirname, 'partials'),
@@ -99,9 +111,10 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    // 파일명 해시 제거 — 개발자가 dist 경로를 고정으로 연결할 수 있게
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.html'),
+        index: path.resolve(__dirname, 'index.html'),
         guide: path.resolve(__dirname, 'guide.html'),
         guideAnswer: path.resolve(__dirname, 'guide-answer.html'),
         guideImage: path.resolve(__dirname, 'guide-image.html'),
@@ -113,6 +126,11 @@ export default defineConfig(({ mode }) => ({
         map: path.resolve(__dirname, 'map.html'),
         viewer: path.resolve(__dirname, 'viewer.html'),
       },
+      output: {
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames,
+      },
     },
   },
-}))
+})

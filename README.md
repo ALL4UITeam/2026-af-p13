@@ -26,6 +26,11 @@ npm run build
 npm run preview
 ```
 
+빌드 결과(`dist/`)는 다음 규칙을 따릅니다.
+
+- 경로: `./assets/...` 상대경로 (Eclipse/로컬에서 바로 열어도 연결됨)
+- 파일명: 해시 없음 (`main-a1b2c3.css` ❌ → `main.css` / `images/.../icon.svg` ✅)
+
 ## 프로젝트 구조
 
 ```
