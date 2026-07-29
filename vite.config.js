@@ -111,6 +111,8 @@ export default defineConfig({
     },
   },
   build: {
+    // data URI 인라인 금지 — dist에서 실제 파일 경로로 연결되게
+    assetsInlineLimit: 0,
     // 파일명 해시 제거 — 개발자가 dist 경로를 고정으로 연결할 수 있게
     rollupOptions: {
       input: {
