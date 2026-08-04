@@ -20,7 +20,7 @@
     </a>
   </div>
   <div class="user-select-header__actions">
-    <span class="user-select-badge user-select-badge--wide">일반사용자</span>
+    <button type="button" class="user-select-badge user-select-badge--wide" data-user-select-open aria-haspopup="dialog">일반사용자</button>
     <button type="button" class="user-select-header__voice" id="voiceTriggerDesktop" aria-label="음성 안내">
       <span>음성안내</span>
     </button>
@@ -206,5 +206,139 @@
       </div>
     </section>
   </main>
+  <div class="user-select-popup" id="userSelectPopup" hidden>
+    <div class="user-select-popup__dim" data-user-select-close tabindex="-1" aria-hidden="true"></div>
+    <div
+      class="user-select-popup__panel"
+      role="dialog"
+      aria-modal="true"
+      aria-label="사용자 유형 선택"
+      tabindex="-1"
+    >
+      <button type="button" class="user-select-popup__close" data-user-select-close aria-label="닫기"></button>
+  
+      <div class="user-select user-select--popup">
+        <div class="user-select__bg" aria-hidden="true"></div>
+  
+        <div class="user-select__contents">
+          <div class="user-select__hero">
+            <div class="logo logo--hero">
+              <img src="./assets/images/user-select/hero-content-mobile.svg" alt="" width="247" height="49" />
+            </div>
+          </div>
+  
+          <div class="user-select__intro">
+            <div class="voice-panel" id="voicePanel">
+              <div class="voice-panel__inner">
+                <button type="button" class="voice-panel__trigger" id="voiceTrigger" aria-label="음성으로 선택" aria-expanded="false">
+                  <span class="voice-panel__icon">
+                    <img src="./assets/images/user-select/icon-voice.svg" alt="" width="40" height="40" />
+                  </span>
+                  <span class="voice-panel__text">
+                    <span class="voice-panel__title">음성으로 선택</span>
+                    <span class="voice-panel__desc">버튼을 눌러 음성으로 선택하세요</span>
+                  </span>
+                </button>
+  
+                <div class="voice-panel__expanded" id="voiceExpanded" hidden>
+                  <div class="voice-panel__header">
+                    <span class="voice-panel__status">안내 중...</span>
+                    <button type="button" class="voice-panel__cancel" id="voiceCancel" aria-label="음성 안내 취소">
+                      <img src="./assets/images/user-select/icon-cancel.svg" alt="" width="12" height="12" />
+                      취소
+                    </button>
+                  </div>
+                  <div class="voice-panel__visual">
+                    <img class="voice-panel__waveform" src="./assets/images/user-select/voice-waveform.svg" alt="" width="208" height="60" />
+                    <p class="voice-panel__playing">안내 음성을 재생하고 있습니다...</p>
+                  </div>
+                  <div class="voice-panel__controls">
+                    <button type="button" class="voice-panel__control-btn voice-panel__control-btn--restart">
+                      <img src="./assets/images/user-select/icon-restart.svg" alt="" width="20" height="20" />
+                      다시 시작
+                    </button>
+                    <button type="button" class="voice-panel__control-btn voice-panel__control-btn--play">
+                      <img src="./assets/images/user-select/icon-play.svg" alt="" width="20" height="20" />
+                      안내 재생
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="user-select__body">
+            <p class="user-select__guide">원하는 사용자유형을 선택해 주세요.</p>
+  
+            <div class="user-select__list" role="radiogroup" aria-label="사용자 유형">
+              <label class="user-select-item is-active">
+                <input type="radio" name="userType" value="general" checked />
+                <span class="user-select-item__inner">
+                  <span class="user-select-item__left">
+                    <img class="user-select-item__icon" src="./assets/images/user-select/icon-general.svg" alt="" width="40" height="40" />
+                    <span class="user-select-item__label">일반 사용자</span>
+                  </span>
+                  <img class="user-select-item__check user-select-item__check--on" src="./assets/images/user-select/icon-checked.svg" alt="" width="28" height="28" />
+                  <img class="user-select-item__check user-select-item__check--off" src="./assets/images/user-select/icon-unchecked.svg" alt="" width="28" height="28" />
+                </span>
+              </label>
+              <label class="user-select-item">
+                <input type="radio" name="userType" value="blind" />
+                <span class="user-select-item__inner">
+                  <span class="user-select-item__left">
+                    <img class="user-select-item__icon" src="./assets/images/user-select/icon-blind.svg" alt="" width="40" height="40" />
+                    <span class="user-select-item__label">시각 장애인</span>
+                  </span>
+                  <img class="user-select-item__check user-select-item__check--on" src="./assets/images/user-select/icon-checked.svg" alt="" width="28" height="28" />
+                  <img class="user-select-item__check user-select-item__check--off" src="./assets/images/user-select/icon-unchecked.svg" alt="" width="28" height="28" />
+                </span>
+              </label>
+              <label class="user-select-item">
+                <input type="radio" name="userType" value="colorblind" />
+                <span class="user-select-item__inner">
+                  <span class="user-select-item__left">
+                    <img class="user-select-item__icon" src="./assets/images/user-select/icon-colorblind.svg" alt="" width="40" height="40" />
+                    <span class="user-select-item__label">색약자</span>
+                  </span>
+                  <img class="user-select-item__check user-select-item__check--on" src="./assets/images/user-select/icon-checked.svg" alt="" width="28" height="28" />
+                  <img class="user-select-item__check user-select-item__check--off" src="./assets/images/user-select/icon-unchecked.svg" alt="" width="28" height="28" />
+                </span>
+              </label>
+              <label class="user-select-item">
+                <input type="radio" name="userType" value="hearing" />
+                <span class="user-select-item__inner">
+                  <span class="user-select-item__left">
+                    <img class="user-select-item__icon" src="./assets/images/user-select/icon-hearing.svg" alt="" width="40" height="40" />
+                    <span class="user-select-item__label">청각 장애인</span>
+                  </span>
+                  <img class="user-select-item__check user-select-item__check--on" src="./assets/images/user-select/icon-checked.svg" alt="" width="28" height="28" />
+                  <img class="user-select-item__check user-select-item__check--off" src="./assets/images/user-select/icon-unchecked.svg" alt="" width="28" height="28" />
+                </span>
+              </label>
+              <label class="user-select-item">
+                <input type="radio" name="userType" value="child" />
+                <span class="user-select-item__inner">
+                  <span class="user-select-item__left">
+                    <img class="user-select-item__icon" src="./assets/images/user-select/icon-child.svg" alt="" width="40" height="40" />
+                    <span class="user-select-item__label">어린이</span>
+                  </span>
+                  <img class="user-select-item__check user-select-item__check--on" src="./assets/images/user-select/icon-checked.svg" alt="" width="28" height="28" />
+                  <img class="user-select-item__check user-select-item__check--off" src="./assets/images/user-select/icon-unchecked.svg" alt="" width="28" height="28" />
+                </span>
+              </label>
+            </div>
+  
+            <div class="user-select__actions">
+              <button type="button" class="btn btn--primary btn--full user-select__submit" id="btnComplete">선택 완료</button>
+              <div class="lang-badge user-select__lang-badge">
+                <img class="lang-badge__flag" src="./assets/images/common/flag-kr.svg" />
+                <span class="lang-badge__text"><strong>한국어</strong> 로 설정됨</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
