@@ -86,23 +86,92 @@ function initLangMenu() {
 }
 
 function initUserSelect() {
-  const list = document.querySelector('.user-select__list')
-  if (!list) return
+  const popup = document.getElementById('userSelectPopup')
+  if (!popup) return
 
-  const items = list.querySelectorAll('.user-select-item')
-  const radios = list.querySelectorAll('input[type="radio"]')
+  const panel = popup.querySelector('.user-select-popup__panel')
+  const list = popup.querySelector('.user-select__list')
+  const items = list?.querySelectorAll('.user-select-item') ?? []
+  const radios = list?.querySelectorAll('input[type="radio"]') ?? []
+
+  const USER_TYPE_LABELS = {
+    general: '일반사용자',
+    blind: '시각장애인',
+    colorblind: '색약자',
+    hearing: '청각장애인',
+    child: '어린이',
+  }
+
+  const getValue = () => list?.querySelector('input[type="radio"]:checked')?.value || 'general'
+
+  const setValue = (value) => {
+    if (!list || !value) return
+    const target = list.querySelector(`input[type="radio"][value="${value}"]`)
+    if (!target) return
+    target.checked = true
+    items.forEach((item) => item.classList.remove('is-active'))
+    target.closest('.user-select-item')?.classList.add('is-active')
+  }
+
+  const syncBadges = (value = getValue()) => {
+    const label = USER_TYPE_LABELS[value] || USER_TYPE_LABELS.general
+    document.querySelectorAll('[data-user-select-open]').forEach((badge) => {
+      badge.textContent = label
+    })
+  }
+
+  const open = (options = {}) => {
+    if (options.value) setValue(options.value)
+    popup.hidden = false
+    document.body.style.overflow = 'hidden'
+    panel?.focus({ preventScroll: true })
+  }
+
+  const close = () => {
+    popup.hidden = true
+    document.body.style.overflow = ''
+  }
 
   radios.forEach((radio) => {
     radio.addEventListener('change', () => {
       items.forEach((item) => item.classList.remove('is-active'))
-      const parent = radio.closest('.user-select-item')
-      if (parent) parent.classList.add('is-active')
+      radio.closest('.user-select-item')?.classList.add('is-active')
     })
   })
 
-  document.getElementById('btnComplete')?.addEventListener('click', () => {
-    window.location.href = './guide.html'
+  document.querySelectorAll('[data-user-select-open]').forEach((btn) => {
+    btn.addEventListener('click', () => open())
   })
+
+  popup.querySelectorAll('[data-user-select-close]').forEach((el) => {
+    el.addEventListener('click', close)
+  })
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !popup.hidden) close()
+  })
+
+  document.getElementById('btnComplete')?.addEventListener('click', () => {
+    const value = getValue()
+    syncBadges(value)
+    close()
+
+    const detail = { value, label: USER_TYPE_LABELS[value] || USER_TYPE_LABELS.general }
+    window.dispatchEvent(new CustomEvent('userselect:complete', { detail }))
+
+    if (document.querySelector('[data-page="01-user-select"]')) {
+      window.location.href = './guide.html'
+    }
+  })
+
+  // 개발자 API — 필요할 때만 호출: UserSelectPopup.open({ value: 'general' })
+  window.UserSelectPopup = {
+    open,
+    close,
+    getValue,
+    setValue,
+    syncBadges,
+  }
 }
 
 function initDesktopVoiceBridge() {
