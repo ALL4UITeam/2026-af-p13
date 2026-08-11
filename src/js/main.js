@@ -96,6 +96,7 @@ function initUserSelect() {
 
   const USER_TYPE_LABELS = {
     general: '일반사용자',
+    expert: '전문사용자',
     blind: '시각장애인',
     colorblind: '색약자',
     hearing: '청각장애인',
