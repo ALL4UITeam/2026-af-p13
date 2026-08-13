@@ -1,0 +1,392 @@
+@use 'base/variables' as *;
+
+.layout-full:has(.roadview) {
+  background-color: #111;
+}
+
+.roadview {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  user-select: none;
+
+  &__pano {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__pano-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 42%;
+    pointer-events: none;
+  }
+
+  &__ui {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+
+    > * {
+      pointer-events: auto;
+    }
+  }
+
+  &__top {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: calc(100% - 24px);
+
+    @media (min-width: $bp-tablet) {
+      top: 16px;
+      right: 16px;
+      gap: 10px;
+    }
+  }
+
+  &__top-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__tools {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transform: translateY(-42%);
+
+    @media (min-width: $bp-tablet) {
+      right: 16px;
+      gap: 10px;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: min(220px, calc(100vw - 72px));
+
+    @media (min-width: $bp-tablet) {
+      left: 16px;
+      bottom: 16px;
+      width: 240px;
+      gap: 10px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      width: 260px;
+    }
+  }
+}
+
+.roadview-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 12px 0 8px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background-color 0.2s ease;
+
+  @media (min-width: $bp-tablet) {
+    height: 36px;
+    padding: 0 14px 0 8px;
+    gap: 10px;
+  }
+
+  &.is-on {
+    background: #2e7bff;
+  }
+
+  &__input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__track {
+    position: relative;
+    display: block;
+    width: 34px;
+    height: 18px;
+    flex-shrink: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.35);
+    transition: background-color 0.2s ease;
+  }
+
+  &__knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+  }
+
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+
+    @media (min-width: $bp-tablet) {
+      font-size: 13px;
+    }
+  }
+
+  &__state {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  &.is-on &__track {
+    background: rgba(255, 255, 255, 0.28);
+  }
+
+  &.is-on &__knob {
+    transform: translateX(16px);
+  }
+
+  &:not(.is-on) &__state {
+    color: #c8ccd0;
+  }
+}
+
+.roadview-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+
+  @media (min-width: $bp-tablet) {
+    width: 36px;
+    height: 36px;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.roadview-tool {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+
+  @media (min-width: $bp-tablet) {
+    width: 36px;
+    height: 36px;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  &__icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.roadview-zoom {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+
+  &__btn {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    background: transparent;
+    cursor: pointer;
+
+    @media (min-width: $bp-tablet) {
+      width: 36px;
+      height: 32px;
+    }
+
+    + .roadview-zoom__btn {
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+}
+
+.roadview-minimap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: 10px;
+  background: #dfe6ef;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+  }
+
+  &__marker {
+    position: absolute;
+    top: 46%;
+    left: 52%;
+    width: 72px;
+    height: 72px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  &__fov {
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(
+      from -48deg at 50% 50%,
+      rgba(46, 123, 255, 0.45) 0deg,
+      rgba(46, 123, 255, 0.18) 70deg,
+      transparent 70deg 360deg
+    );
+    border-radius: 50%;
+    filter: blur(0.2px);
+  }
+
+  &__dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #e53935;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+  }
+
+  &__controls {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  }
+
+  &__zoom {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 26px;
+    padding: 0;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    background: transparent;
+    cursor: pointer;
+
+    + .roadview-minimap__zoom {
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &__expand {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 6px;
+    background:
+      #fff
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none'%3E%3Cpath d='M2 5V2h3M12 5V2H9M2 9v3h3M12 9v3H9' stroke='%23333' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+      center / 14px 14px no-repeat;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 359px) {
+  .roadview-toggle__text {
+    font-size: 11px;
+  }
+
+  .roadview__bottom {
+    width: min(180px, calc(100vw - 64px));
+  }
+}

@@ -68,6 +68,11 @@ const pageData = {
     mapFull: true,
     mapDesktop: true,
   },
+  '/roadview.html': {
+    title: '로드뷰',
+    description: 'AI 국가유산 해설사 - 경복궁 로드뷰',
+    topTitle: '로드뷰',
+  },
 }
 
 function assetFileNames(assetInfo) {
@@ -126,6 +131,7 @@ export default defineConfig({
         tour: path.resolve(__dirname, 'tour.html'),
         tourCourse: path.resolve(__dirname, 'tour-course.html'),
         map: path.resolve(__dirname, 'map.html'),
+        roadview: path.resolve(__dirname, 'roadview.html'),
         viewer: path.resolve(__dirname, 'viewer.html'),
       },
       output: {

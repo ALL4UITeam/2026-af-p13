@@ -40,6 +40,7 @@ const PAGE_GROUPS = [
     title: '지도',
     items: [
       { id: '10', name: '지도', file: 'map.html', ready: true },
+      { id: '11', name: '로드뷰', file: 'roadview.html', ready: true },
     ],
   },
 ]

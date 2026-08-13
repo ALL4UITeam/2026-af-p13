@@ -293,6 +293,34 @@ function initMap() {
   syncEmpty()
 }
 
+function initRoadview() {
+  const root = document.querySelector('.roadview')
+  if (!root) return
+
+  const toggle = document.getElementById('roadviewPlaceToggle')
+  const input = toggle?.querySelector('.roadview-toggle__input')
+  const state = toggle?.querySelector('.roadview-toggle__state')
+  const closeBtn = document.getElementById('roadviewClose')
+
+  const syncToggle = () => {
+    if (!toggle || !input || !state) return
+    const on = input.checked
+    toggle.classList.toggle('is-on', on)
+    state.textContent = on ? 'ON' : 'OFF'
+  }
+
+  input?.addEventListener('change', syncToggle)
+  syncToggle()
+
+  closeBtn?.addEventListener('click', () => {
+    if (window.history.length > 1) {
+      window.history.back()
+      return
+    }
+    window.location.href = './map.html'
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initVoicePanel()
   initLangMenu()
@@ -304,4 +332,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initTour()
   initTourCourseTabs()
   initMap()
+  initRoadview()
 })

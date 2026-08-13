@@ -3,6 +3,16 @@
 .layout-full {
   min-height: 100dvh;
   background-color: var(--color-bg-blue);
+
+  &:has(.roadview) {
+    overflow: hidden;
+    background-color: #111;
+
+    .main {
+      max-width: none;
+      height: 100dvh;
+    }
+  }
 }
 
 .layout-app,
